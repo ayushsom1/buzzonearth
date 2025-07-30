@@ -5,7 +5,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft, ChevronDown, ChevronUp, User, School, Building2 } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { useState, useEffect } from "react";
 
 // Animation variants for fade-in
 const fadeInUp = {
@@ -62,6 +63,52 @@ export default function Home() {
       [dropdown]: !prev[dropdown]
     }));
   };
+const [currentSlide, setCurrentSlide] = useState(0);
+    const [slidesToShow, setSlidesToShow] = useState(4);
+
+    const totalSlides = 12; // x7 to x18
+    const maxSlide = Math.max(0, totalSlides - slidesToShow);
+
+    // Responsive slides per view
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 640) {
+                setSlidesToShow(1);
+            } else if (window.innerWidth < 768) {
+                setSlidesToShow(2);
+            } else if (window.innerWidth < 1024) {
+                setSlidesToShow(3);
+            } else {
+                setSlidesToShow(4);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const nextSlide = () => {
+        setCurrentSlide(prev => Math.min(prev + 1, maxSlide));
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide(prev => Math.max(prev - 1, 0));
+    };
+
+    // Auto-play functionality (optional)
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide(prev => {
+                if (prev >= maxSlide) {
+                    return 0; // Reset to beginning
+                }
+                return prev + 1;
+            });
+        }, 4000); // Change slide every 4 seconds
+
+        return () => clearInterval(timer);
+    }, [maxSlide]);
 
   return (
     <div className="flex flex-col">
@@ -112,9 +159,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto font-light text-blue-500"
+            className="text-xl md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto font-light text-[#1b66cf]"
           >
-            Nurturing future sustainability leaders
+            <b>NURTURING FUTURE SUSTAINABILITY LEADERS</b>
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -171,15 +218,20 @@ export default function Home() {
         className="py-28 bg-gradient-to-b from-black to-[#002e41] text-white relative overflow-hidden"
       >
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071426] to-[#112c4c] opacity-95"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000000] to-[#002e41] opacity-95"></div>
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
-          <div className="flex flex-col items-center text-center max-w-7xl mx-auto">
+          <div className="flex flex-col items-center text-center max-w-9xl mx-auto">
             <div className="w-full">
-              <h1 className="text-2xl md:text-3xl font-bold mb-8">ABOUT INDIA MUN</h1>
+              <h1 className="text-[#1775d0] text-4xl md:text-5xl font-bold mb-8">ABOUT INDIA MUN</h1>
+              
               <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-6">
-                India MUN (launched on October 24, 2020 on international UN Day), a collaborative endeavor by Gaia The Earth Foundation and BuzzOnEarth, is a pioneering global
-                institution dedicated to empowering young minds for climate action, leadership, innovation, and entrepreneurship. As the official partner of the UN Decade on
-                Ecosystem Restoration — jointly led by UNEP and UNFCCC — India MUN stands at the forefront of educational transformation.
+                Empowering Youth. Fueling Innovation. Regenerating Earth.
+              </p>
+              <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-6">
+                India MUN, a collaborative endeavor by Gaia The Earth Foundation and BuzzOnEarth, is a pioneering global institution dedicated to empowering young minds for climate action, leadership, and innovation. Sharing deep foundations with organizations such as the United Nations Environment Programme, the United Nations Global Innovation Hub, the United Nations Framework Convention on Climate Change, NASA, ISRO, AICTE and several IITs, India MUN operates at the confluence of global policy, innovation, and education.
+              </p>
+              <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-8">
+                As an initiative shaped alongside Gaia The Earth Foundation — India’s Actor for the UN Decade on Ecosystem Restoration 2021–2030, jointly led by UNEP and FAO — India MUN stands at the forefront of educational transformation, deeply aligned with global sustainability goals.
               </p>
               <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-8">
                 At its core, India MUN is the vanguard of climate-conscious education and a catalyst for future-ready education — one that integrates environmental stewardship
@@ -204,14 +256,14 @@ export default function Home() {
       </motion.section>
 
       {/* Global Schools Section */}
-      <section className="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-15 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-[#1875d1] text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-[#1775d0] text-4xl md:text-5xl font-bold mb-8">
             Global Schools for Climate Action,<br />
             Leadership & Innovation
           </h2>
           <p className="text-base md:text-lg text-black max-w-5xl mx-auto">
-            Empowering schools and transforming education for global climate action, leadership and innovation.
+            Empowering Schools. Elevating Educators. Transforming Education.
           </p>
         </div>
 
@@ -219,8 +271,11 @@ export default function Home() {
           <div className="col-span-2 space-y-8">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4">"Global Recognition for Schools Driving Change."</h3>
+              <p className="text-sm md:text-base font-bold mb-4 text-black mb-8">
+                A Prestigious Alliance of Visionary Institutions Shaping the Future of Education.
+              </p>
               <p className="text-sm md:text-base text-black mb-8">
-                Join the prestigious network and position your school at the forefront of future education.
+                Join a global movement of pioneering schools championing climate action, leadership, innovation, entrepreneurship, diplomacy, regeneration and SDG-aligned learning.
               </p>
             </div>
 
@@ -270,7 +325,7 @@ export default function Home() {
           </div>
 
           <div className="col-span-1 flex justify-center">
-            <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[450px]">
+            <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
               <Image
                 src="/images/home_page/h4.webp"
                 alt="GSCA Platinum Badge"
@@ -282,46 +337,108 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Small Images Section */}
+                  <section className="py-5 bg-gray-10">
+                      <div className="container mx-auto px-6">
+                          <div className="flex justify-center items-center gap-10">
+                              {[2, 3, 4, 5, 6].map((num) => (
+                                  <div key={num} className="relative w-[250px] h-[250px]">
+                                      <Image
+                                          src={`/images/affiliation/x${num}.png`}
+                                          alt={`Small Image ${num}`}
+                                          fill
+                                          className="object-contain"
+                                      />
+                                  </div>
+                              ))}
+                          </div>
+                      </div>
+                  </section>
+
       {/* Schools Gallery Section - Medium height */}
-      <section className="py-20 bg-gray-50 overflow-hidden">
-        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6">Inspiring School Participation</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Schools across India are already making a difference through our programs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            {[
-              { num: 7, name: "DPS, Raipur" },
-              { num: 8, name: "Presidency School, RT Nagar" },
-              { num: 5, name: "Birla Open Minds" },
-              { num: 6, name: "Kalvi International" }
-            ].map((item) => (
-              <div key={item.num} className="group relative w-full rounded-lg overflow-hidden shadow-md">
-                <div className="relative w-full aspect-[4/3]">
-                  <Image
-                    src={`/images/home_page/h${item.num}.webp`}
-                    alt={item.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    priority
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white text-md">{item.name}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-2xl font-medium text-gray-800 mb-6">Your school could be the next success story</p>
-          </div>
-        </div>
-      </section>
+       <section className="py-12 bg-gray-10">
+                      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                          {/* Header */}
+                          <div className="text-center mb-8">
+                              <h2 className="text-3xl font-bold text-[#1875d1] mb-4">
+                                  A Celebrated Network of Future-Focused Institutions Shaping Global Education
+                              </h2>
+                              <p className="text-gray-600">
+                                  Our Prestigious institutions leading educational transformation
+                              </p>
+                          </div>
+      
+                          {/* Carousel Container */}
+                          <div className="relative max-w-7xl mx-auto">
+                              <div className="overflow-hidden rounded-lg">
+                                  <div
+                                      className="flex transition-transform duration-500 ease-in-out"
+                                      style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
+                                  >
+                                      {[7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((num) => (
+                                          <div
+                                              key={num}
+                                              className="flex-shrink-0 px-2"
+                                              style={{ width: `${100 / slidesToShow}%` }}
+                                          >
+                                              <div className="group relative w-full rounded-lg overflow-hidden shadow-md bg-white">
+                                                  <div className="relative w-full aspect-[4/3]">
+                                                      <Image
+                                                          src={`/images/affiliation/x${num}.webp`}
+                                                          alt={`Affiliated School ${num}`}
+                                                          fill
+                                                          sizes="(max-width: 768px) 50vw, 25vw"
+                                                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                                      />
+                                                  </div>
+                                                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                                      <p className="text-white text-sm font-medium">Global Member School</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      ))}
+                                  </div>
+                              </div>
+      
+                              {/* Navigation Arrows */}
+                              <button
+                                  onClick={prevSlide}
+                                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                                  disabled={currentSlide === 0}
+                              >
+                                  <ChevronLeft className="w-6 h-6" />
+                              </button>
+      
+                              <button
+                                  onClick={nextSlide}
+                                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                                  disabled={currentSlide >= maxSlide}
+                              >
+                                  <ChevronRight className="w-6 h-6" />
+                              </button>
+                          </div>
+      
+                          {/* Dots Indicator */}
+                          <div className="flex justify-center mt-6 space-x-2">
+                              {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+                                  <button
+                                      key={index}
+                                      onClick={() => setCurrentSlide(index)}
+                                      className={`w-3 h-3 rounded-full transition-all duration-200 ${currentSlide === index
+                                              ? 'bg-[#1875d1] scale-110'
+                                              : 'bg-gray-300 hover:bg-gray-400'
+                                          }`}
+                                  />
+                              ))}
+                          </div>
+                          <div className="text-center mb-8">
+                              <h2 className="text-2xl font-bold text-[#000000] mb-4">
+                                  Your school could be the next success story!
+                              </h2>
+                        
+                          </div>
+                      </div>
+                  </section>
 
       <div className="mx-auto">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1875d1] p-4">
@@ -330,9 +447,9 @@ export default function Home() {
 
       </div>
       {/* India MUN Student Programs Section */}
-      <section className="relative min-h-screen">
+      <section className="relative h-[700px] flex justify-center items-center">
         {/* Background Image */}
-        <div className="absolute inset-0">
+        <div className="inset-0">
           <Image
             src="/images/home_page/h9.webp"
             alt="Students silhouette at sunset"
@@ -345,31 +462,29 @@ export default function Home() {
 
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24 min-h-screen flex flex-col items-center justify-between text-white text-center">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-50 min-h-screen flex flex-col items-center justify-between text-white text-center">
 
           <div className="">
-            <h3 className="text-md md:text-lg font-medium">Dear EarthGeeks</h3>
+            <h3 className="text-md md:text-lg font-medium">Dear EarthGeeks,</h3>
           </div>
 
           <div className="">
-            <div className="space-y-4">
+            <div className="">
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                This is your <span className="text-[#FFD700]">moment</span>. This is your <span className="text-[#FFD700]">movement</span>.
+                DO YOU WONDER WHAT YOU AS AN INDIVIDUAL CAN DO?
               </h3>
-              <p className="text-3xl md:text-4xl italic font-light">
-                And it begins with you.
-              </p>
+            
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="">
             <div className="flex flex-col items-center ">
               <p className="text-md md:text-lg">
                 Join <span className="font-bold">India</span> Model <span className="font-bold">United Nations</span>.
               </p>
 
               <p className="text-md md:text-lg max-w-4xl">
-                Where 600 Million* young leaders, innovators and changemakers
+                Where young leaders, innovators and changemakers
               </p>
 
               <div className="flex flex-wrap justify-center gap-x-6 text-[#FFD700] text-md md:text-lg font-medium">
@@ -402,7 +517,7 @@ export default function Home() {
             </h3>
 
             <p className="text-md md:text-lg text-gray-800 leading-relaxed max-w-7xl mx-auto">
-              India's first Model United Nations conference on Climate is a challenging and competitive platform for students to debate and analyse some of the world's most pressing climate problems. As delegates representing different countries and agencies, students will gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.
+              India’s first and largest MUN conference focused entirely on Climate Action and Biodiversity as the core themes. A challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. As delegates representing different countries and agencies, students gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.
             </p>
           </div>
         </div>
@@ -410,11 +525,11 @@ export default function Home() {
         {/* Welcome letter section */}
         <div className="min-h-[620px] max-w-7xl mx-auto mt-15 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4 md:p-8 border-2 rounded-xl mb-8 md:mb-16">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl md:text-2xl font-bold mb-4">Welcome letter by the President, India MUN</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4">Letter by the Executive President, India MUN</h3>
             <p className="text-gray-700 text-sm md:text-base">
               <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
               <br /><br />
-              It is with immense joy and great anticipation that I welcome you to the National India Model United Nations Conference 2025. As the Founder and Executive President of India MUN, I am deeply inspired by the bright young minds gathering from all corners of our diverse nation. Your enthusiasm and dedication to addressing and taking action on the critical issues surrounding climate change and sustainability fill me with hope and confidence for our future.
+              It is with immense joy and great anticipation that I welcome you to the India Model United Nations Platform. As the Founder and Executive President of India MUN, I am deeply inspired by the bright young minds gathering from all corners of our diverse nation for this annual national conference each year. These students’ enthusiasm and dedication to addressing and taking action on the critical issues surrounding climate change and sustainability fill me with hope and confidence for our future.
               <br /><br />
               India is a young country, with more than 50% of our population under the age of 25. This youthful demographic is our greatest asset. I firmly believe in the power of youth to drive change, innovate, and lead with passion and purpose. The energy, creativity, and resilience that you bring to the table are exactly what we need to tackle the pressing challenges of our time.
               <br /><br />
@@ -427,7 +542,7 @@ export default function Home() {
               Yours sincerely,
               <br />
               <br />
-              <b>Gayatri Chauhan, Founder and Executive President, India Model United Nations</b>
+              <b><i>Gayatri Chauhan, Founder and Executive President, India Model United Nations</i></b>
             </p>
           </div>
           <div className="flex items-center justify-center col-span-1">
@@ -444,12 +559,12 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center gap-4 mb-16">
-          <Button size="lg" className="h-auto py-2 bg-blue-500 cursor-pointer hover:bg-blue-700 w-full md:w-auto font-bold text-lg">
-            India MUN National Climate <br /> Conference 2024
+          <Button size="lg" className="h-auto py-2 bg-[#1875d1] cursor-pointer hover:bg-blue-700 w-full md:w-auto font-bold text-lg">
+            India MUN National Climate Conference 2024
           </Button>
           <div className="h-16 w-0.5 bg-gray-300"></div>
-          <Button size="lg" className="h-auto py-2 bg-blue-500 cursor-pointer hover:bg-blue-700 w-full md:w-auto font-bold text-lg">
-            India MUN Climate <br /> Conferences 2025
+          <Button size="lg" className="h-auto py-2 bg-[#1875d1] cursor-pointer hover:bg-blue-700 w-full md:w-auto font-bold text-lg">
+            India MUN Climate Conferences 2025
           </Button>
         </div>
       </section>
@@ -463,7 +578,7 @@ export default function Home() {
             <div className="md:col-span-3">
               <div className="relative w-[200px] h-[200px] mx-auto">
                 <Image
-                  src="/images/programs/s7.webp"
+                  src="/images/programs/S7.webp"
                   alt="Youth Leadership Program"
                   fill
                   className="object-contain"
@@ -484,7 +599,7 @@ export default function Home() {
                     India's most powerful leadership program for the YOUTH.
                   </h3>
                   <p className="text-sm text-gray-700">
-                    An immersive, experiential leadership development program curated by industry leaders to help you <span className="font-semibold">become the best version of yourself</span>, build essential life skills, and grow into a confident, purpose-driven leader ready to shape the future.
+                    An immersive, experiential leadership development program curated by industry leaders to help you <span className="font-semibold">become the best version of yourself, build essential life skills, and grow into a confident, purpose-driven leader</span> ready to shape the future.
                   </p>
                   <p className="text-sm text-gray-700">
                     We believe in <span className="font-semibold">unlocking the boundless potential within every young person</span>. This transformative journey is designed to equip young leaders with the mindset, skills to excel in your chosen field, and purpose to lead with impact.
@@ -517,13 +632,13 @@ export default function Home() {
                 </div>
                 <div className="space-y-4 flex-1">
                   <h3 className="text-lg font-semibold text-[#1875d1]">
-                    Connecting them with UN programs on ecosystem restoration.
+                    Connecting passionate youth with United Nations ecosystem restoration initiatives.
                   </h3>
                   <p className="text-sm text-gray-700">
-                    A transformative learning and leadership program designed to empower young individuals by helping them develop a care for nature, creative persuasion for the right causes, leadership skills, a resilient mindset, a collaborative approach, and environmental stewardship.
+                    This is a transformative learning and leadership program designed to empower young individuals, inspire them to take action, and help them understand the importance of nature and forests for our planet and all living species. It nurtures creative persuasion for vital causes, resilient leadership skills, a collaborative mindset, and environmental stewardship.
                   </p>
                   <p className="text-sm text-gray-700">
-                    <span className="font-semibold">It is not just a program—it's a movement</span> that equips students with the knowledge, skills, and opportunities to take meaningful action toward <span className="font-semibold">restoring our ecosystems</span>.
+                    <span className="font-semibold">More than a program, IYFA empowers the next generation with the knowledge, skills, and opportunities to restore our planet—turning inspiration into action for a sustainable future.</span>
                   </p>
                 </div>
               </div>
@@ -535,7 +650,7 @@ export default function Home() {
             <div className="md:col-span-3">
               <div className="relative w-[200px] h-[200px] mx-auto">
                 <Image
-                  src="/images/programs/s9.webp"
+                  src="/images/home_page/h50.webp"
                   alt="Climate Hackathon"
                   fill
                   className="object-contain"
@@ -545,7 +660,7 @@ export default function Home() {
             <div className="md:col-span-9">
               <div className="flex flex-row gap-16">
                 <div className="flex flex-col items-center justify-center min-w-[250px] text-center">
-                  <h2 className="text-xl font-bold mb-2 text-center">CLIMATE HACKATHON</h2>
+                  <h2 className="text-xl font-bold mb-2 text-center">BuzzOnEarth <br />INDIA<br />HACKATHON</h2>
                   <div className="flex gap-4 items-center mb-2">
                     <div>
                       <p className="text-sm">BIH 2024</p>
@@ -561,10 +676,13 @@ export default function Home() {
                 </div>
                 <div className="space-y-4 flex-1">
                   <h3 className="text-lg font-semibold text-[#1875d1]">
-                    India's Largest Climate Hackathon
+                    India's Largest Climate Hackathon.
                   </h3>
                   <p className="text-sm text-gray-700">
-                    Join this creative but intense hackathon for university students to find <span className="font-semibold">solutions to some of the most pressing issues created by climate change</span> that Indian businesses and communities face. The solutions, possibly various combinations of tech products, policy evaluations, market models, business plans, new designs and product innovations, will help you hone your creativity and offer new directions for climate action.
+                    Find solutions to some of the most pressing climate and sustainability challenges that Indian businesses and communities face. Give wings to your creativity and ideas and develop innovative solutions that can be deployed. The solutions, possibly various combinations of tech products, policy evaluations, market models, business plans, new designs and product innovations, will help you hone your creativity and offer new directions for climate action & sustainability.
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    This is an Open Innovation Student category in which students can give ideas against the pre-defined Problem Statements across themes.
                   </p>
                 </div>
               </div>
@@ -615,7 +733,7 @@ export default function Home() {
           <div>
             <h3 className="text-2xl font-medium text-gray-700 text-center mb-6">Our Network of Associates & Partners</h3>
             <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-              Through India MUN, BuzzOnEarth, or Gaia Foundation across various programs and initiatives.
+              Through India MUN, BuzzOnEarth, or Gaia The Earth Foundation across various programs and initiatives.
             </p>
 
             {/* Logo Carousel */}
@@ -652,22 +770,22 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-12">
               <div className="flex items-end">
-                <h2 className="text-4xl font-bold text-[#4686d8] ">Join</h2>
+                <h2 className="text-4xl font-bold text-[#1774d1] ">Join</h2>
                 <p className="text-md text-white ml-2">a generation rising with purpose, power, and possibility.</p>
               </div>
               
               <div className="flex items-end">
-                <h2 className="text-4xl font-bold text-[#4686d8] ">Create</h2>
+                <h2 className="text-4xl font-bold text-[#1774d1] ">Create</h2>
                 <p className="text-md text-white ml-2">solutions for our planet's most pressing challenges.</p>
               </div>
               
               <div className="flex items-end">
-                <h2 className="text-4xl font-bold text-[#4686d8] ">Network</h2>
-                <p className="text-md text-white ml-2">connect with like-minded friends who act and lead.</p>
+                <h2 className="text-4xl font-bold text-[#1774d1] ">Network</h2>
+                <p className="text-md text-white ml-2">& connect with like-minded friends who act and lead.</p>
               </div>
               
               <div className="flex items-end">
-                <h2 className="text-4xl font-bold text-[#4686d8] ">Become</h2>
+                <h2 className="text-4xl font-bold text-[#1774d1] ">Become</h2>
                 <p className="text-md text-white ml-2">a force for change — a sustainability leader the world needs.</p>
               </div>
             </div>
@@ -700,7 +818,7 @@ export default function Home() {
       >
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-[#4686d8] mb-4">Collaborate</h2>
+            <h2 className="text-5xl font-bold text-[#1774d1] mb-4">Collaborate</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">"Partnerships for a sustainable future"</p>
           </div>
 
@@ -727,37 +845,37 @@ export default function Home() {
                 <div className="bg-gray-100 rounded-lg p-6 w-full">
                   <ul className="space-y-4">
                     <li>
-                      <Link href="/programs/forest-ambassador" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/programs/forest-ambassador" className="block text-gray-800 hover:text-[#1774d1]">
                         Young Forest Ambassador Program
                       </Link>
                     </li>
                     <li>
-                      <Link href="/programs/youth-leadership" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/programs/youth-leadership" className="block text-gray-800 hover:text-[#1774d1]">
                         Youth Leadership Program
                       </Link>
                     </li>
                     <li>
-                      <Link href="/programs/mun-conferences" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/programs/mun-conferences" className="block text-gray-800 hover:text-[#1774d1]">
                         MUN Conferences
                       </Link>
                     </li>
                     <li>
-                      <Link href="/programs/climate-hackathons" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/programs/climate-hackathons" className="block text-gray-800 hover:text-[#1774d1]">
                         Climate Hackathons
                       </Link>
                     </li>
                     <li>
-                      <Link href="/programs/climate-clubs" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/programs/climate-clubs" className="block text-gray-800 hover:text-[#1774d1]">
                         Climate Clubs
                       </Link>
                     </li>
                     <li>
-                      <Link href="/volunteer" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/volunteer" className="block text-gray-800 hover:text-[#1774d1]">
                         Volunteer
                       </Link>
                     </li>
                     <li>
-                      <Link href="/internships" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/internships" className="block text-gray-800 hover:text-[#1774d1]">
                         Internships
                       </Link>
                     </li>
@@ -788,17 +906,17 @@ export default function Home() {
                 <div className="bg-gray-100 rounded-lg p-6 w-full">
                   <ul className="space-y-4">
                     <li>
-                      <Link href="/schools/global-affiliation" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/schools/global-affiliation" className="block text-gray-800 hover:text-[#1774d1]">
                         Global Schools Affiliation (Get Certified)
                       </Link>
                     </li>
                     <li>
-                      <Link href="/schools/global-accreditation" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/schools/global-accreditation" className="block text-gray-800 hover:text-[#1774d1]">
                         Global Schools Accreditation
                       </Link>
                     </li>
                     <li>
-                      <Link href="/schools/city-representatives" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/schools/city-representatives" className="block text-gray-800 hover:text-[#1774d1]">
                         City Representatives
                       </Link>
                     </li>
@@ -829,17 +947,17 @@ export default function Home() {
                 <div className="bg-gray-100 rounded-lg p-6 w-full">
                   <ul className="space-y-4">
                     <li>
-                      <Link href="/partners/hackathon" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/partners/hackathon" className="block text-gray-800 hover:text-[#1774d1]">
                         Hackathon Partners
                       </Link>
                     </li>
                     <li>
-                      <Link href="/partners/mun-conference" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/partners/mun-conference" className="block text-gray-800 hover:text-[#1774d1]">
                         MUN Conference Partners
                       </Link>
                     </li>
                     <li>
-                      <Link href="/partners/programs" className="block text-gray-800 hover:text-[#4686d8]">
+                      <Link href="/partners/programs" className="block text-gray-800 hover:text-[#1774d1]">
                         Programs Partners
                       </Link>
                     </li>
@@ -870,7 +988,7 @@ export default function Home() {
                 </div>
                 
                 <h3 className="text-xl font-bold mb-2">
-                  <Link href="/news/climate-change-wake-up" className="hover:text-[#4686d8]">
+                  <Link href="/news/climate-change-wake-up" className="hover:text-[#1774d1]">
                     Climate change: What will wake us up?
                   </Link>
                 </h3>
@@ -883,7 +1001,7 @@ export default function Home() {
                 </p>
                 
                 <Link href="/news/climate-change-wake-up">
-                  <Button className="bg-[#4686d8] hover:bg-[#4686d8]/90 text-white">
+                  <Button className="bg-[#1774d1] hover:bg-[#1774d1]/90 text-white">
                     Read More
                   </Button>
                 </Link>
@@ -926,7 +1044,7 @@ export default function Home() {
                   </p>
                   
                   <Link href="/events/climate-hackathon-2024">
-                    <Button className="bg-[#4686d8] hover:bg-[#4686d8]/90 text-white">
+                    <Button className="bg-[#1774d1] hover:bg-[#1774d1]/90 text-white">
                       Read More
                     </Button>
                   </Link>
@@ -941,7 +1059,7 @@ export default function Home() {
        <section className="py-20">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-[#4686d8] mb-3">Blogs</h2>
+            <h2 className="text-5xl font-bold text-[#1774d1] mb-3">Blogs</h2>
             <p className="text-xl text-gray-600">by our Students</p>
           </div>
 
@@ -953,7 +1071,7 @@ export default function Home() {
                 Hello everyone! We all know about climate change and how our environment is being affected by our actions, but what can we do to stop this from happening and maybe even reverse it? In this post, I'll be sharing practical steps you can take on a personal level to help our planet, along with some actions I've taken myself I'm Aanyaa ...
               </p>
               <div className="text-center">
-                <Link href="/blogs/climate-chronicles" className="text-[#4686d8] hover:underline">
+                <Link href="/blogs/climate-chronicles" className="text-[#1774d1] hover:underline">
                   Read More
                 </Link>
               </div>
@@ -966,7 +1084,7 @@ export default function Home() {
                 So, first of all, we should know what climate action is: Climate action refers to efforts and initiatives taken to mitigate the effects of climate change and adapt to its impacts. Here's a comprehensive overview of climate action, including its importance, key strategies, global agreements, and ways individuals can contribute Now that we ...
               </p>
               <div className="text-center">
-                <Link href="/blogs/understanding-climate" className="text-[#4686d8] hover:underline">
+                <Link href="/blogs/understanding-climate" className="text-[#1774d1] hover:underline">
                   Read More
                 </Link>
               </div>
@@ -979,7 +1097,7 @@ export default function Home() {
                 In our modern world, one of the most important resources is that of nature, as elements such as fossil fuels, agriculture, and other components derived from nature make up a major part of the world. In 2023, despite all the deforestation and destruction of nature, agriculture still held a 4% share of global GDP, and fossil fuels held an 8% share. However...
               </p>
               <div className="text-center">
-                <Link href="/blogs/importance-of-climate" className="text-[#4686d8] hover:underline">
+                <Link href="/blogs/importance-of-climate" className="text-[#1774d1] hover:underline">
                   Read More
                 </Link>
               </div>
@@ -993,7 +1111,7 @@ export default function Home() {
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           {/* Main Title with Ocean Background */}
           <div className="mb-1">
-            <h2 className="text-7xl md:text-8xl font-bold text-center  tracking-wider" style={{ 
+            <h2 className="text-7xl md:text-8xl font-extrabold text-center  tracking-wider" style={{ 
               backgroundImage: "url('/images/home_page/h18.webp')", 
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
@@ -1036,10 +1154,10 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto flex justify-center flex-col items-center">
-          <h2 className="text-5xl font-bold text-center text-[#4686d8] mb-16">Testimonials</h2>
+          <h2 className="text-5xl font-bold text-center text-[#1774d1] mb-16">Testimonials</h2>
           
           {/* Testimonial Carousel */}
-          <div className="relative max-w-5xl mx-auto mb-20 border border-gray-200 rounded-lg p-8">
+          <div className="relative max-w-7xl mx-auto mb-20 border border-gray-200 rounded-lg p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Profile Image and Info */}
               <div className="flex flex-col items-center text-center">
@@ -1051,30 +1169,30 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-[#4686d8] mb-1">Mr Ovais Sarmad</h3>
+                <h3 className="text-2xl font-bold text-[#1774d1] mb-1">Mr Ovais Sarmad</h3>
                 <p className="text-gray-700 mb-1">Former Deputy Executive Secretary</p>
                 <p className="text-gray-700 mb-2">United Nations Framework Convention on Climate Change</p>
-                <p className="text-[#4686d8]">(UNFCCC)</p>
+                <p className="text-[#1774d1]">(UNFCCC)</p>
               </div>
               
               {/* Quote */}
               <div className="relative">
-                <div className="text-8xl text-[#4686d8] absolute -top-10 left-0">"</div>
+                <div className="text-8xl text-[#1774d1] absolute -top-10 left-0">"</div>
                 <div className="pl-8 pr-8">
                   <p className="text-gray-700 leading-relaxed mb-6">
                     I am delighted to witness the remarkable impact of India MUN's climate action initiatives. Their commitment to empowering India's youth for climate action is truly commendable. As a former Deputy Executive Secretary of UNFCCC, I am pleased to see India MUN providing a dynamic platform for students to engage in real-world problem-solving and policy advocacy. The level of knowledge, diplomacy, and leadership demonstrated by the participating students is a testament to India MUN's dedication to fostering the next generation of climate leaders. I wholeheartedly endorse India MUN's efforts and encourage educational institutions to seek affiliation with this transformative organization.
                   </p>
                 </div>
-                <div className="text-8xl text-[#4686d8] absolute -bottom-16 right-0">"</div>
+                <div className="text-8xl text-[#1774d1] absolute -bottom-16 right-0">"</div>
               </div>
             </div>
             
             {/* Navigation Arrows */}
             <button className="absolute top-1/2 -translate-y-1/2 -left-5 bg-white rounded-full p-2 shadow-lg">
-              <ChevronLeft className="w-6 h-6 text-[#4686d8]" />
+              <ChevronLeft className="w-6 h-6 text-[#1774d1]" />
             </button>
             <button className="absolute top-1/2 -translate-y-1/2 -right-5 bg-white rounded-full p-2 shadow-lg">
-              <ChevronRight className="w-6 h-6 text-[#4686d8]" />
+              <ChevronRight className="w-6 h-6 text-[#1774d1]" />
             </button>
           </div>
           
@@ -1104,7 +1222,7 @@ export default function Home() {
                   <h3 className="font-bold text-gray-800 mb-1">Mr Suresh Prabhu,</h3>
                   <p className="text-gray-700 text-sm">Parliamentarian, Minister and Chancellor</p>
                   <p className="text-gray-700 text-sm">Prime Minister's Sherpa for G20 Summit (2014 - 2015)</p>
-                  <p className="text-[#4686d8] text-sm">(Government of India)</p>
+                  <p className="text-[#1774d1] text-sm">(Government of India)</p>
                 </div>
               </div>
             </div>
@@ -1121,9 +1239,9 @@ export default function Home() {
                 ></iframe>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 relative rounded-full overflow-hidden bg-[#4686d8]">
+                <div className="w-16 h-16 relative rounded-full overflow-hidden bg-[#1774d1]">
                   <Image
-                    src="/images/member/G2.webp"
+                    src="/images/home_page/h17.webp"
                     alt="COP28 Dubai"
                     fill
                     className="object-cover"
@@ -1133,7 +1251,7 @@ export default function Home() {
                   <h3 className="font-bold text-gray-800 mb-1">India MUN at COP28 Dubai</h3>
                   <p className="text-gray-700 text-sm">Ovais Sarmad, Former Deputy Executive Secretary,</p>
                   <p className="text-gray-700 text-sm">United Nations Framework Convention on Climate Change</p>
-                  <p className="text-[#4686d8] text-sm">(UNFCCC)</p>
+                  <p className="text-[#1774d1] text-sm">(UNFCCC)</p>
                 </div>
               </div>
             </div>
@@ -1148,8 +1266,8 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-8 text-center text-[#1875d1]">FOUNDING PARTNERS</h2>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-sm text-gray-700 mb-12 leading-relaxed">
-              India MUN is a joint initiative of <b>BuzzOnEarth</b> and <b>Gaia The Earth Foundation</b>, the organizations that are
-              committed to sustainability and regeneration.
+              India MUN is a collaborative endeavor by  <b>BuzzOnEarth</b> and <b>Gaia The Earth Foundation</b>, the organizations that are
+              committed to sustainability, innovation and regeneration.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg">

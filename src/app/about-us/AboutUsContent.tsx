@@ -2,8 +2,24 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
 
 export default function AboutUsContent() {
+    const sectionRefs = {
+    partners: useRef(null),
+    about: useRef(null),
+    collaborate: useRef(null),
+    news: useRef(null),
+    testimonials: useRef(null)
+  };
   // Refs for journey items
   const journeyRef = useRef<HTMLDivElement>(null);
   const journeyItems = useRef<HTMLElement[]>([]);
@@ -107,7 +123,7 @@ export default function AboutUsContent() {
           backgroundColor: '#e5e7eb',
           scale: 1
         });
-        
+      
         // Add to timeline at the appropriate progress point
         journeyTimeline.to(marker, {
           backgroundColor: '#1875d1',
@@ -207,16 +223,29 @@ export default function AboutUsContent() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* First Section - About India MUN */}
-      <section className="relative py-20 md:py-20 bg-[#0a1929] text-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071426] to-[#112c4c] opacity-95"></div>
+      <motion.section
+        ref={sectionRefs.about}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={fadeInUp}
+        className="py-28 bg-gradient-to-b from-black to-[#002e41] text-white relative overflow-hidden"
+      >
+
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000000] to-[#002e41] opacity-95"></div>
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
-          <div className="flex flex-col items-center text-center max-w-7xl mx-auto">
+          <div className="flex flex-col items-center text-center max-w-9xl mx-auto">
             <div className="w-full">
-              <h1 className="text-2xl md:text-3xl font-bold mb-8">ABOUT INDIA MUN</h1>
+              <h1 className="text-[#1775d0] text-4xl md:text-5xl font-bold mb-8">ABOUT INDIA MUN</h1>
+              
               <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-6">
-                India MUN (launched on October 24, 2020 on international UN Day), a collaborative endeavor by Gaia The Earth Foundation and BuzzOnEarth, is a pioneering global
-                institution dedicated to empowering young minds for climate action, leadership, innovation, and entrepreneurship. As the official partner of the UN Decade on
-                Ecosystem Restoration — jointly led by UNEP and UNFCCC — India MUN stands at the forefront of educational transformation.
+                Empowering Youth. Fueling Innovation. Regenerating Earth.
+              </p>
+              <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-6">
+                India MUN, a collaborative endeavor by Gaia The Earth Foundation and BuzzOnEarth, is a pioneering global institution dedicated to empowering young minds for climate action, leadership, and innovation. Sharing deep foundations with organizations such as the United Nations Environment Programme, the United Nations Global Innovation Hub, the United Nations Framework Convention on Climate Change, NASA, ISRO, AICTE and several IITs, India MUN operates at the confluence of global policy, innovation, and education.
+              </p>
+              <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-8">
+                As an initiative shaped alongside Gaia The Earth Foundation — India’s Actor for the UN Decade on Ecosystem Restoration 2021–2030, jointly led by UNEP and FAO — India MUN stands at the forefront of educational transformation, deeply aligned with global sustainability goals.
               </p>
               <p className="text-sm md:text-lg text-blue-100 leading-relaxed mb-8">
                 At its core, India MUN is the vanguard of climate-conscious education and a catalyst for future-ready education — one that integrates environmental stewardship
@@ -235,10 +264,14 @@ export default function AboutUsContent() {
                   className="rounded-lg"
                 />
               </div>
+              <h2 className="text-xl md:text-2xl font-semibold text-[#1775d0] mb-12">
+                CLIMATE ACTION. LEADERSHIP. INNOVATION. DIPLOMACY. ENTREPRENEURSHIP. REGENERATION. SDGs.
+              </h2>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
+      
 
       {/* Second Section - Key Stats */}
       <section className="py-28 bg-white">
@@ -256,8 +289,8 @@ export default function AboutUsContent() {
               {/* Launch Day */}
               <div className="flex flex-col md:flex-row items-center group journey-item">
                 <div className="md:w-1/2 md:text-right md:pr-12 order-2 md:order-1">
-                  <h3 className="text-xl font-normal text-[#1875d1] mb-2">Launch Day</h3>
-                  <p className="text-gray-500 font-light">October 24 India MUN</p>
+                  <h3 className="text-xl font-normal text-[#1875d1] mb-2">October 24</h3>
+                  <p className="text-gray-500 font-light">India MUN Launch - United Nations Day</p>
                 </div>
                 <div className="flex items-center justify-center md:w-16 z-10 mb-4 md:mb-0 order-1 md:order-2">
                   <div className="bg-white p-3 rounded-full border border-gray-100 shadow-sm group-hover:shadow-md transition-all duration-500 relative">
@@ -287,7 +320,7 @@ export default function AboutUsContent() {
               <div className="flex flex-col md:flex-row items-center group journey-item">
                 <div className="md:w-1/2 md:text-right md:pr-12 order-2 md:order-1">
                   <h3 className="text-xl font-normal text-[#1875d1] mb-2">Focusing</h3>
-                  <p className="text-gray-500 font-light">On Climate Change</p>
+                  <p className="text-gray-500 font-light">On Climate Change & Innovation</p>
                 </div>
                 <div className="flex items-center justify-center md:w-16 z-10 mb-4 md:mb-0 order-1 md:order-2">
                   <div className="bg-white p-3 rounded-full border border-gray-100 shadow-sm group-hover:shadow-md transition-all duration-500 relative">
@@ -309,7 +342,7 @@ export default function AboutUsContent() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 order-3">
                   <h3 className="text-xl font-normal text-[#1875d1] mb-2">Uniting</h3>
-                  <p className="text-gray-500 font-light">India's Youth For Climate Action</p>
+                  <p className="text-gray-500 font-light">Young Leaders, Innovators & Changemakers</p>
                 </div>
               </div>
             </div>
@@ -325,18 +358,17 @@ export default function AboutUsContent() {
               <Image
                 src="/images/about_us/A5.webp"
                 alt="Our Vision Illustration"
-                width={600}
-                height={500}
+                width={700}
+                height={600}
                 className="rounded-lg"
               />
             </div>
             <div className="md:w-1/2 md:pl-12">
-              <h2 className="text-4xl font-bold mb-8 text-[#1875d1]">OUR VISION</h2>
+              <h2 className="text-5xl font-bold mb-8 text-[#1875d1]">VISION</h2>
               <p className="text-xl text-gray-700 leading-relaxed">
                 India MUN envisions a world where every student
                 becomes a powerful force for positive change.
-                Aligned with the UN Decade Climate Action and
-                Ecosystem Restoration, we redefine education to
+                Aligned with the Decade of Action - United Nations Sustainable Development Goals, we redefine education to
                 empower youth as architects of a sustainable future.
               </p>
             </div>
@@ -345,20 +377,20 @@ export default function AboutUsContent() {
       </section>
 
       {/* Fourth Section - Mission */}
-      <section className="bg-gradient-to-r pt-4 from-[#0a1929] to-[#112c4c]">
-        <div className="container px-2 sm:px-4 lg:px-3 mx-auto">
+      <section className="py-20 bg-gradient-to-r pt-4 from-[#000000] to-[#002e41] opacity-95">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="flex flex-col md:flex-row-reverse items-center">
-            <div className="">
+            <div className="md:w-1/2 mb-8 md:mb-0">
               <Image
                 src="/images/about_us/A6.webp"
                 alt="Our Mission Illustration"
-                width={600}
-                height={500}
+                width={900}
+                height={600}
                 className="rounded-lg"
               />
             </div>
             <div className="md:w-1/2 md:pr-12">
-              <h2 className="text-4xl font-bold mb-8 text-[#1875d1]">OUR MISSION</h2>
+              <h2 className="text-5xl font-bold mb-8 text-[#1875d1]">MISSION</h2>
               <p className="text-xl text-white leading-relaxed">
                 At the core of India MUN is a mission to transform
                 young minds into dynamic sustainability leaders.
@@ -374,38 +406,43 @@ export default function AboutUsContent() {
       {/* Fifth Section - Values */}
       <section className="py-15 bg-gray-50">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center text-[#1875d1]">OUR VALUES</h2>
+          <h2 className="text-5xl font-bold mb-16 text-center text-[#1875d1]">VALUES</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Youth Empowerment",
-                description: "Placing the empowerment of young individuals at the forefront, encouraging leadership, innovation, and proactive engagement in climate action.",
+                description: "We place young people at the heart of everything we do — nurturing their voice, vision, and capacity to lead. Through real-world programs, we empower students to become innovators, changemakers, and global citizens.",
                 icon: "👥"
               },
               {
-                title: "Sustainability Commitment",
-                description: "Integrating sustainable practices into all aspects of our work, fostering environmental responsibility, and promoting a culture of eco-consciousness.",
+                title: "Sustainability & Climate Responsibility",
+                description: "We are committed to embedding sustainability into education and action — cultivating environmentally responsible mindsets and championing the UN Sustainable Development Goals at every level.",
                 icon: "🌱"
               },
               {
-                title: "Global Collaboration",
-                description: "Prioritizing partnerships and collaborations on a global scale, creating a diverse and inclusive network dedicated to addressing climate challenges collectively.",
+                title: "Leadership for the 21st Century",
+                description: "We believe education must develop courageous, ethical, and visionary leaders. Our programs are designed to foster leadership grounded in purpose, impact, and global awareness.",
+                icon: "🚀"
+              },
+              {
+                title: "Innovation & Future Readiness",
+                description: "In a rapidly changing world, we promote innovation as a mindset — encouraging creative thinking, problem-solving, and resilience building to equip learners for the challenges of tomorrow.",
+                icon: "💡"
+              },
+              {
+                title: "Global Collaboration & Inclusion",
+                description: "We value global partnerships and diverse perspectives. By building a connected, inclusive network of institutions, educators, and youth leaders, we work collectively toward a just and resilient future.",
                 icon: "🌍"
               },
               {
                 title: "Integrity and Transparency",
-                description: "Upholding the highest ethical standards, ensuring transparency in organizational activities, and fostering trust within the community.",
+                description: "We uphold the highest standards of integrity, ensuring openness, accountability, and trust in all our initiatives and relationships.",
                 icon: "⚖️"
               },
               {
-                title: "Educational Excellence",
-                description: "Striving for excellence in climate education, providing impactful learning experiences that equip individuals with the knowledge and skills needed for effective climate action.",
+                title: "Excellence in Education",
+                description: "We are committed to delivering transformational learning experiences that combine academic rigor with real-world relevance — empowering educators and students alike to lead with insight and impact.",
                 icon: "📚"
-              },
-              {
-                title: "Innovation and Adaptability",
-                description: "Encouraging innovative solutions and an adaptive mindset to address evolving challenges in the realm of climate change.",
-                icon: "💡"
               }
             ].map((value, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -422,12 +459,12 @@ export default function AboutUsContent() {
       <section className="w-full min-h-[600px] py-16 relative flex flex-col justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/programs/s33.webp"
+            src="/images/programs/S33.webp"
             alt="Impact Background"
             fill
             style={{ objectFit: 'cover' }}
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-black opacity-5"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -436,7 +473,7 @@ export default function AboutUsContent() {
             <div className="space-y-6 col-span-1">
               <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
                 <Image
-                  src="/images/programs/s34.webp"
+                  src="/images/programs/S34.webp"
                   alt="Impact Image 1"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -445,7 +482,7 @@ export default function AboutUsContent() {
               </div>
               <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
                 <Image
-                  src="/images/programs/s35.webp"
+                  src="/images/programs/S35.webp"
                   alt="Impact Image 2"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -459,20 +496,13 @@ export default function AboutUsContent() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6">WHAT CAN YOU(th) DO?</h2>
               <div className="space-y-6 text-lg">
                 <p>
-                  With over 600 million young people, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – will impact the youth and their future generations the most — the stakes couldn't be higher.
+                  With over <b>600 million young people</b>, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – <b>will impact the youth and their future generations the most</b> — the stakes couldn't be higher.
                 </p>
                 <p>
                   Global bodies have not been able to move the needle as yet.
                 </p>
                 <p>
                   Every small step taken by millions of young Indians can create a ripple effect with global impact.
-                </p>
-                <p>
-                  You're standing at the most powerful moment in history.
-                </p>
-                <p>
-                  🌱 This is your moment. This is your movement.<br />
-                  And it begins with you.
                 </p>
               </div>
             </div>
@@ -484,15 +514,15 @@ export default function AboutUsContent() {
       <section className="relative overflow-hidden">
         {/* Gradient strip background */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-400 to-white h-48 top-1/3 z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-400 to-white h-48 top-1/2 z-0"></div>
           
-          <div className="container px-4 sm:px-6 lg:px-8 mx-auto py-16 relative z-10">
+          <div className="container px-4 sm:px-6 lg:px-8 mx-auto py-20 relative z-10">
             {/* Impactful Typography */}
             <div className="flex flex-wrap justify-center items-center mb-5 text-center">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl  mx-3 transform transition-transform hover:scale-105">THINK.</h2>
-              <h2 className="text-2xl sm:text-4xl md:text-5xl mx-3 transform transition-transform hover:scale-105">ACT.</h2>
               <h2 className="text-2xl sm:text-4xl md:text-5xl  mx-3 transform transition-transform hover:scale-105">COLLABORATE.</h2>
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-black mx-3 transform transition-transform hover:scale-105">LEAD.</h2>
+              <h2 className="text-2xl sm:text-4xl md:text-5xl mx-3 transform transition-transform hover:scale-105">BRAINSTORM.</h2>
+              <h2 className="text-2xl sm:text-4xl md:text-5xl  mx-3 transform transition-transform hover:scale-105">ACT.</h2>
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-black mx-3 transform transition-transform hover:scale-105"><b>LEAD.</b></h2>
               <h2 className="text-2xl sm:text-4xl md:text-5xl font-black mx-3 transform transition-transform hover:scale-105">CHANGE.</h2>
             </div>
 
@@ -502,7 +532,7 @@ export default function AboutUsContent() {
                 src="/images/about_us/A7.svg"
                 alt="Action Framework Illustration"
                 width={1000}
-                height={600}
+                height={500}
                 className="w-full h-[500px]"
               />
             </div>
@@ -516,8 +546,8 @@ export default function AboutUsContent() {
           <h2 className="text-4xl font-bold mb-8 text-center text-[#1875d1]">FOUNDING PARTNERS</h2>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-sm text-gray-700 mb-12 leading-relaxed">
-              India MUN is a joint initiative of <b>BuzzOnEarth</b> and <b>Gaia The Earth Foundation</b>, the organizations that are
-              committed to sustainability and regeneration.
+              India MUN is a collaborative endeavor by  <b>BuzzOnEarth</b> and <b>Gaia The Earth Foundation</b>, the organizations that are
+              committed to sustainability, innovation and regeneration.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg">

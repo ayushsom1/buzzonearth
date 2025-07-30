@@ -52,7 +52,7 @@ export default function PartnersAndAffiliates() {
       {/* Hero Section */}
 
       {/* Partners and Associates Section */}
-      <section className="py-16 bg-white">
+      <section className="py-24 bg-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <motion.div 
             className="text-center mb-10"
@@ -62,9 +62,9 @@ export default function PartnersAndAffiliates() {
             variants={fadeIn}
             custom={0}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Partners and Associates</h2>
-            <div className="h-1 w-20 bg-primary mx-auto"></div>
-            <p className="mt-4 text-lg text-gray-700 max-w-5xl mx-auto">
+            <h2 className="text-5xl md:text-5xl text-[#1875D1] font-bold mb-2">Partners and Associates</h2>
+          
+            <p className="mt-4 text-lg text-gray-700 max-w-7xl mx-auto">
               India MUN partners with schools, colleges, institutions, and corporations who believe in the power of young people in accelerating the pace of climate action and
               innovation, and are committed to empower them.
             </p>
@@ -78,19 +78,24 @@ export default function PartnersAndAffiliates() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <motion.h3 
-              className="text-2xl font-bold mb-6 text-center"
+              className="text-2xl font-bold mb-6  text-center"
               variants={fadeIn}
               custom={1}
             >
               Founding Partners
+              <motion.div 
+    className="h-1 w-42 mx-auto mb-6 bg-gradient-to-r from-blue-200 via-blue-400 to-purple-300 rounded-full"
+    variants={fadeIn}
+    custom={1.5}
+  />
             </motion.h3>
             <motion.p 
               className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-8"
               variants={fadeIn}
               custom={2}
             >
-              India MUN is a joint initiative of BuzzOnEarth and Gaia The Earth Foundation, the organizations that are
-              committed to sustainability and regeneration.
+              India MUN is a collaborative endeavor by  <b>BuzzOnEarth</b> and <b>Gaia The Earth Foundation</b>, the organizations that are
+              committed to sustainability, innovation and regeneration.
             </motion.p>
             <motion.div 
               className="flex justify-center gap-8 flex-wrap"
@@ -138,7 +143,13 @@ export default function PartnersAndAffiliates() {
               custom={0}
             >
               Vision Partners
+              <motion.div 
+    className="h-1 w-42 mx-auto mb-6 bg-gradient-to-r from-blue-200 via-blue-400 to-purple-300 rounded-full"
+    variants={fadeIn}
+    custom={1.5}
+  />
             </motion.h3>
+            
             <motion.div 
               className="flex justify-center gap-8 flex-wrap"
               variants={staggerContainer}
@@ -175,6 +186,11 @@ export default function PartnersAndAffiliates() {
               custom={0}
             >
               Program Partners
+              <motion.div 
+    className="h-1 w-42 mx-auto mb-6 bg-gradient-to-r from-blue-200 via-blue-400 to-purple-300 rounded-full"
+    variants={fadeIn}
+    custom={1.5}
+  />
             </motion.h3>
             <motion.div 
               className="flex justify-center gap-8 flex-wrap"
@@ -213,7 +229,7 @@ export default function PartnersAndAffiliates() {
 
       {/* Partner with Us Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
           <motion.div 
             className="text-center mb-16"
             initial="hidden"
@@ -222,12 +238,12 @@ export default function PartnersAndAffiliates() {
             variants={fadeIn}
             custom={0}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner with Us</h2>
+            <h2 className="text-xl md:text-5xl font-bold mb-4 text-[#1875D1] ">Partner with Us</h2>
             <div className="h-1 w-20 bg-primary mx-auto"></div>
           </motion.div>
           
           <motion.div 
-            className="max-w-3xl mx-auto"
+            className="max-w-7xl mx-auto mb-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
