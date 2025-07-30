@@ -10,47 +10,47 @@ export default function StudentPrograms() {
     const programs = [
         {
             name: "INDIA'S YOUNG FOREST AMBASSADOR",
-            heading: "Connecting them with UN programs on ecosystem restoration.",
-            description: "A transformative learning and leadership program designed to empower young individuals by helping them develop a care for nature, creative persuasion for the right causes, leadership skills, a resilient mindset, a collaborative approach, and environmental stewardship.",
-            gradient: "linear-gradient(90deg, rgba(22, 38, 41, 0.95), rgba(57, 97, 39, 0.9))",
-            image: "/images/programs/s1.webp",
-            icon: "/images/programs/s6.webp",
+            heading: "Connecting passionate youth with UN programs on ecosystem restoration.",
+            description: "Get ready to dive deep into nature, ignite your passion, and become a voice for our precious forests. Through our immersive program, you'll gain the skills and knowledge needed to create positive change.",
+            gradient: "linear-gradient(0deg, rgba(22, 38, 41, 0.95), rgba(57, 97, 39, 0.9))",
+            image: "/images/programs/S1.webp",
+            icon: "/images/programs/S6.webp",
             link: "/student-programs/young-forest-ambassador-program"
         },
         {
-            name: "INDIA MUN CLIMATE CONFERENCE",
-            heading: "India's premier student conference on climate action.",
-            description: "A prestigious platform for students to engage in intellectual discourse on pressing global climate issues, develop diplomatic skills, and collaborate with peers to draft innovative resolutions addressing environmental challenges.",
-            gradient: "linear-gradient(90deg, rgba(41, 22, 22, 0.95), rgba(97, 39, 39, 0.9))",
-            image: "/images/programs/s2.webp",
-            icon: "/images/programs/s7.webp",
+            name: "YOUTH LEADERSHIP PROGRAM",
+            heading: "India’s most powerful leadership program for the YOUTH.",
+            description: "An immersive, experiential leadership development program curated by industry leaders to help you become the best version of yourself, build essential life skills, and grow into a confident, purpose-driven leader ready to shape the future.",
+            gradient: "linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(17, 206, 206, 0.65))",
+            image: "/images/programs/S2.webp",
+            icon: "/images/programs/S7.webp",
             link: "/student-programs/mun-conferences"
         },
         {
-            name: "YOUTH LEADERSHIP PROGRAM",
-            heading: "India's most powerful leadership program for youth.",
-            description: "An immersive, experiential leadership development program curated by industry leaders to help you become the best version of yourself, build essential life skills, and grow into a confident, purpose-driven leader ready to shape the future.",
+            name: "INDIA MUN National Climate Conference",
+            heading: "India’s Biggest Model United Nations Conference on Climate.",
+            description: "A challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. India’s first and largest MUN conference focused entirely on Climate Action and Biodiversity as the core themes.",
             gradient: "linear-gradient(90deg, rgba(22, 28, 41, 0.95), rgba(39, 57, 97, 0.9))",
-            image: "/images/programs/s3.webp",
-            icon: "/images/programs/s8.webp",
+            image: "/images/programs/S3.webp",
+            icon: "/images/programs/S8.webp",
             link: "/student-programs/youth-leadership-program"
         },
         {
-            name: "CLIMATE HACKATHONS",
-            heading: "Innovative solutions for a sustainable planet.",
-            description: "An exciting competition that challenges students to develop creative technological solutions for environmental problems, fostering innovation, teamwork, and practical problem-solving skills within tight timeframes.",
-            gradient: "linear-gradient(90deg, rgba(22, 41, 39, 0.95), rgba(39, 97, 91, 0.9))",
-            image: "/images/programs/s4.webp",
-            icon: "/images/programs/s9.webp",
+            name: "BuzzOnEarth INDIA HACKATHON",
+            heading: "India’s Largest Climate Hackathon",
+            description: "Find solutions to some of the most pressing climate and sustainability issues that Indian businesses and communities face. Give wings to your creativity and ideas and develop innovative solutions that can be deployed.",
+            gradient: "linear-gradient(0deg, rgba(22, 41, 39, 0.95), rgba(39, 97, 91, 0.9))",
+            image: "/images/programs/S4.webp",
+            icon: "/images/programs/S9.webp",
             link: "/student-programs/climate-hackathons"
         },
         {
-            name: "VOLUNTEER OPPORTUNITIES",
-            heading: "Make an impact through meaningful service.",
-            description: "A range of engaging volunteer positions that allow students to contribute their time and talents to environmental causes, gain valuable experience, develop new skills, and make a positive difference in their communities.",
-            gradient: "linear-gradient(90deg, rgba(41, 22, 35, 0.95), rgba(97, 39, 82, 0.9))",
-            image: "/images/programs/s5.webp",
-            icon: "/images/programs/s10.webp",
+            name: "STEP UP YOUTHS' GOT TALENT ",
+            heading: "A National Creative Platform for Climate Action.",
+            description: "A national initiative to bridge the gap between awareness and action by harnessing the boundless creativity of students. YGT empowers young minds to express their thoughts, emotions, and solutions on climate change through engaging competitions.",
+            gradient: "linear-gradient(90deg, hsla(44, 73%, 34%, 0.66), rgba(167, 127, 40, 0.54))",
+            image: "/images/programs/S5.webp",
+            icon: "/images/programs/S10.webp",
             link: "/student-programs/volunteer"
         }
     ];
@@ -197,7 +197,7 @@ export default function StudentPrograms() {
             </section>
 
             {/* Section 2: The Next Generation of Leaders */}
-            <section className="w-full py-24 bg-gradient-to-br from-gray-900 to-blue-900 text-white relative overflow-hidden">
+            <section className="w-full py-24 bg-gradient-to-r from-[#000000] to-[#002e41] opacity-95 text-white relative overflow-hidden">
                 {/* Animated particles background */}
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
@@ -211,10 +211,10 @@ export default function StudentPrograms() {
                         viewport={{ once: true }}
                         className="mb-12"
                     >
-                        <h2 className="text-5xl font-bold mb-8 leading-tight">The Next Generation of <span className="text-blue-400">Leaders</span></h2>
+                        <h2 className="text-5xl font-bold mb-8 leading-tight">The Next Generation of <span className="text-[#38b6ff]">Leaders</span></h2>
                         <div className="h-1 w-24 bg-blue-500 mx-auto rounded-full mb-8"></div>
-                        <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                            Nurturing tomorrow's changemakers through immersive experiences, mentorship, and real-world challenges
+                        <p className="text-xl text-blue-100 max-w-5xl mx-auto">
+                            Nurturing young minds through global programs, immersive experiences, mentorship, and real-world challenges.
                         </p>
                     </motion.div>
 
@@ -228,7 +228,7 @@ export default function StudentPrograms() {
                         >
                             <div className="mt-10 w-400px h-400px absolute inset-0 bg-gradient-to-r from-white-200 via-blue-200 to-white-200 rounded-full blur-2xl opacity-80 transform scale-125"></div>
                             <Image
-                                src="/images/programs/s11.webp"
+                                src="/images/programs/s50.webp"
                                 alt="INDIA MUN 2025"
                                 width={350}
                                 height={175}
@@ -236,6 +236,9 @@ export default function StudentPrograms() {
                             />
                         </motion.div>
                     </div>
+                    <h2 className="text-xl md:text-2xl font-semibold text-[#38b6ff] mb-12">
+                CLIMATE ACTION. LEADERSHIP. INNOVATION. DIPLOMACY. ENTREPRENEURSHIP. REGENERATION. SDGs.
+              </h2>
 
                     {/* <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -267,10 +270,10 @@ export default function StudentPrograms() {
             {/* Section 3: Detailed Program - India MUN */}
             <section className="w-full py-16 px-4 md:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-8">India MUN National Climate Conference</h2>
-                    <p className="text-xl text-center mb-6 font-semibold">The only MUN which is India's MUN and represents India internationally.</p>
-                    <p className="text-lg text-center max-w-4xl mx-auto mb-12">
-                        India's first Model United Nations conference on Climate is a challenging and competitive platform for students to debate and analyse some of the world's most pressing climate problems. As delegates representing different countries and agencies, students will gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.
+                    <h2 className="text-4xl font-bold text-center mb-8">India MUN National Climate Conference</h2>
+                    <p className="text-xl text-[#1775d0] text-center mb-6">The only MUN which is India's MUN and represents India internationally.</p>
+                    <p className="text-lg text-center max-w-7xl mx-auto mb-12">
+                        India’s first and largest MUN conference focused entirely on Climate Action and Biodiversity as the core themes. A challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. As delegates representing different countries and agencies, students gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.
                     </p>
 
                     {/* Image gallery */}
@@ -278,7 +281,7 @@ export default function StudentPrograms() {
                         <div className="flex flex-col gap-4">
                             <div className="h-100 relative rounded-lg overflow-hidden">
                                 <Image
-                                    src="/images/programs/s12.webp"
+                                    src="/images/programs/S12.webp"
                                     alt="MUN Conference"
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -287,7 +290,7 @@ export default function StudentPrograms() {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="h-48 relative rounded-lg overflow-hidden">
                                     <Image
-                                        src="/images/programs/s17.webp"
+                                        src="/images/programs/S17.webp"
                                         alt="MUN Conference"
                                         fill
                                         style={{ objectFit: 'cover' }}
@@ -295,7 +298,7 @@ export default function StudentPrograms() {
                                 </div>
                                 <div className="h-48 relative rounded-lg overflow-hidden">
                                     <Image
-                                        src="/images/programs/s18.webp"
+                                        src="/images/programs/S18.webp"
                                         alt="MUN Conference"
                                         fill
                                         style={{ objectFit: 'cover' }}
@@ -306,7 +309,7 @@ export default function StudentPrograms() {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="h-48 relative rounded-lg overflow-hidden">
                                 <Image
-                                    src="/images/programs/s13.webp"
+                                    src="/images/programs/S13.webp"
                                     alt="MUN Conference"
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -314,7 +317,7 @@ export default function StudentPrograms() {
                             </div>
                             <div className="h-48 relative rounded-lg overflow-hidden">
                                 <Image
-                                    src="/images/programs/s14.webp"
+                                    src="/images/programs/S14.webp"
                                     alt="MUN Conference"
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -322,7 +325,7 @@ export default function StudentPrograms() {
                             </div>
                             <div className="h-48 relative rounded-lg overflow-hidden">
                                 <Image
-                                    src="/images/programs/s15.webp"
+                                    src="/images/programs/S15.webp"
                                     alt="MUN Conference"
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -330,7 +333,7 @@ export default function StudentPrograms() {
                             </div>
                             <div className="h-48 relative rounded-lg overflow-hidden">
                                 <Image
-                                    src="/images/programs/s16.webp"
+                                    src="/images/programs/S16.webp"
                                     alt="MUN Conference"
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -338,7 +341,7 @@ export default function StudentPrograms() {
                             </div>
                             <div className="h-48 relative rounded-lg overflow-hidden">
                                 <Image
-                                    src="/images/programs/s19.webp"
+                                    src="/images/programs/S19.webp"
                                     alt="MUN Conference"
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -346,7 +349,7 @@ export default function StudentPrograms() {
                             </div>
                             <div className="h-48 relative rounded-lg overflow-hidden">
                                 <Image
-                                    src="/images/programs/s20.webp"
+                                    src="/images/programs/S20.webp"
                                     alt="MUN Conference"
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -355,56 +358,49 @@ export default function StudentPrograms() {
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-4 mb-16">
-                        <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                            India MUN National Climate Conference 2024
-                        </Button>
-                        <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                            India MUN Climate Conferences 2025
-                        </Button>
-                    </div>
+            
 
                     {/* Welcome letter section */}
-                    <div className="min-h-[620px] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4 md:p-8 border-2 rounded-xl mb-8 md:mb-16">
-                        <div className="col-span-1 md:col-span-2">
-                            <h3 className="text-xl md:text-2xl font-bold mb-4">Welcome letter by the President, India MUN</h3>
-                            <p className="text-gray-700 text-sm md:text-base">
-                                <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
-                                <br /><br />
-                                It is with immense joy and great anticipation that I welcome you to the National India Model United Nations Conference 2025. As the Founder and Executive President of India MUN, I am deeply inspired by the bright young minds gathering from all corners of our diverse nation. Your enthusiasm and dedication to addressing and taking action on the critical issues surrounding climate change and sustainability fill me with hope and confidence for our future.
-                                <br /><br />
-                                India is a young country, with more than 50% of our population under the age of 25. This youthful demographic is our greatest asset. I firmly believe in the power of youth to drive change, innovate, and lead with passion and purpose. The energy, creativity, and resilience that you bring to the table are exactly what we need to tackle the pressing challenges of our time.
-                                <br /><br />
-                                I envision the youth of our country as torchbearers in solving global challenges. Instead of adopting a victim mindset, I urge you to embrace an action mindset. Rise above the challenges not only for your own good but for the betterment of society, nature, and our planet at large. Your participation in this conference is a testament to your dedication to the cause and your willingness to step up as leaders of tomorrow.
-                                <br /><br />
-                                Let us remember that every discussion, every debate, and every decision made here has the potential to impact our planet positively. Let us be bold in our aspirations, decisive in our actions, and unwavering in our commitment to a sustainable future.
-                                <br /><br />
-                                Welcome to the <b>National India MUN Conference 2025.</b>
-                                <br /><br />
-                                Yours sincerely,
-                                <br />
-                                <br />
-                                <b>Gayatri Chauhan, Founder and Executive President, India Model United Nations</b>
-                            </p>
-                        </div>
-                        <div className="flex items-center justify-center col-span-1">
-                            <div className="relative h-[300px] md:h-[500px] w-full">
-                                <Image
+                    <div className="min-h-[620px] max-w-7xl mx-auto mt-15 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4 md:p-8 border-2 rounded-xl mb-8 md:mb-16">
+                              <div className="col-span-1 md:col-span-2">
+                                <h3 className="text-xl md:text-2xl font-bold mb-4">Letter by the Executive President, India MUN</h3>
+                                <p className="text-gray-700 text-sm md:text-base">
+                                  <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
+                                  <br /><br />
+                                  It is with immense joy and great anticipation that I welcome you to the India Model United Nations Platform. As the Founder and Executive President of India MUN, I am deeply inspired by the bright young minds gathering from all corners of our diverse nation for this annual national conference each year. These students’ enthusiasm and dedication to addressing and taking action on the critical issues surrounding climate change and sustainability fill me with hope and confidence for our future.
+                                  <br /><br />
+                                  India is a young country, with more than 50% of our population under the age of 25. This youthful demographic is our greatest asset. I firmly believe in the power of youth to drive change, innovate, and lead with passion and purpose. The energy, creativity, and resilience that you bring to the table are exactly what we need to tackle the pressing challenges of our time.
+                                  <br /><br />
+                                  I envision the youth of our country as torchbearers in solving global challenges. Instead of adopting a victim mindset, I urge you to embrace an action mindset. Rise above the challenges not only for your own good but for the betterment of society, nature, and our planet at large. Your participation in this conference is a testament to your dedication to the cause and your willingness to step up as leaders of tomorrow.
+                                  <br /><br />
+                                  Let us remember that every discussion, every debate, and every decision made here has the potential to impact our planet positively. Let us be bold in our aspirations, decisive in our actions, and unwavering in our commitment to a sustainable future.
+                                  <br /><br />
+                                  Welcome to the <b>National India MUN Conference 2025.</b>
+                                  <br /><br />
+                                  Yours sincerely,
+                                  <br />
+                                  <br />
+                                  <b><i>Gayatri Chauhan, Founder and Executive President, India Model United Nations</i></b>
+                                </p>
+                              </div>
+                              <div className="flex items-center justify-center col-span-1">
+                                <div className="relative h-[300px] md:h-[500px] w-full">
+                                  <Image
                                     src="/images/programs/S21.webp"
                                     alt="India MUN President"
                                     fill
                                     style={{ objectFit: 'contain' }}
                                     className="rounded-lg"
-                                />
+                                  />
+                                </div>
+                              </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div className="flex flex-col md:flex-row justify-center gap-4 mb-16">
-                        <Button size="lg" className="bg-blue-600 hover:bg-blue-700 w-full md:w-auto">
+                    <div className="flex flex-wrap justify-center gap-4 mb-16">
+                        <Button size="lg" className="bg-[#1875d1] hover:bg-blue-700">
                             India MUN National Climate Conference 2024
                         </Button>
-                        <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full md:w-auto">
+                        <Button size="lg" variant="outline" className="border-blue-600 text-[#1875d1] hover:bg-blue-50">
                             India MUN Climate Conferences 2025
                         </Button>
                     </div>
@@ -412,7 +408,7 @@ export default function StudentPrograms() {
             </section>
 
             {/* Young Forest Ambassador Challenge */}
-            <section className="w-full min-h-[400px] md:h-[600px] py-8 md:py-16 relative flex flex-col justify-center">
+            <section className="w-full min-h-[400px] md:h-[700px] py-8 md:py-16 relative flex flex-col justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/programs/S22.webp"
@@ -420,39 +416,58 @@ export default function StudentPrograms() {
                         fill
                         style={{ objectFit: 'cover' }}
                     />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                    <div className="absolute inset-0 bg-black opacity-10"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 relative z-10 text-white text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">India's Young Forest Ambassador Challenge</h2>
-                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-lime-500">Connecting Young Minds with UN programs on ecosystem restoration.</h3>
-                    <p className="text-base md:text-xl max-w-4xl mx-auto mb-6 md:mb-8">
-                        Get ready to dive deep into nature, ignite your passion, and become a voice for our precious forests. Through our immersive program, you'll gain the skills and knowledge needed to create positive change.
+                    <h2 className="py-20 text-4xl md:text-5xl font-bold mb-4">India's Young Forest Ambassador Challenge</h2>
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-[#b8d638]">Connecting Young Minds with UN programs on ecosystem restoration.</h3>
+                    <p className="text-base md:text-xl max-w-7xl mx-auto mb-6 md:mb-8">
+                        Get ready to dive deep into nature, ignite your passion, and become a voice for our precious forests. <br />Through our immersive program, you'll gain the skills and knowledge needed to create positive change.
                     </p>
-                    <p className="text-lg md:text-xl font-bold italic">Be the Voice. Be the Action. Be the Change.</p>
+                    <p className="py-20 text-lg md:text-xl font-bold ">Be the Voice. Be the Action. Be the Change.</p>
                 </div>
             </section>
 
             <section className="w-full py-8 md:py-12 relative">
                 <div className="grid grid-cols-1 md:grid-cols-4 mt-4 md:mt-8 max-w-7xl mx-auto p-4 border-2 border-blue-100 rounded-2xl">
                     <div className="col-span-1 md:col-span-3 bg-white rounded-2xl p-4 md:p-8">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-blue-900">Building a network of Young Global <br className="hidden md:block"></br>Ambassadors for Forests & Biodiversity.🌍🏆🌿</h3>
-                        <p className="text-lg md:text-xl font-semibold text-gray-700">A Learning Journey. A Challenge. A Movement.</p>
+                        <h3 className="text-3xl text-[#85bc0d] font-bold mb-4">A Learning Journey. A Challenge. A Movement.</h3>
+                        <p className="text-lg text-gray-700">
+                            This is a transformative learning and leadership program designed to empower young individuals, inspire them to take action, and help them understand the importance of nature and forests for our planet and all living species. It nurtures creative persuasion for vital causes, resilient leadership skills, a collaborative mindset, and environmental stewardship.
+                            <br /><br />
+                            More than a program, IYFA empowers the next generation with the knowledge, skills, and opportunities to restore our planet—turning inspiration into action for a sustainable future.
+                        </p>
                     </div>
-                    <div className="col-span-1 w-full md:w-[300px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 md:p-6 shadow-2xl flex flex-col items-center justify-center space-y-4 md:space-y-6 hover:shadow-2xl transition-all duration-300 border border-blue-200 mt-4 md:mt-0">
-                        <p className="text-xl md:text-2xl font-bold text-blue-900 mb-2 md:mb-4">Registrations Open!</p>
+                    <div className="col-span-1 w-full md:w-[300px] bg-gradient-to-br from-white-50 to-white-100 rounded-2xl p-4 md:p-6 shadow-2xl flex flex-col items-center justify-center space-y-4 md:space-y-6 hover:shadow-2xl transition-all duration-300 border border-blue-200 mt-4 md:mt-0">
+                        <p className="text-xl md:text-2xl font-bold mb-2 md:mb-4">Registrations Open!</p>
                         <Button
                             size="lg"
-                            className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-6 md:px-10 py-4 md:py-6 text-base md:text-lg w-full"
+                            className="bg-[#1875d1] hover:bg-blue-500 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-6 md:px-10 py-4 md:py-6 text-base md:text-lg w-full"
                         >
                             Enroll Now
                         </Button>
                     </div>
                 </div>
             </section>
+            <section className="w-full py-14 bg-white">
+                <div className="max-w-6xl mx-auto px-4 text-center">
+                    <h3 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-black-900">Building a network of Young Global <br className="hidden md:block"></br>Ambassadors for Forests & Biodiversity.🌍🏆🌿</h3>
+                    <p className="text-xl">
+                        <i className='text-sm'>India's Young Forest Ambassador Challenge</i></p>
+                    <div className="flex items-center justify-center my-4">
+                        <Image
+                            src="/images/programs/S6.webp"
+                            alt="Hackathon Icon"
+                            width={150}
+                            height={150}
+                        />
+                    </div>
+                </div>
+            </section>
 
             {/* Section 3 continued: Youth Leadership Program */}
-            <section className="w-full h-[700px] py-16 relative flex flex-col justify-center">
+            <section className="w-full h-[800px] py-16 relative flex flex-col justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/programs/S23.webp"
@@ -460,23 +475,26 @@ export default function StudentPrograms() {
                         fill
                         style={{ objectFit: 'cover' }}
                     />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                    <div className="absolute inset-0 bg-black opacity-10"></div>
                 </div>
 
-                <div className="max-w-7xl h-[500px] grid grid-row mx-auto px-4 relative z-10 text-white text-center ">
+                <div className="max-w-7xl h-[600px] grid grid-row mx-auto px-4 relative z-10 text-white text-center ">
                     <div>
-                        <h2 className="text-6xl font-bold mb-4">Youth Leadership Program</h2>
+                        <h2 className="py-16 text-6xl font-bold mb-4">Youth Leadership Program</h2>
                     </div>
                     <div>
 
-                        <h3 className="text-2xl mb-6"><span className="text-sky-500">India's most powerful</span> <br /> <b>LEADERSHIP PROGRAM</b> <br /> <span className="text-sky-500">for the <b>YOUTH.</b></span></h3>
+                        <h3 className="text-2xl mb-6"><span className="text-[#0cc0df]">India's most powerful</span> <br /> <b>LEADERSHIP PROGRAM</b> <br /> <span className="text-[#0cc0df]">for the <b>YOUTH.</b></span></h3>
                     </div>
-                    <div className="w-16 h-16 mx-auto mb-8">
+                    <p className="text-base md:text-xl max-w-7xl mx-auto mb-6 md:mb-8">
+                        An immersive, experiential leadership development program curated by industry leaders to help you become the best version of yourself, build essential life skills, and grow into a confident, purpose-driven leader ready to shape the future. 
+                    </p>
+                    <div className="w-100 h-50 py-16 mx-auto mb-8">
                         <Image
-                            src="/images/icons/leadership-icon.svg"
+                            src="/images/programs/S36.webp"
                             alt="Leadership Icon"
-                            width={64}
-                            height={64}
+                            width={400}
+                            height={200}
                         />
                     </div>
 
@@ -495,36 +513,35 @@ export default function StudentPrograms() {
             </div> */}
                 </div>
             </section>
-
-            <section className="w-full py-12 relative">
-                <div className="grid grid-cols-1 md:grid-cols-5 mt-8 max-w-7xl mx-auto p-4 border-2 border-blue-100 rounded-2xl">
-                    <div className="col-span-4 bg-white rounded-2xl p-8">
-                        <h3 className="text-4xl font-bold mb-4 text-blue-900">Building World class Leaders of tomorrow</h3>
+<section className="w-full py-8 md:py-12 relative">
+                <div className="grid grid-cols-1 md:grid-cols-4 mt-4 md:mt-8 max-w-7xl mx-auto p-4 border-2 border-blue-100 rounded-2xl">
+                    <div className="col-span-1 md:col-span-3 bg-white rounded-2xl p-4 md:p-8">
+                        <h3 className="text-3xl font-bold mb-4">Building World class Leaders of tomorrow.</h3>
                         <p className="text-lg text-gray-700">
-                            An immersive, experiential leadership development program curated by industry leaders to help you <b>become the best version of yourself</b>, build essential life skills, and grow into a confident, purpose-driven leader ready to shape the future.
+                            We believe in unlocking the boundless potential within every young person. Our flagship initiative, the Youth Leadership Program, is not just a program; it's a transformative journey designed to empower young leaders with the skills, mindset and purpose needed to shape a better future and lead with impact.
                             <br /><br />
-                            We believe in <b>unlocking the boundless potential within every young person</b>. This transformative journey is designed to equip young leaders with the mindset, skills to excel in your chosen field, and purpose to lead with impact.
+                            <b>Crafted for young visionaries ready to shape the world with purpose, clarity, and confidence.</b>
                         </p>
                     </div>
-                    <div className="col-span-1 mx-auto bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-10 shadow-2xl flex flex-col items-center justify-center space-y-6 hover:shadow-2xl transition-all duration-300 border border-blue-200">
-                        <p className="text-xl font-bold text-blue-900 mb-4">Registrations Open!</p>
+                    <div className="col-span-1 w-full md:w-[300px] bg-gradient-to-br from-white-50 to-white-100 rounded-2xl p-4 md:p-6 shadow-2xl flex flex-col items-center justify-center space-y-4 md:space-y-6 hover:shadow-2xl transition-all duration-300 border border-blue-200 mt-4 md:mt-0">
+                        <p className="text-xl md:text-2xl font-bold mb-2 md:mb-4">Registrations Open!</p>
                         <Button
                             size="lg"
-                            className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-10 py-6 text-lg"
+                            className="bg-[#1875d1] hover:bg-blue-500 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-6 md:px-10 py-4 md:py-6 text-base md:text-lg w-full"
                         >
                             Enroll Now
                         </Button>
                     </div>
                 </div>
-
             </section>
+        
 
             <section className="w-full py-14 bg-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-blue-900">Empowering youth to</h2>
-                    <p>
-                    <u>dream big, think smart, and lead with impact.</u>
-                    </p>
+                     <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-teal-500">Empowering youth to</h2>
+                    <h3 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-black-900">dream big, think smart, and lead with impact.</h3>
+                    
+                    
                     <p>
                         <i className='text-sm'>Youth Leadership Program</i></p>
                     <div className="flex items-center justify-center my-4">
@@ -538,7 +555,41 @@ export default function StudentPrograms() {
                 </div>
             </section>
 
-            <section className="w-full min-h-[400px] md:h-[700px] py-8 md:py-16 relative flex flex-col justify-center">
+
+
+            {/* BuzzOnEarth Hackathon Section */}
+            <section className="w-full min-h-[900px] md:h-[700px] py-8 md:py-16 relative flex flex-col justify-center">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/programs/S24.webp"
+                        alt="Hackathon Background"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                    />
+                    <div className="absolute inset-0 bg-black opacity-20"></div>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 relative z-10 text-white text-center">
+                    <h2 className="pt-24 pb-12 text-4xl md:text-5xl font-bold mb-4 md:mb-6">BuzzOnEarth INDIA <br />
+                    <span className="text-5xl md:text-9xl mb-6 md:mb-8">HACKATHON</span> </h2>
+                    <p className="text-lg md:text-xl max-w-7xl mx-auto mb-6 md:mb-8">
+                        Find solutions to some of the most pressing climate and sustainability issues that Indian businesses and communities face. Give wings to your creativity and ideas and develop innovative solutions that can be deployed. The solutions, possibly various combinations of tech products, policy evaluations, market models, business plans, new designs and product innovations, will help you hone your creativity and offer new directions for climate action.
+                    </p>
+                    <p className="text-base md:text-lg max-w-7xl mx-auto mb-8 md:mb-12 text-[#0cc0df] ">
+                         This is an Open Innovation Student category in which students can give ideas against the pre-defined Problem Statements across themes.
+                    </p>
+                    <div className="w-100 h-50 py-06 mx-auto mb-8">
+                        <Image
+                            src="/images/programs/S37.webp"
+                            alt="largest Hackathon Icon"
+                            width={400}
+                            height={200}
+                        />
+                    </div>
+                </div>
+            </section>
+
+<section className="w-full min-h-[400px] md:h-[700px] py-8 md:py-16 relative flex flex-col justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
                     <div className="col-span-1 md:col-span-2 relative min-h-[300px] md:min-h-0">
                         <Image
@@ -548,7 +599,7 @@ export default function StudentPrograms() {
                             style={{ objectFit: 'contain' }}
                             className="rounded-xl md:rounded-r-3xl md:rounded-l-none"
                         />
-                        <div className="absolute inset-0 bg-black opacity-50 rounded-xl md:rounded-r-3xl md:rounded-l-none"></div>
+                        <div className="absolute inset-0 bg-black opacity-5 rounded-xl md:rounded-r-3xl md:rounded-l-none"></div>
                     </div>
                     <div className="col-span-1 relative min-h-[300px] md:min-h-0">
                         <Image
@@ -558,82 +609,41 @@ export default function StudentPrograms() {
                             style={{ objectFit: 'contain' }}
                             className="rounded-xl md:rounded-l-3xl md:rounded-r-none"
                         />
-                        <div className="absolute inset-0 bg-black opacity-50 rounded-xl md:rounded-l-3xl md:rounded-r-none"></div>
+                        <div className="absolute inset-0 bg-black opacity-5 rounded-xl md:rounded-l-3xl md:rounded-r-none"></div>
                     </div>
                 </div>
 
             </section>
-
-            <section className="w-full py-15 relative">
-                <div className="grid grid-cols-1 md:grid-cols-5 mt-8 max-w-7xl mx-auto p-4 border-2 border-blue-100 rounded-2xl">
-                    <div className="col-span-4 bg-white rounded-2xl p-8">
+        
+            <section className="w-full py-8 md:py-12 relative">
+                <div className="grid grid-cols-1 md:grid-cols-4 mt-4 md:mt-8 max-w-7xl mx-auto p-4 border-2 border-blue-100 rounded-2xl">
+                    <div className="col-span-1 md:col-span-3 bg-white rounded-2xl p-4 md:p-8">
+                        <h3 className="text-3xl font-bold mb-4">India's Largest Climate Innovation Hackathon, BIH 24' powered by Intel, held at IIT
+                                Kanpur in 2024</h3>
                         <p className="text-lg text-gray-700">
-                            India's Largest <b>Climate Innovation Hackathon, BIH 24'</b> powered by <b>Intel, held at IIT
-                                Kanpur in 2024</b>, saw <b>2000+ young innovators developing cutting-edge climate solutions</b>.
+                            saw <b>2000+ young innovators developing cutting-edge climate solutions</b>.
                             The event focused on leveraging AI for sustainable development of cities, featuring a
                             panel of esteemed judges composed of industry leaders, AI experts, and sustainability
                             professionals. Intel's partnership ensured access to advanced technology, Intel's AI Stack,
                             and expert guidance, empowering participants to create impactful, AI-driven solutions.
                         </p>
                     </div>
-                    <div className="col-span-1 w-[250px] mx-auto bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-10 shadow-2xl flex flex-col items-center justify-center space-y-6 hover:shadow-2xl transition-all duration-300 border border-blue-200">
-                        <p className="text-2xl font-bold text-blue-900 mb-4">BIH 2024</p>
+                    <div className="col-span-1 w-full md:w-[300px] bg-gradient-to-br from-white-50 to-white-100 rounded-2xl p-4 md:p-6 shadow-2xl flex flex-col items-center justify-center space-y-4 md:space-y-6 hover:shadow-2xl transition-all duration-300 border border-blue-200 mt-4 md:mt-0">
+                        <p className="text-xl md:text-2xl font-bold mb-2 md:mb-4 text-center">BuzzOnEarth India Hackthon 2024</p>
                         <Button
                             size="lg"
-                            className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-10 py-6 text-lg"
+                            className="bg-[#1875d1] hover:bg-blue-500 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-6 md:px-10 py-4 md:py-6 text-base md:text-lg w-full"
                         >
                             View Results
                         </Button>
                     </div>
                 </div>
             </section>
-
-
-            {/* BuzzOnEarth Hackathon Section */}
-            <section className="w-full min-h-[500px] md:h-[700px] py-8 md:py-16 relative flex flex-col justify-center">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/images/programs/S24.webp"
-                        alt="Hackathon Background"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                </div>
-
-                <div className="max-w-7xl mx-auto px-4 relative z-10 text-white text-center">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6">BuzzOnEarth India</h2>
-                    <h3 className="text-5xl md:text-7xl font-bold mb-6 md:mb-8">HACKATHON</h3>
-                    <p className="text-lg md:text-xl max-w-4xl mx-auto mb-6 md:mb-8 text-blue-200">
-                        Join this creative but intense hackathon for university students to find solutions to some of the most pressing issues created by climate change that Indian businesses and communities face.
-                    </p>
-                    <p className="text-base md:text-lg max-w-4xl mx-auto mb-8 md:mb-12">
-                        The solutions, possibly various combinations of tech products, policy evaluations, market models, business plans, new designs and product innovations, will help you hone your creativity and offer new directions for climate action.
-                    </p>
-                    <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 px-4 md:px-0">
-                        <Button
-                            size="lg"
-                            className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-4 md:px-10 py-4 md:py-6 text-sm md:text-lg whitespace-normal text-center"
-                        >
-                            Register for BuzzOnEarth Hackathon 2024
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-white text-white hover:bg-white/10 shadow-lg transform hover:scale-105 transition-all duration-300 px-4 md:px-10 py-4 md:py-6 text-sm md:text-lg whitespace-normal text-center"
-                        >
-                            Learn More
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
-            
             <section className="w-full py-14 bg-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-blue-900">Hacking for a better future</h2>
+                    <h2 className="text-5xl font-bold ">Hacking for a better future</h2>
                     <p className="text-xl">
-                        <i className='text-sm'>BIH 2025 (coming soon) </i></p>
+                        <i className='text-sm'>BIH 2025 (Coming Soon) </i></p>
                     <div className="flex items-center justify-center my-4">
                         <Image
                             src="/images/programs/S9.webp"
@@ -648,7 +658,7 @@ export default function StudentPrograms() {
            
 
             {/* Process Section */}
-            <section className="w-full min-h-[600px] md:h-[800px] py-8 md:py-16 relative flex flex-col justify-center">
+            <section className="w-full min-h-[600px] md:h-[600px] py-8 md:py-16 relative flex flex-col justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/programs/S27.webp"
@@ -656,21 +666,25 @@ export default function StudentPrograms() {
                         fill
                         style={{ objectFit: 'cover' }}
                     />
-                    <div className="absolute inset-0 bg-black opacity-60"></div>
+                    <div className="absolute inset-0 bg-black opacity-20"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 relative z-10 text-white">
                     <div className="text-center mb-8 md:mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">STEP UP YOUTH'S GOT TALENT</h2>
-                        <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8">A National Creative Platform for Climate Action</h3>
-                        <p className="text-base md:text-xl max-w-4xl mx-auto">
+                        <h2 className="py-16 text-3xl md:text-5xl font-bold mb-4 md:mb-6">STEP UP YOUTH'S GOT TALENT</h2>
+                        <h3 className="text-xl md:text-3xl font-semibold text-black mb-6 md:mb-8">A National Creative Platform for Climate Action</h3>
+                        <p className="text-base md:text-xl max-w-7xl mx-auto">
                             A national initiative to bridge the gap between awareness and action by harnessing the boundless creativity of students. This unique platform empowers young minds to express their thoughts, emotions, and solutions on climate change and environmental challenges through engaging competitions.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-8 md:mt-16">
+                
+                </div>
+            </section>
+             <section className="w-full min-h-[600px] md:h-[600px] py-8 md:py-12 relative flex flex-col justify-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-8 md:mt-06">
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full md:w-[250px] h-[200px] md:h-[300px] rounded-xl overflow-hidden mb-4 md:mb-6">
+                            <div className="relative w-full md:w-[350px] h-[500px] md:h-[600px] rounded-xl overflow-hidden mb-4 md:mb-6">
                                 <Image
                                     src="/images/programs/S28.webp"
                                     alt="Process Step 1"
@@ -681,7 +695,7 @@ export default function StudentPrograms() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full md:w-[250px] h-[200px] md:h-[300px] rounded-xl overflow-hidden mb-4 md:mb-6">
+                            <div className="relative w-full md:w-[350px] h-[500px] md:h-[600px] rounded-xl overflow-hidden mb-4 md:mb-6">
                                 <Image
                                     src="/images/programs/S29.webp"
                                     alt="Process Step 2"
@@ -692,7 +706,7 @@ export default function StudentPrograms() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full md:w-[250px] h-[200px] md:h-[300px] rounded-xl overflow-hidden mb-4 md:mb-6">
+                            <div className="relative w-full md:w-[350px] h-[500px] md:h-[600px] rounded-xl overflow-hidden mb-4 md:mb-6">
                                 <Image
                                     src="/images/programs/S30.webp"
                                     alt="Process Step 3"
@@ -703,7 +717,7 @@ export default function StudentPrograms() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full md:w-[250px] h-[200px] md:h-[300px] rounded-xl overflow-hidden mb-4 md:mb-6">
+                            <div className="relative w-full md:w-[350px] h-[500px] md:h-[600px] rounded-xl overflow-hidden mb-4 md:mb-6">
                                 <Image
                                     src="/images/programs/S31.webp"
                                     alt="Process Step 4"
@@ -714,9 +728,26 @@ export default function StudentPrograms() {
                             </div>
                         </div>
                     </div>
+             </section>
+            
+<section className="w-full py-14 bg-white">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                     <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-teal-500">Create. Express. Inspire.</h2>
+                    <h3 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-black-900">Let’s Change the Climate Story.</h3>
+                    
+                    
+                    <p>
+                        <i className='text-sm'>STEP UP YGT Competitions (Coming Soon)</i></p>
+                    <div className="flex items-center justify-center my-4">
+                        <Image
+                            src="/images/programs/S10.webp"
+                            alt="Hackathon Icon"
+                            width={150}
+                            height={150}
+                        />
+                    </div>
                 </div>
             </section>
-
 
             {/* Section 5: What CAN Youth do */}
             {/* <section className="w-full py-24 relative">
@@ -809,30 +840,18 @@ export default function StudentPrograms() {
         </div>
       </section> */}
  {/* Vision & Mission Section */}
- <section className="w-full py-16 bg-white">
-                <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-8">Our Vision & Mission</h2>
-                    <div className="space-y-6 text-lg md:text-xl">
-                        <p>
-                            <span className="font-bold">India MUN</span> envisions a world where every student becomes a powerful force for positive change.
-                        </p>
-                        <p>
-                            Aligned with the <span className="font-bold">Decade of Action - United Nations Sustainable Development Goals</span>, we redefine education to empower youth as architects of a sustainable future.
-                        </p>
-                    </div>
-                </div>
-            </section>
+
             {/* Responsive Image Section */}
             <section className="w-full relative">
                 <div className="text-center py-12 md:py-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Previous Events</h2>
-                    <div className="h-1 w-24 bg-blue-600 mx-auto rounded-full"></div>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">Previous Events</h2>
+                    <div className="h-1 w-24 bg-blue-200 mx-auto rounded-full"></div>
                 </div>
 
                 {/* Mobile version */}
                 <div className="block md:hidden">
                     <Image
-                        src="/images/programs/s32a.webp"
+                        src="/images/programs/S32a.webp"
                         alt="Mobile Program Image"
                         width={1080}
                         height={1920}
@@ -843,7 +862,7 @@ export default function StudentPrograms() {
                 {/* Desktop/Laptop version */}
                 <div className="hidden md:block">
                     <Image
-                        src="/images/programs/s32b.webp"
+                        src="/images/programs/S32b.webp"
                         alt="Desktop Program Image"
                         width={1920}
                         height={1080}
@@ -853,6 +872,82 @@ export default function StudentPrograms() {
             </section>
 
             {/* Section 6: CTA for currently open programs */}
+            
+             <section className="w-full py-16 bg-white">
+                <div className="max-w-7xl mx-auto px-4 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#0076ba] mb-8">Our Vision & Mission</h2>
+                    <div className="space-y-6 text-lg md:text-xl">
+                        <p>
+                            <span className="font-bold">India MUN</span> envisions a world where every student becomes a powerful force for positive change.
+                        </p>
+                        <p>
+                            Aligned with the <span className="font-bold">Decade of Action - United Nations Sustainable Development Goals</span>, we redefine education to empower youth as architects of a sustainable future.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final Impact Section */}
+            <section className="w-full min-h-[600px] py-16 relative flex flex-col justify-center">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/programs/S33.webp"
+                        alt="Impact Background"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                    />
+                    <div className="absolute inset-0 bg-black opacity-2"></div>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-40 items-center">
+                        {/* Left Column with Images */}
+                        <div className="space-y-6 col-span-1">
+                            <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
+                                <Image
+                                    src="/images/programs/S34.webp"
+                                    alt="Impact Image 1"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="hover:scale-110 transition-transform duration-300"
+                                />
+                            </div>
+                            <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
+                                <Image
+                                    src="/images/programs/S35.webp"
+                                    alt="Impact Image 2"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="hover:scale-110 transition-transform duration-300"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Right Column with Text */}
+                        <div className="text-white col-span-2">
+                            <h2 className="py-12 text-4xl md:text-5xl font-bold mb-6">WHAT CAN YOU(th) DO?</h2>
+                            <div className="space-y-6 text-lg">
+                                <p>
+                                    With over 600 million young people, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – will impact the youth and their future generations the most — the stakes couldn't be higher.
+                                </p>
+                                <p>
+                                    Global bodies have not been able to move the needle as yet.
+                                </p>
+                                <p>
+                                    Every small step taken by millions of young Indians can create a ripple effect with global impact.
+                                </p>
+                                <p>
+                                    You're standing at the most powerful moment in history.
+                                </p>
+                                <p>
+                                    🌱 This is your moment. This is your movement.<br />
+                                    And it begins with you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="w-full py-24 bg-gradient-to-br from-gray-50 to-blue-50">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-16">
@@ -868,7 +963,7 @@ export default function StudentPrograms() {
                                 <div>
 
                             <Image
-                                    src="/images/programs/s7.webp"
+                                    src="/images/programs/S7.webp"
                                     alt="Youth Leadership Program Icon"
                                     width={200}
                                     height={200}
@@ -894,7 +989,7 @@ export default function StudentPrograms() {
                             <div className="p-8 grid grid-cols-2 gap-4 items-center">
                                 <div>
                                     <Image
-                                        src="/images/programs/s6.webp"
+                                        src="/images/programs/S6.webp"
                                         alt="Young Forest Ambassador Icon"
                                         width={200}
                                         height={200}
@@ -931,68 +1026,6 @@ export default function StudentPrograms() {
                             </Button>
                         </div>
                     </div> */}
-                </div>
-            </section>
-
-            {/* Final Impact Section */}
-            <section className="w-full min-h-[600px] py-16 relative flex flex-col justify-center">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/images/programs/s33.webp"
-                        alt="Impact Background"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                </div>
-
-                <div className="max-w-7xl mx-auto px-4 relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-40 items-center">
-                        {/* Left Column with Images */}
-                        <div className="space-y-6 col-span-1">
-                            <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
-                                <Image
-                                    src="/images/programs/s34.webp"
-                                    alt="Impact Image 1"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                    className="hover:scale-110 transition-transform duration-300"
-                                />
-                            </div>
-                            <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
-                                <Image
-                                    src="/images/programs/s35.webp"
-                                    alt="Impact Image 2"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                    className="hover:scale-110 transition-transform duration-300"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Right Column with Text */}
-                        <div className="text-white col-span-2">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6">WHAT CAN YOU(th) DO?</h2>
-                            <div className="space-y-6 text-lg">
-                                <p>
-                                    With over 600 million young people, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – will impact the youth and their future generations the most — the stakes couldn't be higher.
-                                </p>
-                                <p>
-                                    Global bodies have not been able to move the needle as yet.
-                                </p>
-                                <p>
-                                    Every small step taken by millions of young Indians can create a ripple effect with global impact.
-                                </p>
-                                <p>
-                                    You're standing at the most powerful moment in history.
-                                </p>
-                                <p>
-                                    🌱 This is your moment. This is your movement.<br />
-                                    And it begins with you.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
         </main>

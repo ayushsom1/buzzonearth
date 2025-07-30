@@ -141,7 +141,7 @@ export default function NationalConferences() {
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <motion.div
             variants={fadeInUp}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-7xl mx-auto text-center"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-blue-600">
               India's Biggest Climate MUN
@@ -330,7 +330,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c2.webp"
+                    src="/images/Conference/c2.webp"
                     alt="Mr. Ovais Sarmad"
                     fill
                     className="object-cover"
@@ -402,7 +402,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c4.webp"
+                    src="/images/Conference/c4.webp"
                     alt="Ms. Gayatri Chauhan"
                     fill
                     className="object-cover"
@@ -527,7 +527,7 @@ export default function NationalConferences() {
       {/* Full Width Image Section */}
       <section className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
         <Image
-          src="/images/conference/c9.webp"
+          src="/images/Conference/c9.webp"
           alt="Conference Highlights"
           fill
           className="object-cover"
@@ -590,7 +590,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/missing.webp"
+                    src="/images/Conference/missing.webp"
                     alt="Dr. Babu Padmanabhan"
                     fill
                     className="object-cover"
@@ -617,7 +617,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c10.webp"
+                    src="/images/Conference/c10.webp"
                     alt="Ms. Reshmi Vasudevan"
                     fill
                     className="object-cover"
@@ -644,7 +644,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c11.webp"
+                    src="/images/Conference/c11.webp"
                     alt="Mr. Shiva Subramanian"
                     fill
                     className="object-cover"
@@ -665,7 +665,7 @@ export default function NationalConferences() {
       {/* Full Width Image Section */}
       <section className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
         <Image
-          src="/images/conference/c12.webp"
+          src="/images/Conference/c12.webp"
           alt="Conference Highlights"
           fill
           className="object-cover"
@@ -702,7 +702,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/cmissin.webp"
+                    src="/images/Conference/cmissin.webp"
                     alt="Mr. Venktesh Raghwendra"
                     fill
                     className="object-cover"
@@ -729,7 +729,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c13.webp"
+                    src="/images/Conference/c13.webp"
                     alt="Ms. Liza Goldberg"
                     fill
                     className="object-cover"
@@ -756,7 +756,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c14.webp"
+                    src="/images/Conference/c14.webp"
                     alt="Air Vice Marshal (Dr) Ajit Tyagi"
                     fill
                     className="object-cover"
@@ -783,7 +783,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c15.webp"
+                    src="/images/Conference/c15.webp"
                     alt="Ms. Neha Raghav"
                     fill
                     className="object-cover"
@@ -805,7 +805,7 @@ export default function NationalConferences() {
       {/* Full Width Image Section */}
       <section className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
         <Image
-          src="/images/conference/c16.webp"
+          src="/images/Conference/c16.webp"
           alt="Conference Highlights"
           fill
           className="object-cover"
@@ -831,7 +831,7 @@ export default function NationalConferences() {
               {/* Left side - Conference Image */}
               <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl col-span-2">
                 <Image
-                  src="/images/conference/c17.webp"
+                  src="/images/Conference/c17.webp"
                   alt="India MUN National Climate Conference"
                   fill
                   className="object-cover"
@@ -1192,7 +1192,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c18.webp"
+                    src="/images/Conference/c18.webp"
                     alt="Mr. Rajendra Shende"
                     fill
                     className="object-cover"
@@ -1248,7 +1248,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/missing.webp"
+                    src="/images/Conference/missing.webp"
                     alt="Dr. Babu Padmanabhan"
                     fill
                     className="object-cover"
@@ -1276,7 +1276,7 @@ export default function NationalConferences() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="/images/conference/c19.webp"
+                    src="/images/Conference/c19.webp"
                     alt="Ms. Goulnara AGUIAR"
                     fill
                     className="object-cover"
@@ -1299,7 +1299,7 @@ export default function NationalConferences() {
       {/* Full Width Image Section */}
       <section className="relative  flex justify-center items-center h-[1000px] overflow-hidden">
       <Image
-          src="/images/conference/c20.webp"
+          src="/images/Conference/c20.webp"
           alt="Conference Highlights"
           fill
           className="object-contain"
@@ -1546,7 +1546,7 @@ export default function NationalConferences() {
       {/* Full Width Image Section */}
       <section className="relative  flex justify-center items-center h-[1000px] overflow-hidden">
       <Image
-          src="/images/conference/c21.webp"
+          src="/images/Conference/c21.webp"
           alt="Conference Highlights"
           fill
           className="object-contain"
