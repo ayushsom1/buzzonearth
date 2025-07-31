@@ -73,6 +73,7 @@ const Navbar = () => {
       dropdown: true,
       items: nationalConferencesItems,
     },
+    { name: "Global School Awards", href: "/awards" }, 
     { name: "Governing Council", href: "/governing-council" },
   ];
 
