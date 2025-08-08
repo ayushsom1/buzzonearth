@@ -37,7 +37,7 @@ export const useTimelineScroll = () => {
     // Animate each timeline point and its content
     Array.from(points).forEach((point) => {
       const content = (point as HTMLElement).querySelector('.timeline-content');
-      const dot = (point as HTMLElement).querySelector('.timeline-dot');
+      const dot = (point as HTMLElement).querySelector('.timeline-circle');
 
       gsap.set([content, dot], { opacity: 0, y: 20 });
 
