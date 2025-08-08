@@ -47,145 +47,78 @@ const staggerContainer = {
 export default function GlobalSchoolsAwards() {
   return (
     <div className="flex flex-col min-h-screen">
-
-      {/* Hero Section */}
-      
-
-      <motion.section
+<motion.section
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.8 }}
-  className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700"
+  className="relative h-[900px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700"
 >
   {/* Background Pattern - UN Globe Style */}
   <div className="absolute inset-0 z-0">
     {/* Background Image */}
     <Image
-      src="/images/prizes/P1.webp"
+      src="/images/ranking/r2.webp"
       alt="Conference Background"
       fill
-      className="object-cover"
+      className="object-cover object-center"
       priority
-    />
-
-    {/* Black Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80"></div>
-
-    
-    {/* UN-style laurel branches */}
-    <div className="absolute bottom-0 left-0 w-full h-32 opacity-10">
-      <div className="flex justify-center">
-        <div className="w-64 h-32 border-t-4 border-l-4 border-r-4 border-white rounded-t-full transform rotate-180" />
-      </div>
-    </div>
+      sizes="100vw"
+    /> 
   </div>
 
-  {/* Main Grid Container */}
-  <div className="container px-4 sm:px-6 lg:px-8 relative z-10 py-4 sm:py-6 lg:py-8">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 min-h-[calc(100vh-12rem)] sm:min-h-[calc(100vh-6rem)] md:min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-4rem) xl:min-h-screen] items-center">
-      
-      {/* Left Column - Content */}
-      <div className="text-white text-center lg:text-left">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          className="max-w-2xl mx-auto lg:mx-0"
-        >
-          {/* Logo */}
-          <motion.div
-            variants={fadeInUp}
-            className="mb-3 sm:mb-4 lg:mb-6 flex justify-center lg:justify-start"
-          >
-            <div className="inline-block bg-[rgba(0,0,0,0.5)] shadow-[0_4px_20px_rgba(0,0,0,0.9)] rounded-4xl">
-  <Image
-    src="/images/prizes/p3.webp"
-    alt="Organization Logo"
-    width={240}
-    height={240}
-    className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 object-contain"
-  />
-</div>
+  {/* Content */}
+  <div className="container px-4 sm:px-6 lg:px-8 relative z-10 text-white text-center">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={fadeInUp}
+      className="max-w-5xl mx-auto"
+    >
+      <motion.h2
+        variants={fadeInUp}
+        transition={{ delay: 0.2 }}
+        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-8 text-white"
+      >
+        Global Schools Ranking
+      </motion.h2>
 
-          </motion.div>
-
-          {/* Conference Title */}
-          <motion.h2
-            variants={fadeInUp}
-            transition={{ delay: 0.2 }}
-            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white mb-2 sm:mb-3 lg:mb-4"
-          >
-            Recognizing <br className="hidden sm:block"/>Visionary Institutions<br/> Driving Educational Transformation
-          </motion.h2>
-          
-          
-
-          {/* Date */}
-          <motion.div
-            variants={fadeInUp}
-            transition={{ delay: 0.4 }}
-            className="mb-4 sm:mb-6 lg:mb-8"
-          >
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg px-4 sm:px-6 lg:px-8 py-3 lg:py-4 border border-white/20">
-              <div className="flex items-center justify-center gap-2 lg:gap-3 text-xs sm:text-sm md:text-base lg:text-lg font-light">
-                <span>🏆</span>
-                <span className="text-center">A Global Distinction for Future-Ready Schools</span>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Right Column - Large Image */}
-      <div className="flex justify-center lg:justify-end mt-4 sm:mt-6 lg:mt-0">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInRight}
-          className="relative"
-        >
-          <div className="relative w-full max-w-xl sm:max-w-xl md:max-w-xl lg:max-w-2xl">
-            <div className="absolute inset-0 scale-110"></div>
-            <Image
-              src="/images/prizes/p2.webp"
-              alt="Global Schools Awards Trophy"
-              width={600}
-              height={500}
-              className="relative z-10 w-full h-auto"
-              priority
-            />
+      {/* Date */}
+      <motion.div
+        variants={fadeInUp}
+        transition={{ delay: 0.4 }}
+        className="mb-12"
+      >
+        <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg px-8 py-4 border border-white/20">
+          <div className="flex items-center justify-center gap-3 text-xl md:text-2xl lg:text-3xl font-light">
+            <Calendar className="w-6 h-6 md:w-8 md:h-8" />
+            <span>2025</span>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </div>
+      </motion.div>
+    </motion.div>
   </div>
-
-  {/* Scroll Indicator */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 1, duration: 0.6 }}
-    className="absolute bottom-4 lg:bottom-8 left-1/2 transform -translate-x-1/2 text-white"
-  >
-    <div className="flex flex-col items-center">
-      <span className="text-xs lg:text-sm mb-2">Scroll to explore</span>
-      <div className="w-5 h-8 lg:w-6 lg:h-10 border-2 border-white rounded-full flex justify-center">
-        <div className="w-1 h-2 lg:h-3 bg-white rounded-full mt-2 animate-bounce" />
-      </div>
-    </div>
-  </motion.div>
-</motion.section>
-
-      
+</motion.section>    
 
       <section className="max-w-7xl mx-auto py-16 px-4">
               <motion.div
-  className="py-12 bg-gradient-to-br from-[#000000] via-[#002e41] to-black rounded-3xl p-4 md:p-12"
+  className="relative py-12 p-4 md:p-12 rounded-3xl overflow-hidden"
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}
   variants={fadeInUp}
 >
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/images/ranking/r2.webp"
+      alt="Background"
+      fill
+      className="object-cover rounded-3xl"
+      priority
+    />
+    {/* Optional dark overlay for readability */}
+    <div className="absolute inset-0 bg-gradient-to-br from-[#000000]/80 via-[#002e41]/80 to-black/80 rounded-3xl" />
+  </div>
   <h2 className="text-3xl md:text-4xl font-bold text-[#1774d1] mb-8 text-center">
     The Global Schools Awards
   </h2>

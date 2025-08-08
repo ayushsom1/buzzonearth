@@ -191,9 +191,12 @@ export default function GlobalSchoolsPage() {
                     <div className="col-span-2 space-y-8">
                         <div>
                             <h3 className="text-2xl md:text-3xl font-bold mb-4">"Global Recognition for Schools Driving Change."</h3>
-                            <p className="text-sm md:text-base text-black mb-8">
-                                Join the prestigious network and position your school at the forefront of future education.
-                            </p>
+                            <p className="text-sm md:text-base font-bold mb-4 text-black mb-8">
+                A Prestigious Alliance of Visionary Institutions Shaping the Future of Education.
+              </p>
+              <p className="text-sm md:text-base text-black mb-8">
+                Join a global movement of pioneering schools championing climate action, leadership, innovation, entrepreneurship, diplomacy, regeneration and SDG-aligned learning.
+              </p>
                         </div>
 
                         <div className="flex items-center gap-4">
@@ -255,7 +258,7 @@ export default function GlobalSchoolsPage() {
             </section>
 
             {/* Small Images Section */}
-            <section className="py-12 bg-gray-50">
+            <section className=" bg-gray-5">
                 <div className="container mx-auto px-4">
                     <div className="flex justify-center items-center gap-8">
                         {[2, 3, 4, 5, 6].map((num) => (
@@ -273,20 +276,20 @@ export default function GlobalSchoolsPage() {
             </section>
 
             {/* Affiliated Schools Carousel Section */}
-            <section className="py-12 bg-gray-50">
+            <section className="py-12 bg-gray-5">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header */}
                     <div className="text-center mb-8">
                         <h2 className="text-3xl font-bold text-[#1875d1] mb-4">
-                            Our Affiliated Schools
+                            A Celebrated Network of Future-Focused Institutions Shaping Global Education
                         </h2>
                         <p className="text-gray-600">
-                            Prestigious institutions leading educational transformation globally
+                            Our Prestigious institutions leading educational transformation
                         </p>
                     </div>
 
                     {/* Carousel Container */}
-                    <div className="relative max-w-7xl mx-auto">
+                    <div className="relative max-w-9xl mx-auto">
                         <div className="overflow-hidden rounded-lg">
                             <div
                                 className="flex transition-transform duration-500 ease-in-out"
@@ -351,33 +354,40 @@ export default function GlobalSchoolsPage() {
                 </div>
             </section>
 
-            <section className="bg-gradient-to-r pt-4 from-[#0a1929] to-[#112c4c]">
-                <div className="container px-2 sm:px-4 lg:px-3 mx-auto py-16">
-                    <div className="flex flex-col md:flex-row-reverse items-center">
+
+            <section className="bg-gradient-to-r pt-4 from-[#000000] to-[#002e41] opacity-95">
+                <div className="pt-16 container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-[#1875d1] text-4xl md:text-5xl mb-8">
+                        Your school could be the next success story!
+                    </h2>
+                    </div>
+                </div>
+
+                <div className="container px-2 sm:px-4 lg:px-3 mx-auto pb-16">
+                    <div className="flex flex-col md:flex-row-reverse items-right">
                         <div className="">
                             <Image
-                                src="/images/about_us/A6.webp"
+                                src="/images/affiliation/x75.webp"
                                 alt="Our Mission Illustration"
-                                width={600}
-                                height={500}
+                                width={700}
+                                height={600}
                                 className="rounded-lg"
                             />
                         </div>
                         <div className="md:w-1/2 md:pr-12">
-                            <h2 className="text-4xl font-bold mb-8 text-[#1875d1]">Your school could be the next success story</h2>
-                            <p className="text-sm text-white leading-relaxed">
-                                At India MUN, we celebrate schools not only as centers of learning, but as launchpads for
-                                leadership, innovation, and global impact. <br />
-                                We believe that every student deserves an education that empowers them to lead, solve, and
-                                transform, and every educator deserves a platform that uplifts their vision and amplifies their
-                                voice. <br />
-                                The Global Schools Affiliation represents a comprehensive transformation of your school's
-                                identity, impact, and international standing. It is a prestigious recognition of your
-                                commitment to global education values — from sustainability and leadership to innovation
-                                and inclusion. <br />
-                                By affiliating with India MUN, your school joins a prestigious alliance of changemaking
-                                institutions — committed to nurturing the next generation of global leaders and
-                                ambassadors.
+                            <p className="text-sm text-white text-justify leading-relaxed">
+                                We celebrate schools not only as centers of learning, but as <b>launchpads for leadership, innovation, and global impact.</b>
+                                 </p>
+                              <p className="py-5 text-sm text-white text-justify leading-relaxed">
+                                  We <b>
+provide schools with an unparalleled platform to showcase your school’s vision, amplify your leadership, and gain national & global recognition.</b>
+                                </p>
+                                 <p className="text-sm py-5 text-white text-justify leading-relaxed">
+                                <b>The Global Schools Affiliation</b> represents a comprehensive transformation of your school’s identity, impact, and international standing. It is a <b>prestigious recognition of your commitment to global education values</b> — from sustainability and leadership to innovation and inclusion.
+                                </p>
+                                <p className="text-sm py-5 text-white text-justify leading-relaxed">
+                                On affiliation, you become a <span className="text-[#1b66cf]">Global Member School </span>and join a <b>prestigious alliance of changemaking institutions</b> — committed to nurturing the next generation of global leaders, innovators & ambassadors.
                             </p>
                         </div>
                     </div>
@@ -385,16 +395,18 @@ export default function GlobalSchoolsPage() {
             </section>
 
             {/* Empowering Schools Section */}
-            <section className="py-16 bg-white">
+            <section className="pt-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         {/* Left side - Image */}
                         <div className="md:w-1/2">
-                            <div className="relative w-full aspect-square">
+                        <h2 className="text-5xl font-bold mb-8">We Empower Schools Through:</h2>
+                            <div className="py-16 relative w-full aspect-square">
                                 <Image
                                     src="/images/affiliation/x24.webp"
                                     alt="Empowering Schools Illustration"
-                                    fill
+                                    width={600}
+                                height={600}
                                     className="object-contain"
                                 />
                             </div>
@@ -402,7 +414,7 @@ export default function GlobalSchoolsPage() {
 
                         {/* Right side - Accordions */}
                         <div className="md:w-1/2">
-                            <h2 className="text-3xl font-bold mb-8">Empowering Schools Through:</h2>
+
                             <Accordion type="single" collapsible className="w-full">
                                 <AccordionItem value="item-1">
                                     <AccordionTrigger className="text-left text-xl font-bold">
@@ -482,87 +494,230 @@ export default function GlobalSchoolsPage() {
             </section>
 
             {/* Global Force Section */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        {/* Left side - Image */}
-                        <div className="relative">
-                            <div className="relative w-full aspect-3/2  h-100 mx-auto">
-                                <Image
-                                    src="/images/affiliation/x25.webp"
-                                    alt="Global collaboration - hands protecting Earth"
-                                    fill
-                                    className="object-cover rounded-lg"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Right side - Quote Content */}
-                        <div className="relative">
-                            {/* Large opening quote */}
-                            <div className="text-8xl text-[#4686d8] absolute -top-6 -left-4 leading-none">"</div>
-
-                            <div className="pl-8">
-                                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 leading-relaxed">
-                                    We're not just building a network. We're cultivating a{" "}
-                                    <span className="text-[#1875d1]">global force</span> for{" "}
-                                    <span className="text-[#1875d1]">educational transformation.</span>
-                                </h2>
-
-                                {/* Keywords section */}
-                                <div className="mb-8">
-                                    <p className="text-lg font-semibold text-gray-700 italic">
-                                        CLIMATE ACTION. LEADERSHIP. INNOVATION.<br />
-                                        DIPLOMACY. ENTREPRENEURSHIP. REGENERATION. SDGs.
-                                    </p>
-                                </div>
-
-                                {/* Bottom quote */}
-                                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#4686d8]">
-                                    <p className="text-lg text-gray-700 leading-relaxed">
-                                        Every student deserves an education that empowers them to{" "}
-                                        <span className="font-semibold text-[#1875d1]">lead, solve, innovate and transform</span>.
-                                        Every educator deserves a platform that{" "}
-                                        <span className="font-semibold text-[#1875d1]">uplifts their vision and amplifies their impact</span>.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Large closing quote */}
-                            <div className="text-8xl text-[#4686d8] absolute -bottom-6 right-4 leading-none">"</div>
+            {/* Global Force Section */}
+<section className="w-full py-5 md:mb-8 bg-white">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 min-h-[430px] lg:h-96">
+            {/* Left side - Image with overlay text */}
+            <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-full">
+                <div className="relative h-full rounded-lg overflow-hidden">
+                    <Image
+                        src="/images/affiliation/x25.webp"
+                        alt="Global collaboration - hands protecting Earth"
+                        fill
+                        className="object-cover"
+                    />
+                    {/* Overlay text at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 sm:p-6">
+                        <div className="text-white">
+                            <h3 className="text-lg sm:text-xl font-bold mb-2">Every student deserves an education that empowers them to lead, solve, innovate and transform.</h3>
+                            <p className="text-sm sm:text-base opacity-90 line-clamp-3">
+                                Every educator deserves a platform that uplifts their vision and amplifies their impact.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section className="py-16 bg-white">
-                {/* Timeline Points */}
-                <div className="flex flex-col gap-8">
-                    <div className="flex justify-center gap-4 items-center text-lg">
-                        {[
-                            "Highly influential and effective Governing council",
-                            "Strong network of mentors and guides for students to unleash their best potential",
-                            "Certificates signed by UN dignitaries",
-                            "Network of Global Schools for Climate Action, Leadership and Innovation",
-                            "Focus on inculcating spirit of innovation, entrepreneurship, leadership and regeneration"
-                        ].map((text, index) => (
-                            <div key={index} className="flex items-center justify-center w-55 h-55 rounded-full bg-white border-10 border-[#E6F3FF] p-4 text-center font-medium hover:border-[#0066FF] transition-colors duration-300">
-                                {text}
-                            </div>
-                        ))}
+            {/* Right side - Quote Content */}
+            <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-6">
+                <div className="relative w-full max-w-2xl rounded-2xl lg:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 bg-white">
+                    {/* Logo/Image at top */}
+                    <div className="flex justify-left mb-4">
+                        <Image
+                            src="/images/affiliation/x51.webp"
+                            alt="Global collaboration logo"
+                            width={60}
+                            height={60}
+                            className="object-contain sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                        />
                     </div>
-                    <div className="flex justify-center gap-4 items-center text-lg">
-                        {[
-                            "Exposure to essential life skills. Experiential learning on diverse topics",
-                            "The only MUN focused on Climate and Biodiversity as core themes",
-                            "Direct linkage with UNEP and UNFCCC.",
-                            "Unique opportunity to represent India at UN COP Events.",
-                            "Access to top institutions like IITs, IIMs, Ashoka University, Amrita University, ISB & so on."
-                        ].map((text, index) => (
-                            <div key={index} className="flex items-center justify-center w-55 h-55 rounded-full bg-white border-10 border-[#E6F3FF] p-4 text-center font-medium hover:border-[#0066FF] transition-colors duration-300">
-                                {text}
+                    
+                    <div className="text-center lg:text-left">
+                        <h2 className="text-xl sm:text-2xl lg:text-4xl text-gray-800 mb-4 sm:mb-6 leading-tight">
+                            We're not just building a network.<br className="hidden sm:block" /> 
+                            <span className="sm:hidden"> </span>We're cultivating a{" "}
+                            <b>global force</b> for{" "}
+                            <b>educational transformation.</b>
+                        </h2>
+                        
+                        {/* Keywords section */}
+                        <div className="mb-4 py-5">
+                            <p className="text-sm sm:text-base text-gray-700 italic">
+                                CLIMATE ACTION. LEADERSHIP. INNOVATION.<br />
+                                DIPLOMACY. ENTREPRENEURSHIP. REGENERATION. SDGs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <motion.div
+              className="text-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <h2 className="py-16 text-3xl md:text-4xl lg:text-5xl text-black leading-tight">
+                A <b>Prestigious Alliance</b> of<span className="text-[#1774d1]"><b> Visionary Institutions</b></span> <br/>shaping the <b>Future of Education</b><span className="text-[#0066FF]">.</span>
+              </h2>
+            </motion.div>
+</section>
+
+
+            <section className="py-8 sm:py-12 lg:py-16 bg-white">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                What Sets Us Apart?
+            </h2>
+        </div>
+
+        <div className="space-y-8 lg:space-y-12">
+            {/* First Row */}
+            <div className="space-y-8 lg:space-y-12">
+  {/* First Row */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+    {[
+      "Highly influential and effective Governing council",
+      "Strong network of mentors and guides for students to unleash their best potential",
+      "Global Certifications co-signed by UN Dignitaries and global leaders",
+      " Network of top 1% Schools",
+      "Focus on inculcating spirit of innovation, entrepreneurship, leadership and regeneration"
+    ].map((text, index) => (
+      <div
+        key={index}
+        className="bg-gradient-to-r from-green-200 via-teal-200 to-teal-300 p-[px] rounded-full p-[5px] rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+      >
+        <div className="group flex items-center justify-center text-center 
+                        min-h-[160px] min-w-[160px] sm:min-h-[180px] sm:min-w-[180px] lg:min-h-[200px] lg:min-w-[200px]
+                        rounded-full bg-white p-4 sm:p-6 font-medium">
+          <p className="text-xs sm:text-sm lg:text-base leading-relaxed group-hover:text-[#1774d1] transition-colors duration-300">
+            {text}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+{/* Timeline Points */}
+       
+
+            {/* Second Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+    {[
+      "Exposure to essential life skills. Experiential learning on diverse topics",
+      "The only MUN focused on Climate and Biodiversity as core themes",
+      "Direct linkage with UNEP ,UN Decade on Ecosystem Restoration, UNFCCC & UN Global Innovation Hub",
+      "Unique opportunity to represent India at UN COP & Global Events",
+      "Access to top institutions like IITs, IIMs, Ashoka University, Amrita University, ISB & so on"
+    ].map((text, index) => (
+      <div
+        key={index}
+        className="bg-gradient-to-r from-green-200 via-teal-200 to-teal-300 p-[px] rounded-full p-[5px] rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+      >
+        <div className="group flex items-center justify-center text-center 
+                        min-h-[160px] min-w-[160px] sm:min-h-[180px] sm:min-w-[180px] lg:min-h-[200px] lg:min-w-[200px]
+                        rounded-full bg-white p-4 sm:p-6 font-medium">
+          <p className="text-xs sm:text-sm lg:text-base leading-relaxed group-hover:text-[#1774d1] transition-colors duration-300">
+            {text}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+        </div>
+
+        {/* Call to Action */}
+        
+    </div>
+</section>
+
+<section className="py-16 bg-gradient-to-r from-[#000000] to-[#002e41] opacity-95">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Header */}
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            Unite - Empower - Act
+                        </h2>
+                        <p className="text-white text-sm max-w-7xl mx-auto">
+                            Global Schools Affiliation, an initiative aligned with the Decade of Action - United Nations Sustainable Development Goals , is more than a network — it’s a global movement to reimagine education for a climate-conscious, innovation-driven, future-ready world. 
+                        </p>
+                    </div>
+
+                    {/* Two Column Content */}
+                    <div className="grid md:grid-cols-2 gap-12 mb-16">
+                        {/* Left Column */}
+                        <div className="space-y-6">
+                            {/* Quote marks */}
+                            <div className="text-[#4A90E2] text-6xl font-bold mb-4">"</div>
+                            <div className="text-sm  text-[#4A90E2] text-justify space-y-4">
+                                <p className="text-sm leading-relaxed">
+                                    <span className="text-[#4A90E2]">India MUN</span> — a distinguished global institution uniting and empowering schools, educators, and young minds for climate action, leadership, innovation, and regeneration — provides a transformative platform to turn ideas into action.
+                                </p>
+                                <p className="text-sm leading-relaxed">
+                                    Sharing deep foundations with organizations such as the United Nations Environment Programme, the United Nations Global Innovation Hub, the United Nations Framework Convention on Climate Change, NASA, ISRO, AICTE and several IITs,<b> India MUN operates at the confluence of global policy, innovation, and education.</b>
+                                </p>
+                                <p className="text-sm leading-relaxed">
+                                    As an initiative shaped alongside <b>Gaia The Earth Foundation</b> — India’s Actor for the UN Decade on Ecosystem Restoration 2021–2030, jointly led by UNEP and FAO — India MUN stands at the forefront of educational transformation, deeply aligned with global sustainability goals.
+                                </p>
+                                <p className="text-sm leading-relaxed">
+                                    At its core, India MUN is the vanguard of climate-conscious education and a catalyst for future-ready learning — one that integrates environmental stewardship with bold leadership, creative innovation, and real-world problem-solving.
+                                </p>
                             </div>
-                        ))}
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="space-y-6">
+                            {/* Quote marks */}
+                            <div className="text-white text-6xl font-bold mb-4">"</div>
+                            <div className="text-white text-justify space-y-4">
+                                <p className="text-sm leading-relaxed">
+                                    By affiliating with India MUN, your school becomes part of a prestigious alliance of changemaking institutions — united in a shared commitment to shape the future through climate action, innovation, and educational leadership.  This prestigious alliance opens doors to global opportunities, UN-aligned programs,  and events, and a community of forward-thinking educators and institutions.
+                                </p>
+                                <p className="text-sm leading-relaxed">
+                                    Affiliation offers an unparalleled platform to showcase your school’s impact, elevate your global profile, and lead transformative change in education — across sustainability, leadership, innovation and 21st-century learning.
+                                </p>
+                                <p className="text-sm leading-relaxed">
+                                    Together, let's embark on a rewarding journey of climate action, leadership and innovation, crafting a world that thrives and prospers for generations to come. 
+                                </p>
+                                <p className="text-sm leading-relaxed font-semibold">
+                                    India MUN Secretariat is committed to providing our affiliated schools with extensive support and resources, expert-led training, and dedicated guidance for both educators and students — ensuring your school thrives at every step.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Centered Statement */}
+                    <div className="text-center mb-12">
+                        <p className="text-white text-lg font-semibold max-w-9xl mx-auto">
+                            We believe in harnessing the collective power of the largest youth constituency in the world to transform them into a dynamic network of future sustainability leaders, innovators, and changemakers of tomorrow.
+                        </p>
+                    </div>
+
+                    {/* UN Logo */}
+                    <div className="flex justify-center mb-12">
+                        <div className="relative w-24 h-24">
+                            <Image
+                                src="/images/home_page/h2.webp"
+                                alt="UN Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <Button className="bg-[#4A90E2] hover:bg-[#357ABD] text-white px-12 py-4 text-lg font-semibold rounded-xl min-w-[200px]">
+                            Download Brochure
+                        </Button>
+                        <Button className="bg-[#4A90E2] hover:bg-[#357ABD] text-white px-12 py-4 text-lg font-semibold rounded-xl min-w-[200px]">
+                            Affiliate Now
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -633,214 +788,348 @@ export default function GlobalSchoolsPage() {
             </section>
 
             {/* Unite - Empower - Act Section */}
-            <section className="py-16 bg-gradient-to-r from-[#0a1929] to-[#1a2332]">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Header */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            Unite - Empower - Act
-                        </h2>
-                        <p className="text-[#4A90E2] text-lg md:text-xl max-w-4xl mx-auto">
-                            Global Schools Affiliation is more than a network — it's a movement to reimagine education for a climate-conscious, innovation-driven, future-ready world.
-                        </p>
-                    </div>
-
-                    {/* Two Column Content */}
-                    <div className="grid md:grid-cols-2 gap-12 mb-16">
-                        {/* Left Column */}
-                        <div className="space-y-6">
-                            {/* Quote marks */}
-                            <div className="text-[#4A90E2] text-6xl font-bold mb-4">"</div>
-                            <div className="text-white space-y-4">
-                                <p className="text-lg leading-relaxed">
-                                    <span className="text-[#4A90E2] font-semibold">India MUN</span> - a pioneering global institution, uniting and empowering schools, educators and young minds for climate action, leadership and innovation, provides a transformative platform for the schools, educators & students to help nurture their ideas into action, connecting them with a global community supported by global leaders, industry experts, UN Environment Program and UN Climate Change.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    Sharing deep foundations with organizations such as the United Nations Environment Programme, the United Nations Global Innovation Hub, the United Nations Framework Convention on Climate Change, NASA, ISRO, ARCI and several IITs, India MUN operates at the confluence of global policy, innovation, and education.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    At its core, India MUN is the vanguard of climate-conscious education and a catalyst for future-ready learning — one that integrates environmental stewardship with bold leadership, creative innovation, and real-world problem-solving.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Right Column */}
-                        <div className="space-y-6">
-                            {/* Quote marks */}
-                            <div className="text-[#4A90E2] text-6xl font-bold mb-4">"</div>
-                            <div className="text-white space-y-4">
-                                <p className="text-lg leading-relaxed">
-                                    By affiliating with <span className="font-semibold">India MUN</span>, your school joins a <span className="font-semibold">prestigious alliance of changemaking institutions</span> — united in signing the climate pledge for "UN Decade on Climate Action". This prestigious alliance opens doors to participate in UN-based programs and events, fostering connections among leaders who are passionately committed to shaping a greener and more resilient world.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    We provide schools with an unparalleled platform to showcase their work, earn global recognition, and lead in climate action, innovation, and leadership.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    Together, let's embark on a rewarding journey of climate action, leadership and innovation, crafting a world that thrives and prospers for generations to come.
-                                </p>
-                                <p className="text-lg leading-relaxed font-semibold">
-                                    <span className="text-[#4A90E2]">India MUN secretariat</span> is committed to providing our affiliated schools with extensive support and resources, including trainings for teachers and students, and ongoing guidance throughout the program's journey.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Centered Statement */}
-                    <div className="text-center mb-12">
-                        <p className="text-white text-xl font-medium max-w-4xl mx-auto">
-                            We believe in harnessing the collective power of the largest youth constituency in the world to transform them into a dynamic network of future sustainability leaders, innovators, and changemakers of tomorrow.
-                        </p>
-                    </div>
-
-                    {/* UN Logo */}
-                    <div className="flex justify-center mb-12">
-                        <div className="relative w-24 h-24">
-                            <Image
-                                src="/images/home_page/h2.webp"
-                                alt="UN Logo"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <Button className="bg-[#4A90E2] hover:bg-[#357ABD] text-white px-12 py-4 text-lg font-semibold rounded-xl min-w-[200px]">
-                            Download Brochure
-                        </Button>
-                        <Button className="bg-[#4A90E2] hover:bg-[#357ABD] text-white px-12 py-4 text-lg font-semibold rounded-xl min-w-[200px]">
-                            Affiliate Now
-                        </Button>
-                    </div>
-                </div>
-            </section>
 
             {/* Affiliation Benefits Section */}
-            <section className="py-16 bg-gray-50">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Header */}
-                    <div className="text-center mb-16">
+
+
+            <section className="bg-white py-16">
+                            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                                {/* Header */}
+                                <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-[#1875d1] mb-4">
                             Affiliation Benefits
                         </h2>
+                        <h2 className="text-4xl md:text-3xl text-black mb-6">
+                            For <span className="font-bold">lnstitutions</span><span className="text-[#4686d8]">.</span> For <span className="font-bold">Educators</span><span className="text-[#4686d8]">.</span> For <span className="font-bold">Students</span><span className="text-[#4686d8]">.</span>
+                        
+                        </h2>
                     </div>
-
-                    {/* Benefits Accordion Grid */}
-                    <div className="relative max-w-6xl mx-auto">
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 mb-12">
-                            {[
-                                {
-                                    id: "certificate",
-                                    title: "Affiliation Certificate",
-                                    content: "Receive an official certificate recognizing your school's commitment to global climate action, leadership, and innovation. This prestigious certificate validates your institution's dedication to future-ready education.",
-                                    icon: (
-                                        <svg viewBox="0 0 64 64" fill="currentColor" className="w-full h-full">
-                                            <path d="M12 8h40a4 4 0 0 1 4 4v32a4 4 0 0 1-4 4H36l-4 8-4-8H12a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4zm6 8v4h28v-4H18zm0 8v4h28v-4H18zm0 8v4h20v-4H18z" />
-                                            <circle cx="44" cy="40" r="6" fill="none" stroke="currentColor" strokeWidth="2" />
-                                            <path d="m41 40 2 2 4-4" fill="none" stroke="currentColor" strokeWidth="2" />
-                                        </svg>
-                                    )
-                                },
-                                {
-                                    id: "ranking",
-                                    title: "Global Schools Ranking",
-                                    content: "Be part of an exclusive ranking system that recognizes schools globally for their excellence in climate action, leadership, and innovation. Showcase your school's achievements on an international platform.",
-                                    icon: (
-                                        <svg viewBox="0 0 64 64" fill="currentColor" className="w-full h-full">
-                                            <rect x="8" y="32" width="8" height="24" rx="2" />
-                                            <rect x="20" y="24" width="8" height="32" rx="2" />
-                                            <rect x="32" y="16" width="8" height="40" rx="2" />
-                                            <rect x="44" y="8" width="8" height="48" rx="2" />
-                                            <path d="m12 20 8-8 8 8 8-8 8 8" fill="none" stroke="currentColor" strokeWidth="2" />
-                                        </svg>
-                                    )
-                                },
-                                {
-                                    id: "reputation",
-                                    title: "Enhanced Reputation",
-                                    content: "Elevate your school's reputation in the educational community and beyond. Gain recognition as a forward-thinking institution committed to addressing global challenges and preparing future leaders.",
-                                    icon: (
-                                        <svg viewBox="0 0 64 64" fill="currentColor" className="w-full h-full">
-                                            <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" strokeWidth="2" />
-                                            <path d="m20 32 8 8 16-16" fill="none" stroke="currentColor" strokeWidth="3" />
-                                            <circle cx="32" cy="8" r="4" />
-                                            <circle cx="8" cy="32" r="4" />
-                                            <circle cx="56" cy="32" r="4" />
-                                            <circle cx="32" cy="56" r="4" />
-                                        </svg>
-                                    )
-                                },
-                                {
-                                    id: "accreditation",
-                                    title: "GSCA & GSLI Accreditation",
-                                    content: "Achieve prestigious Global Schools for Climate Action (GSCA) and Global Schools Leadership Initiative (GSLI) accreditation, marking your school as a certified leader in sustainable education practices.",
-                                    icon: (
-                                        <svg viewBox="0 0 64 64" fill="currentColor" className="w-full h-full">
-                                            <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" strokeWidth="2" />
-                                            <path d="M32 12v8M32 44v8M52 32h-8M20 32h8" stroke="currentColor" strokeWidth="2" />
-                                            <text x="32" y="28" textAnchor="middle" fontSize="8" fill="currentColor">GSCA</text>
-                                            <text x="32" y="38" textAnchor="middle" fontSize="6" fill="currentColor">PLATINUM</text>
-                                        </svg>
-                                    )
-                                },
-                                {
-                                    id: "awards",
-                                    title: "Recognition & Awards",
-                                    content: "Access exclusive awards and recognition opportunities for your school and students. Participate in competitions, win prestigious prizes, and gain international acclaim for outstanding achievements.",
-                                    icon: (
-                                        <svg viewBox="0 0 64 64" fill="currentColor" className="w-full h-full">
-                                            <path d="M32 8l6 12h12l-10 8 4 12-12-8-12 8 4-12-10-8h12z" />
-                                            <circle cx="46" cy="18" r="6" fill="none" stroke="currentColor" strokeWidth="2" />
-                                            <path d="M32 44v12M28 52h8" stroke="currentColor" strokeWidth="2" />
-                                        </svg>
-                                    )
-                                },
-                                {
-                                    id: "support",
-                                    title: "Access to Support & Resources",
-                                    content: "Gain access to comprehensive support including training programs for teachers and students, educational resources, mentorship opportunities, and ongoing guidance throughout your journey with India MUN.",
-                                    icon: (
-                                        <svg viewBox="0 0 64 64" fill="currentColor" className="w-full h-full">
-                                            <rect x="16" y="16" width="32" height="32" rx="4" fill="none" stroke="currentColor" strokeWidth="2" />
-                                            <circle cx="32" cy="24" r="4" />
-                                            <path d="M24 36h16v8H24z" />
-                                            <path d="M32 8v8M32 48v8M8 32h8M48 32h8" stroke="currentColor" strokeWidth="2" />
-                                        </svg>
-                                    )
-                                }
-                            ].map((benefit) => (
-                                <div key={benefit.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            
+                                {/* Benefits Grid with Accordions */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+                                    {/* Benefit Item 1 */}
                                     <Accordion type="single" collapsible className="w-full">
-                                        <AccordionItem value={benefit.id} className="border-none">
-                                            <AccordionTrigger className="hover:no-underline px-4 pt-4 pb-2 flex flex-col [&>svg]:order-last [&>svg]:mt-2 [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-[#4ECDC4]">
-                                                <div className="flex flex-col items-center text-center w-full">
-                                                    <div className="flex justify-center items-center mb-3">
-                                                        <div className="w-8 h-8 text-[#4ECDC4]">
-                                                            {benefit.icon}
-                                                        </div>
-                                                    </div>
-                                                    <h3 className="text-sm font-bold text-gray-800 line-clamp-2 mb-1">{benefit.title}</h3>
+                                        <AccordionItem value="item-1" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w5.webp"
+                                                        alt="Global Schools Affiliation Certificate"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Global Schools Affiliation Certificate
+                                                    </span>
                                                 </div>
                                             </AccordionTrigger>
-                                            <AccordionContent className="px-4 pb-4">
-                                                <p className="text-xs text-gray-600 text-center">{benefit.content}</p>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Receive an official certificate recognizing your school's commitment to global education excellence.
+                                                This prestigious document validates your institution's dedication to 21st-century learning principles.
                                             </AccordionContent>
                                         </AccordionItem>
                                     </Accordion>
+            
+                                    {/* Benefit Item 2 */}
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-2" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w6.webp"
+                                                        alt="Global Schools Ranking"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Global Schools Ranking
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Get featured in our comprehensive global schools ranking system based on sustainability, innovation, and impact.
+                                                Gain visibility among parents, students, and educational stakeholders worldwide.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    {/* Benefit Item 3 */}
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-3" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w7.webp"
+                                                        alt="Digital Badge & Branding Assets"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Digital Badge & Branding Assets
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Access high-quality digital badges and branding materials for your website, marketing, and communications.
+                                                Enhance your school's visual identity with internationally recognized certification marks.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    {/* Benefit Item 4 */}
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-4" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w8.webp"
+                                                        alt="GSCA & GSLI Accreditation"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        GSCA & GSLI Accreditation
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Achieve specialized accreditation through Global Schools for Climate Action and Global Schools Leadership Initiative.
+                                                Join an elite network of schools driving positive environmental and social change.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    {/* Benefit Item 5 */}
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-5" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w9.webp"
+                                                        alt="Recognition & Awards"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Recognition & Awards
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Participate in annual Global Schools Awards recognizing excellence in education, innovation, and sustainability.
+                                                Gain media coverage and recognition from educational leaders worldwide.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    {/* Benefit Item 6 */}
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-6" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w10.webp"
+                                                        alt="Access to Support & Resources"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Access to Support & Resources
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Get access to exclusive educational resources, curriculum guides, and implementation frameworks.
+                                                Connect with a global community of educators sharing best practices and innovative solutions.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    {/* Continue with remaining items - Row 2 */}
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-7" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w11.webp"
+                                                        alt="Global Schools Summit"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Global Schools Summit
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Participate in exclusive annual summits bringing together global educational leaders and innovators.
+                                                Present your school's achievements and initiatives to an international audience.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-8" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w12.webp"
+                                                        alt="Professional Development for Educators"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Professional Development for Educators
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Provide your teachers with world-class professional development opportunities and certifications.
+                                                Empower your educators to become catalysts of transformation in their classrooms.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-9" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w13.webp"
+                                                        alt="Enhanced Reputation"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Enhanced Reputation
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Elevate your school's reputation as a forward-thinking institution committed to global excellence.
+                                                Stand out in the competitive educational landscape with internationally recognized certification.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-10" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w14.webp"
+                                                        alt="Host Your Own MUN"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Host Your Own MUN
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Get support and resources to host your own Model United Nations conferences and diplomatic events.
+                                                Build partnerships with other schools and create meaningful learning experiences.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-11" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w15.webp"
+                                                        alt="Greater Student Engagement"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        Greater Student Engagement
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Implement innovative programs and activities that significantly boost student engagement and motivation.
+                                                Foster a culture of active participation and leadership among your student community.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-12" className="border rounded-lg">
+                                            <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                <div className="flex flex-col items-center space-y-2 text-center">
+                                                    <Image
+                                                        src="/images/whyApply/w16.webp"
+                                                        alt="City Representative Recognition"
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-30 h-30 object-contain"
+                                                    />
+                                                    <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                        City Representative Recognition
+                                                    </span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                Become the official Global Schools representative for your city or region.
+                                                Gain recognition as a hub for educational excellence and community leadership.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+            
+                                    {/* Continue with items 13-18 (w17-w22) */}
+                                    {[
+                                        { num: 17, title: "Global Schools Network Directory", desc: "Get listed in our comprehensive directory accessible to parents, students, and educational partners worldwide. Connect with a global network of like-minded educational institutions." },
+                                        { num: 18, title: "Networking and Collaborations", desc: "Build meaningful partnerships with schools, organizations, and institutions around the world. Share resources and best practices with a global community of educators." },
+                                        { num: 19, title: "Global Exposure", desc: "Showcase your school's achievements and initiatives on international platforms and media. Gain visibility among international educational leaders and stakeholders." },
+                                        { num: 20, title: "Community Impact", desc: "Implement programs that create positive impact in your local and global communities. Build partnerships with NGOs and community organizations for greater impact." },
+                                        { num: 21, title: "Innovative Teaching", desc: "Access cutting-edge teaching methodologies and educational technologies. Stay at the forefront of educational innovation and best practices." },
+                                        { num: 22, title: "Climate and Innovation Clubs", desc: "Establish specialized clubs focused on climate action, sustainability, and innovation. Foster entrepreneurial thinking and environmental stewardship among young learners." },
+                                    ].map((item, index) => (
+                                        <Accordion key={item.num} type="single" collapsible className="w-full">
+                                            <AccordionItem value={`item-${item.num}`} className="border rounded-lg">
+                                                <AccordionTrigger className="hover:no-underline px-4 py-3">
+                                                    <div className="flex flex-col items-center space-y-2 text-center">
+                                                        <Image
+                                                            src={`/images/whyApply/w${item.num}.webp`}
+                                                            alt={item.title}
+                                                            width={48}
+                                                            height={48}
+                                                            className="w-30 h-30 object-contain"
+                                                        />
+                                                        <span className="text-xs font-semibold text-gray-800 leading-tight">
+                                                            {item.title}
+                                                        </span>
+                                                    </div>
+                                                </AccordionTrigger>
+                                                <AccordionContent className="text-xs text-gray-600 px-4 pb-4">
+                                                    {item.desc}
+                                                </AccordionContent>
+                                            </AccordionItem>
+                                        </Accordion>
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Affiliate Now Button */}
-                    <div className="text-center">
+                            </div>
+                            {/* Affiliate Now Button */}
+                    <div className="text-center py-10">
                         <Button className="bg-[#1875d1] hover:bg-[#1875d1]/90 text-white px-12 py-4 text-lg font-semibold rounded-xl">
-                            Affiliate Now
+                            Explore all Affiliation Benefits
                         </Button>
                     </div>
-                </div>
-            </section>
+                        </section>
 
             {/* Affiliation Structure & Recognition Pathways Section */}
             <section className="py-16 bg-gray-50">
@@ -895,7 +1184,7 @@ export default function GlobalSchoolsPage() {
 
                                     {/* Right side - Content */}
                                     <div className="space-y-4">
-                                        <h3 className="text-xl font-bold text-gray-800 mb-3">
+                                        <h3 className="text-xl py-6 font-bold text-gray-800 mb-3">
                                             Global Schools Affiliation
                                         </h3>
 
@@ -922,7 +1211,7 @@ export default function GlobalSchoolsPage() {
                                                 <span className="font-semibold">Affiliation fee (Global Member School):</span> INR 25,000 + GST
                                             </p>
                                             <p className="text-sm text-gray-800">
-                                                <span className="font-semibold">Renewal:</span> INR 10,000 + GST/year
+                                                <span className="font-semibold">Renewal:</span> INR 15,000 + GST/year
                                             </p>
                                         </div>
 
@@ -937,7 +1226,7 @@ export default function GlobalSchoolsPage() {
 
                                 {/* Bottom section */}
                                 <div className="mt-8 text-center">
-                                    <p className="text-sm text-gray-700 leading-relaxed max-w-5xl mx-auto mb-6">
+                                    <p className="text-sm text-gray-700 leading-relaxed max-w-6xl mx-auto mb-6">
                                         The future of education is being written today by institutions bold enough to lead. Your school has the opportunity
                                         to be recognized not just locally, but nationally and internationally, as a beacon of educational excellence and transformation.
                                     </p>
@@ -953,7 +1242,7 @@ export default function GlobalSchoolsPage() {
                             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
                                 <div className="text-center mb-6">
                                     <h3 className="text-xl font-bold text-gray-800">
-                                        Your School's Official Onboarding Kit
+                                        Global Member School - Official Onboarding Kit
                                     </h3>
                                 </div>
 
@@ -972,8 +1261,7 @@ export default function GlobalSchoolsPage() {
                                         </div>
 
                                         <div>
-                                            <h4 className="text-lg font-bold text-gray-800 mb-4">
-                                                Global Member School<br />
+                                            <h4 className="text-xl font-bold text-[#1774d1] mb-4">
                                                 Official Onboarding Kit -
                                             </h4>
 
@@ -997,27 +1285,29 @@ export default function GlobalSchoolsPage() {
                                                     <h5 className="text-sm font-semibold text-gray-800">Media Toolkit –</h5>
                                                     <p className="text-xs text-gray-600">Includes a press release template, branding assets, and promotional materials to announce your affiliation.</p>
                                                 </div>
+                                                <div>
+                                            <h5 className="text-sm font-semibold text-gray-800">Marketing Pack –</h5>
+                                            <p className="text-xs text-gray-600">Ready-to-use designs for social media, co-branded posters, certificates, and more.</p>
+                                        </div>
+
+                                        <div>
+                                            <h5 className="text-sm font-semibold text-gray-800">School Listing –</h5>
+                                            <p className="text-xs text-gray-600">in the National Global Schools Network Directory</p>
+                                        </div>
+
+                                        
+                                                
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Right Column */}
                                     <div className="space-y-3">
-                                        <div>
-                                            <h5 className="text-sm font-semibold text-gray-800">Marketing Pack –</h5>
-                                            <p className="text-xs text-gray-600">Ready-to-use designs for social media, co-branded posters, certificates, and more.</p>
-                                        </div>
-
-                                        <div>
-                                            <h5 className="text-sm font-semibold text-gray-800">School Listing</h5>
-                                            <p className="text-xs text-gray-600">in the National Global Schools Network Directory</p>
-                                        </div>
-
-                                        <div>
+                                        
+<div>
                                             <h5 className="text-sm font-semibold text-gray-800">Access to India MUNx Resources –</h5>
                                             <p className="text-xs text-gray-600">Complete support to host Model UNs, Hackathons, Innovation Tank, Sustainability Fests, and more.</p>
                                         </div>
-
                                         <div>
                                             <h5 className="text-sm font-semibold text-gray-800">Eligibility for Awards & Ranking –</h5>
                                             <p className="text-xs text-gray-600">Automatically considered for Global Schools Ranking and prestigious prizes.</p>
@@ -1070,12 +1360,12 @@ export default function GlobalSchoolsPage() {
             </section>
 
             {/* City Representatives Section */}
-            <section className="py-16 bg-gradient-to-r from-[#0a1929] to-[#1a2332]">
+            <section className="py-16 bg-gradient-to-r from-[#000000] to-[#002e41] opacity-95">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         {/* Left side - Content */}
                         <div className="text-white space-y-4">
-                            <h2 className="text-3xl font-bold text-[#4A90E2] mb-4">
+                            <h2 className="text-3xl font-bold text-[#1b66cf] mb-4">
                                 City Representatives
                             </h2>
 
@@ -1083,7 +1373,7 @@ export default function GlobalSchoolsPage() {
                                 Your School. Your City. A Leadership Role.
                             </h3>
 
-                            <p className="text-sm mb-6">
+                            <p className="text-sm mb-6 text-justify">
                                 Affiliated schools have the exclusive opportunity to be nominated for the esteemed role of City
                                 Representative — a position that marks your institution as a regional leader in educational
                                 transformation.
@@ -1122,9 +1412,9 @@ export default function GlobalSchoolsPage() {
                             </div>
 
                             <div className="bg-[#1a2332] p-4 rounded-lg mt-6">
-                                <p className="text-sm">
-                                    City Representatives are spotlight institutions who becomes the face of educational transformation
-                                    in their region — shaping local ecosystems for climate action, innovation, and youth leadership.
+                                <p className="text-sm text-justify">
+                                    <b>City Representatives are spotlight institutions who becomes the face of educational transformation
+                                    in their region — shaping local ecosystems for climate action, innovation, and youth leadership.</b>
                                 </p>
                             </div>
 
@@ -1150,39 +1440,39 @@ export default function GlobalSchoolsPage() {
 
             {/* Responsive Image Section */}
             <section className="w-full relative">
+  <div className="max-w-[1200px] mx-auto">
+    <Image
+      src="/images/affiliation/x32.webp"
+      alt="Desktop Program Image"
+      width={1200}
+      height={675} // 16:9 ratio for 1200px width
+      className="w-full h-auto"
+    />
+  </div>
+</section>
 
-                <div className="">
-                    <Image
-                        src="/images/affiliation/x32.webp"
-                        alt="Desktop Program Image"
-                        width={1920}
-                        height={1080}
-                        className="w-full"
-                    />
-                </div>
-            </section>
 
             {/* The Vision Behind the Global Schools Affiliation Section */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <section className="max-w-7xl mx-auto py-16 px-4">
+                <div className="bg-gray-30 rounded-3xl border-2 border-gray-200 p-8 md:p-12">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-[#4686d8] mb-4">
+                        <h2 className="text-5xl font-bold text-[#4686d8] mb-4">
                             The Vision Behind the Global Schools Affiliation
                         </h2>
-                        <p className="text-lg text-gray-800 font-medium">
+                        <p className="text-lg text-gray-800">
                             Uniting Institutions Bold Enough to Shape the Future of Education
                         </p>
                     </div>
 
                     {/* Main Content */}
                     <div className="space-y-6">
-                        <p className="text-sm text-gray-800 font-medium">
+                        <p className="text-sm text-gray-800 font-bold">
                             The Global Schools Affiliation is built on a powerful belief — that the future of education will be led by bold, collaborative, purpose-driven institutions.
                         </p>
 
                         <p className="text-sm text-gray-700 leading-relaxed">
-                            This prestigious affiliation is designed to bring together <span className="font-medium">visionary schools</span> that are redefining what it means to educate in the 21st century — integrating <span className="font-medium">climate action, global citizenship, SDG learning, innovation, diplomacy, and leadership development</span> into the very fabric of their institution, also are courageous enough to evolve — and collaborative enough to uplift others along the way.
+                            This prestigious affiliation is designed to bring together <span className="font-bold">visionary schools</span> that are redefining what it means to educate in the 21st century — integrating <span className="font-bold">climate action, global citizenship, SDG learning, innovation, diplomacy, and leadership development</span> into the very fabric of their institution, also are courageous enough to evolve — and collaborative enough to uplift others along the way.
                         </p>
 
                         <p className="text-sm text-gray-700 leading-relaxed">
@@ -1199,7 +1489,7 @@ export default function GlobalSchoolsPage() {
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-gray-400 mt-1">•</span>
-                                    <span className="text-sm text-gray-700">Give schools the <span className="font-medium">visibility, tools, and global platforms</span> to create measurable change</span>
+                                    <span className="text-sm text-gray-700">Give schools the <span className="font-bold">visibility, tools, and global platforms</span> to create measurable change</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-gray-400 mt-1">•</span>
@@ -1226,19 +1516,19 @@ export default function GlobalSchoolsPage() {
                             <ul className="space-y-2">
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#4686d8] mt-1">♦</span>
-                                    <span className="text-sm text-gray-700"><span className="font-medium">National & Global Visibility</span></span>
+                                    <span className="text-sm text-gray-700"><span className="font-bold">National & Global Visibility</span></span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#4686d8] mt-1">♦</span>
-                                    <span className="text-sm text-gray-700">Recognition by <span className="font-medium">global leaders, UN-aligned experts and dignitaries</span></span>
+                                    <span className="text-sm text-gray-700">Recognition by <span className="font-bold">global leaders, UN-aligned experts and dignitaries</span></span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#4686d8] mt-1">♦</span>
-                                    <span className="text-sm text-gray-700">Access to <span className="font-medium">Globally recognized programs and certifications</span></span>
+                                    <span className="text-sm text-gray-700">Access to <span className="font-bold">Globally recognized programs and certifications</span></span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#4686d8] mt-1">♦</span>
-                                    <span className="text-sm text-gray-700"><span className="font-medium">Unparalleled leadership opportunities</span> for educators and students</span>
+                                    <span className="text-sm text-gray-700"><span className="font-bold">Unparalleled leadership opportunities</span> for educators and students</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#4686d8] mt-1">♦</span>
@@ -1246,7 +1536,7 @@ export default function GlobalSchoolsPage() {
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#4686d8] mt-1">♦</span>
-                                    <span className="text-sm text-gray-700">Access to a <span className="font-medium">powerful ecosystem</span> of like-minded schools, experts, and global partners.</span>
+                                    <span className="text-sm text-gray-700">Access to a <span className="font-bold">powerful ecosystem</span> of like-minded schools, experts, and global partners.</span>
                                 </li>
                             </ul>
                         </div>
@@ -1254,7 +1544,7 @@ export default function GlobalSchoolsPage() {
                         {/* Eligibility Section */}
                         <div className="bg-gray-50 p-4 rounded-lg mt-8">
                             <p className="text-sm text-gray-700">
-                                <span className="font-medium">Eligibility for</span> - City Representative roles, Global Schools Ranking, Platinum-Level Accreditation, Global Schools Prizes, Summit Recognition, Representation at India's Biggest MUN Conference (India MUN National Conferences).
+                                Eligibility for <span className="font-bold">- City Representative roles, Global Schools Ranking, Platinum-Level Accreditation, Global Schools Awards, Global Schools Summit, Representation at India’s Biggest MUN Conference (India MUN National Conferences) and Innovation Hackathons.</span>
                             </p>
                         </div>
 
@@ -1272,7 +1562,7 @@ export default function GlobalSchoolsPage() {
                         </div>
 
                         {/* Call to Action */}
-                        <div className="text-center mt-10">
+                        <div className="mt-10">
                             <h4 className="text-lg font-bold text-gray-800">
                                 Join the movement of schools rewriting the future of education — together.
                             </h4>
@@ -1287,9 +1577,9 @@ export default function GlobalSchoolsPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Main Heading */}
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                            BECOME A <span className="font-bold">GLOBAL MEMBER SCHOOL</span><span className="text-[#4686d8]">.</span><br />
-                            <span className="font-bold">GET CERTIFIED</span><span className="text-[#4686d8]">.</span>
+                        <h2 className="text-4xl md:text-6xl text-black mb-6">
+                            BECOME A <span className="font-extrabold">GLOBAL MEMBER SCHOOL</span><span className="text-[#4686d8]">.</span><br />
+                           GET  <span className="font-bold">CERTIFIED</span><span className="text-[#4686d8]">.</span>
                         </h2>
 
                         {/* Affiliate Now Button */}
@@ -1302,20 +1592,21 @@ export default function GlobalSchoolsPage() {
                     <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16">
                         {/* Global Schools Prizes Card */}
                         <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-                            <h3 className="text-xl font-bold text-gray-800 mb-8">
-                                Global Schools Prizes
+                            <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                Global Schools Awards
                             </h3>
 
                             {/* Circular Badge */}
-                            <div className="flex justify-center mb-8">
-                                <div className="w-32 h-32 rounded-full border-2 border-gray-300 flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-xs font-bold text-gray-600 mb-1">GLOBAL</div>
-                                        <div className="text-xs font-bold text-gray-600 mb-1">SCHOOL</div>
-                                        <div className="text-xs font-bold text-gray-600">PRIZES</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className="flex justify-center mb-4">
+                        <div className="relative w-40 h-40">
+                            <Image
+                                src="/images/affiliation/x33.webp"
+                                alt="UN Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
 
                             <Button className="bg-[#4686d8] hover:bg-[#357ABD] text-white px-8 py-2 text-sm font-medium rounded-lg">
                                 Learn More
@@ -1324,20 +1615,21 @@ export default function GlobalSchoolsPage() {
 
                         {/* Global Schools Ranking Card */}
                         <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-                            <h3 className="text-xl font-bold text-gray-800 mb-8">
+                            <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Global Schools Ranking
                             </h3>
 
                             {/* Circular Badge */}
-                            <div className="flex justify-center mb-8">
-                                <div className="w-32 h-32 rounded-full border-2 border-gray-300 flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-xs font-bold text-gray-600 mb-1">WORLD'S</div>
-                                        <div className="text-xs font-bold text-gray-600 mb-1">LEADING</div>
-                                        <div className="text-xs font-bold text-gray-600">SCHOOLS</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className="flex justify-center mb-4">
+                        <div className="relative w-40 h-40">
+                            <Image
+                                src="/images/affiliation/x34.webp"
+                                alt="UN Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
 
                             <Button className="bg-[#4686d8] hover:bg-[#357ABD] text-white px-8 py-2 text-sm font-medium rounded-lg">
                                 Learn More
@@ -1346,20 +1638,21 @@ export default function GlobalSchoolsPage() {
 
                         {/* Global Schools Summit Card */}
                         <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-                            <h3 className="text-xl font-bold text-gray-800 mb-8">
+                            <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Global Schools Summit
                             </h3>
 
                             {/* Circular Badge */}
-                            <div className="flex justify-center mb-8">
-                                <div className="w-32 h-32 rounded-full border-2 border-gray-300 flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-xs font-bold text-gray-600 mb-1">GLOBAL</div>
-                                        <div className="text-xs font-bold text-gray-600 mb-1">SCHOOL</div>
-                                        <div className="text-xs font-bold text-gray-600">SUMMIT</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className="flex justify-center mb-4">
+                        <div className="relative w-40 h-40">
+                            <Image
+                                src="/images/affiliation/x35.webp"
+                                alt="UN Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
 
                             <Button className="bg-[#4686d8] hover:bg-[#357ABD] text-white px-8 py-2 text-sm font-medium rounded-lg">
                                 Learn More
@@ -1381,7 +1674,7 @@ export default function GlobalSchoolsPage() {
                     >
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1875d1]">Our Governing Council</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Led by distinguished global leaders, UN experts, and education visionaries committed to transforming education for climate action and innovation.
+                            Led by distinguished global leaders, UN experts, and educational leaders committed to transforming education for climate action and innovation.
                         </p>
                         <div className="w-24 h-2 bg-[#1875d1] mx-auto rounded-full mt-6"></div>
                     </motion.div>
@@ -1466,7 +1759,7 @@ export default function GlobalSchoolsPage() {
 
                     {/* Founding Partners */}
                     <div className="mb-16">
-                        <h3 className="text-2xl font-medium text-gray-700 text-center mb-8">Founding Partners</h3>
+                        <h3 className="text-2xl font-bold text-gray-700 text-center mb-8">Founding Partners</h3>
                         <div className="flex flex-col md:flex-row justify-center items-center gap-10">
                             <div className="bg-white rounded-lg p-8 flex items-center justify-center h-40 w-80 relative">
                                 <Image
@@ -1489,9 +1782,9 @@ export default function GlobalSchoolsPage() {
 
                     {/* Network Partners */}
                     <div>
-                        <h3 className="text-2xl font-medium text-gray-700 text-center mb-6">Our Network of Associates & Partners</h3>
+                        <h3 className="text-2xl font-bold text-gray-700 text-center mb-6">Our Network of Associates & Partners</h3>
                         <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                            Through India MUN, BuzzOnEarth, or Gaia Foundation across various programs and initiatives.
+                            Through India MUN, BuzzOnEarth, or Gaia The Earth Foundation across various programs and initiatives.
                         </p>
 
                         {/* Logo Carousel */}
@@ -1526,7 +1819,7 @@ export default function GlobalSchoolsPage() {
                     <h2 className="text-5xl font-bold text-center text-[#4686d8] mb-16">Testimonials</h2>
 
                     {/* Testimonial Carousel */}
-                    <div className="relative max-w-5xl mx-auto mb-20 border border-gray-200 rounded-lg p-8">
+                    <div className="relative max-w-7xl mx-auto mb-20 border border-gray-200 rounded-lg p-8">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             {/* Profile Image and Info */}
                             <div className="flex flex-col items-center text-center">

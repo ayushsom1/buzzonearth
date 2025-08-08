@@ -514,7 +514,7 @@ export default function AboutUsContent() {
       <section className="relative overflow-hidden">
         {/* Gradient strip background */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-400 to-white h-48 top-1/2 z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-400 to-white h-48 top-1/2 z-0"></div>
           
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto py-20 relative z-10">
             {/* Impactful Typography */}

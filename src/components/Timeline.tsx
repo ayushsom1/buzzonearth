@@ -92,16 +92,17 @@ const TimelineSection = () => {
     }, []);
 
     return (
-        <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-black py-16 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-[#000000] via-[#002e41] to-black py-16 overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-6">
+                    <h2 className="py-8 text-3xl md:text-4xl font-bold text-[#1b66cf] mb-6">
                         Global Schools Affiliation is an Investment in Your Most Valuable Assets.
                     </h2>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">
-                        Your Students. Your Educators. Your Legacy.
-                    </h3>
+                    <h2 className="pb-6 text-4xl md:text-4xl text-white mb-6">
+                            Your <span className="font-bold">Students</span><span className="text-[#4686d8] font-bold">.</span> Your <span className="font-bold">Educators</span><span className="text-[#4686d8] font-bold">.</span> Your <span className="font-bold">Legacy</span><span className="text-[#4686d8] font-bold">.</span>
+                        
+                        </h2>
                 </div>
 
                 {/* Timeline */}
@@ -232,7 +233,7 @@ const TimelineSection = () => {
 
                 {/* Bottom Section */}
                 <div className="text-center mt-20">
-                    <h3 className="text-3xl md:text-4xl font-bold text-blue-400 mb-8">
+                    <h3 className="text-3xl md:text-4xl font-bold text-[#1b66cf] mb-8">
                         Build a Transformational Legacy.
                     </h3>
                     <p className="text-gray-300 text-lg leading-relaxed max-w-5xl mx-auto mb-6">
