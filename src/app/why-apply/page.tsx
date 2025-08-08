@@ -105,27 +105,26 @@ export default function WhyApplyPage() {
         <main>
             {/* Global Schools Section */}
             <section className="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-[#1875d1] text-4xl md:text-5xl font-bold mb-8">
-                        Why Apply for the Global Schools<br />
-                        Affiliation?
+                <div className="text-center pt-10">
+                    <h2 className="text-[#1875d1] text-4xl md:text-5xl font-bold mb-4">
+                        Why Apply for the Global Schools Affiliation?
                     </h2>
-                    <p className="text-base md:text-lg text-black max-w-5xl mx-auto">
+                    <p className="text-base md:text-lg text-black max-w-3xl mx-auto">
                         Empowering Your Institution. Elevating Your Impact.
                     </p>
                 </div>
             </section>
 
             {/* Global Education Values Section */}
-            <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-black overflow-hidden">
+            <section className="relative min-h-screen flex justify-center items-center">
                 {/* Background with Earth image */}
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/70 to-black/90"></div>
+                    <div className="absolute inset-0"></div>
                     <Image
                         src={"/images/whyApply/w1.webp"}
                         alt="Earth from space background"
                         fill
-                        className="object-cover opacity-60"
+                        className="object-cover opacity-100"
                     />
                 </div>
 
@@ -139,18 +138,18 @@ export default function WhyApplyPage() {
                             transition={{ duration: 0.8 }}
                         >
                             <div className="space-y-6">
-                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold italic">
+                                <h2 className="text-2xl md:text-3xl lg:text-3xl font-semibold italic">
                                     A prestigious recognition & symbol<br />
                                     of your school's commitment to<br />
-                                    <span className="text-blue-300">global education values.</span>
+                                    global education values.
                                 </h2>
 
                                 <div className="w-24 h-1 bg-blue-400"></div>
 
-                                <p className="text-base md:text-lg leading-relaxed text-gray-200">
+                                <p className="text-base md:text-sm leading-relaxed text-gray-200">
                                     A commitment to future-ready, purpose-driven education. By
-                                    affiliating, your school joins a select league of visionary institutions
-                                    shaping the leaders, innovators, and changemakers of tomorrow.
+                                    affiliating, <br />your school joins a select league of visionary institutions
+                                    shaping the <br />leaders, innovators, and changemakers of tomorrow.
                                 </p>
                             </div>
                         </motion.div>
@@ -176,19 +175,19 @@ export default function WhyApplyPage() {
 
                     {/* Bottom text */}
                     <motion.div
-                        className="mt-16 text-center"
+                        className="text-center"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
                         <div className="text-white text-lg md:text-xl font-bold tracking-wider">
-                            <span className="text-blue-300">CLIMATE ACTION.</span>
+                            <span className="mx-2">CLIMATE ACTION.</span>
                             <span className="mx-2">LEADERSHIP.</span>
-                            <span className="text-blue-300">INNOVATION.</span>
+                            <span className="mx-2">INNOVATION.</span>
                             <span className="mx-2">DIPLOMACY.</span>
-                            <span className="text-blue-300">ENTREPRENEURSHIP.</span>
+                            <span className="mx-2">ENTREPRENEURSHIP.</span>
                             <span className="mx-2">REGENERATION.</span>
-                            <span className="text-blue-300">SDGs.</span>
+                            <span className="mx-2">SDGs.</span>
                         </div>
                     </motion.div>
                 </div>
@@ -197,19 +196,20 @@ export default function WhyApplyPage() {
             {/* Responsive Image Section */}
             <section className="w-full relative mx-auto px-8">
 
-                <div className="">
+                <div className="max-w-[1200px] mx-auto">
                     <Image
                         src="/images/whyApply/w3.png"
                         alt="Desktop Program Image"
-                        width={1920}
-                        height={1080}
+                        width={1200}
+                        height={675}
                         className="w-full px-8 py-14"
                     />
                 </div>
             </section>
+            
 
             {/* Leadership and Transformation Section */}
-            <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-black py-16">
+            <section className="relative bg-gradient-to-r from-[#000000] to-[#002e41] opacity-95 py-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left side - Text content */}
@@ -223,23 +223,23 @@ export default function WhyApplyPage() {
                                 A Mark of Leadership
                             </h2>
 
-                            <h3 className="text-lg md:text-xl font-semibold mb-6">
+                            <h3 className="text-lg pt-8 md:text-xl font-semibold mb-6">
                                 A Commitment to Transformation.
                             </h3>
 
-                            <p className="text-sm md:text-base leading-relaxed text-gray-200 mb-4">
+                            <p className="text-sm md:text-base text-justify text-gray-200 mb-4">
                                 The Global Schools Affiliation isn't just a certification — it's a transformation.
                                 It offers direction, insight, and a powerful partnership that elevates your school culture,
                                 educational leadership, and global standing.
                             </p>
 
-                            <p className="text-sm md:text-base leading-relaxed text-gray-200 mb-6">
+                            <p className="text-sm md:text-base text-justify text-gray-200 mb-6">
                                 It is a mark of distinction for schools that lead with purpose. It recognizes institutions
                                 that are not only educating, but transforming lives through innovation, sustainability, and
                                 global citizenship.
                             </p>
 
-                            <div className="space-y-4">
+                            <div className="space-y-2">
                                 <h4 className="text-blue-400 text-sm md:text-base font-semibold">
                                     Affiliated schools signal to the world that they are:
                                 </h4>
@@ -271,12 +271,12 @@ export default function WhyApplyPage() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, delay: 0.3 }}
                         >
-                            <div className="relative w-full max-w-lg border-2 border-blue-400/30 rounded-lg overflow-hidden">
+                            <div className="relative w-full max-w-2xl overflow-hidden">
                                 <Image
                                     src="/images/whyApply/w4.webp"
                                     alt="Educational Transformation"
-                                    width={600}
-                                    height={400}
+                                    width={1000}
+                                    height={800}
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
@@ -333,7 +333,7 @@ export default function WhyApplyPage() {
                                         It tells the world:
                                     </p>
                                     <p className="text-base md:text-lg text-gray-800 font-bold italic">
-                                        We don't just teach students — <span className="text-blue-500 font-semibold">we shape leaders</span>.
+                                        We don't just teach students — <span className="text-[#1774d1] font-semibold">we shape leaders</span>.
                                     </p>
                                 </div>
                             </div>
@@ -345,11 +345,14 @@ export default function WhyApplyPage() {
             <section className="bg-white py-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-4">
+                    <div className="text-center mb-16">
+                        <h2 className="py-8 text-4xl md:text-5xl font-bold mb-4">
+                            Affiliation Benefits
+                        </h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
                             For Institutions.
                         </h2>
-                        <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto">
+                        <p className="text-base md:text-sm text-gray-700 max-w-7xl mx-auto">
                             We provide schools with an unparalleled platform to showcase your school's vision, amplify your leadership, and gain national & global recognition.
                         </p>
                     </div>
@@ -684,10 +687,10 @@ export default function WhyApplyPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
                             For Educators.
                         </h2>
-                        <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto">
+                        <p className="text-base md:text-sm text-gray-700 max-w-7xl mx-auto">
                             We empowers educators to grow as leaders and 21st-century mentors, equipped with tools, networks, and opportunities to elevate their teaching
                             and transform student outcomes.</p>
                     </div>
@@ -853,10 +856,10 @@ export default function WhyApplyPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
                             For Students:
                         </h2>
-                        <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto">
+                        <p className="text-base md:text-sm text-gray-700 max-w-7xl mx-auto">
                             As part of the Global Schools Affiliation, students gain access to India MUN's most prestigious platforms — designed to build leadership, innovation, climate action, entrepreneurship and future-readiness.
                         </p>
                     </div>
@@ -868,8 +871,8 @@ export default function WhyApplyPage() {
                                 <Image
                                     src="/images/whyApply/w35.webp"
                                     alt="Student Programs Illustration"
-                                    width={500}
-                                    height={500}
+                                    width={700}
+                                    height={700}
                                     className="object-contain"
                                 />
                             </div>
@@ -981,7 +984,7 @@ export default function WhyApplyPage() {
             <div className="w-full lg:w-1/2">
                 {/* Header */}
                 <div className="mb-6">
-                    <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-3">
                         City Representatives
                     </h2>
                     <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-4">
@@ -990,7 +993,7 @@ export default function WhyApplyPage() {
                 </div>
 
                 {/* Main Description */}
-                <div className="mb-6">
+                <div className="mb-6 text-justify">
                     <p className="text-gray-700 text-sm leading-relaxed">
                         Affiliated schools may nominate themselves for the esteemed role of City 
                         Representative — a position that marks your institution as a regional leader in 
@@ -999,23 +1002,23 @@ export default function WhyApplyPage() {
                 </div>
 
                 {/* City Representatives Benefits */}
-                <div className="mb-6">
-                    <h4 className="text-base font-bold text-blue-600 mb-3">City Representatives:</h4>
+                <div className="mb-6 text-justify">
+                    <h4 className="text-base font-bold mb-3">City Representatives:</h4>
                     <ul className="text-gray-700 space-y-2 text-sm">
                         <li className="flex items-start">
-                            <span className="text-blue-600 mr-2 mt-1">•</span>
+                            <span className="text-[#1b66cf] mr-2 mt-1">◆</span>
                             <span>Serve as the official face of India MUN in their city.</span>
                         </li>
                         <li className="flex items-start">
-                            <span className="text-blue-600 mr-2 mt-1">•</span>
+                            <span className="text-[#1b66cf] mr-2 mt-1">◆</span>
                             <span>Host and lead flagship student programs: MUNs, Conferences, Hackathons, Leadership Summits, SDG Events.</span>
                         </li>
                         <li className="flex items-start">
-                            <span className="text-blue-600 mr-2 mt-1">•</span>
+                            <span className="text-[#1b66cf] mr-2 mt-1">◆</span>
                             <span>Represent their city in key national forums and global platforms</span>
                         </li>
                         <li className="flex items-start">
-                            <span className="text-blue-600 mr-2 mt-1">•</span>
+                            <span className="text-[#1b66cf] mr-2 mt-1">◆</span>
                             <span>Gain priority access to flagship initiatives, leadership councils, strategic partnerships and speaking opportunities.</span>
                         </li>
                     </ul>
@@ -1023,7 +1026,7 @@ export default function WhyApplyPage() {
 
                 {/* Additional Description */}
                 <div className="mb-6">
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="text-gray-700 text-sm text-justify leading-relaxed">
                         <strong className="text-gray-800">City Representatives are spotlight institutions who becomes the face of 
                         educational transformation in their region</strong> — shaping local ecosystems for climate 
                         action, innovation, and youth leadership.
@@ -1032,7 +1035,7 @@ export default function WhyApplyPage() {
 
                 {/* Call to Action */}
                 <div>
-                    <p className="text-blue-600 text-base font-bold">
+                    <p className="text-[#1774d1] text-base font-bold">
                         Be the force that elevates your city's voice on a national and global stage.
                     </p>
                 </div>
@@ -1042,16 +1045,16 @@ export default function WhyApplyPage() {
             </section>  
 
           {/* Global Schools Ranking Section */}
-<section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-black py-12">
+<section className="relative bg-gradient-to-br from-[#000000] to-[#002e41] py-12">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Text content */}
-            <div className="text-white space-y-4">
-                <h2 className="text-2xl md:text-3xl font-bold text-blue-400 mb-3">
+            <div className="text-white space-y-4 text-justify">
+                <h2 className="py-10 text-2xl md:text-3xl font-bold text-[#1774d1] mb-3">
                     Global Schools Ranking
                 </h2>
 
-                <h3 className="text-sm md:text-base font-semibold mb-4">
+                <h3 className="text-sm md:text-base mb-4">
                     An international distinction for institutions leading in Climate Action, Leadership, Innovation, 
                     Diplomacy, Entrepreneurship, and Regeneration.
                 </h3>
@@ -1063,9 +1066,9 @@ export default function WhyApplyPage() {
                 </p>
 
                 <div className="space-y-3">
-                    <h4 className="text-white-400 text-sm md:text-base font-semibold">
+                    <h3 className="py-4 text-white-400 text-2xl md:text-2xl font-semibold">
                         Putting Schools on the Global Map:
-                    </h4>
+                    </h3>
                     
                     <p className="text-xs md:text-sm leading-relaxed text-gray-200 mb-3">
                         This prestigious ranking is part of the Global Schools for Climate Action, Leadership & 
@@ -1090,7 +1093,7 @@ export default function WhyApplyPage() {
 
             {/* Right side - Image */}
             <div className="flex justify-center items-center">
-                <div className="relative w-full max-w-lg border-blue-400/30 rounded-lg overflow-hidden">
+                <div className="relative w-full max-w-xl overflow-hidden">
                     <Image
                         src="/images/whyApply/w41.webp"
                         alt="Global Schools Ranking"
@@ -1124,7 +1127,7 @@ export default function WhyApplyPage() {
             <div className="w-full lg:w-1/2">
                 {/* Header */}
                 <div className="mb-6">
-                    <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-3">
+                    <h2 className="py-6 text-2xl md:text-3xl font-bold text-[#1774d1] mb-3">
                         Global Schools Prizes
                     </h2>
                     <h3 className="text-base md:text-lg font-bold text-gray-800 mb-4">
@@ -1134,18 +1137,16 @@ export default function WhyApplyPage() {
 
                 {/* Main Description */}
                 <div className="mb-6">
-                    <p className="text-gray-700 text-sm leading-relaxed">
-                        Global Schools Prizes celebrate schools making a profound and lasting impact 
-                        across education, leadership, climate action, innovation, SDG integration, Youth 
-                        Empowerment & Community Engagement.
+                    <p className="text-gray-700 text-sm text-justify leading-relaxed">
+                        Global Schools Awards celebrate schools making a profound and lasting impact across the key pillars of 21st-century education — including Educational Leadership , Innovation & Entrepreneurship, Climate Action & Sustainability, SDG Integration, Youth Empowerment, and Community Engagement.
                     </p>
                 </div>
 
                 {/* A Mark of Global Impact Section */}
                 <div className="mb-6">
-                    <h4 className="text-base font-bold text-gray-800 mb-3">A Mark of Global Impact</h4>
+                    <h3 className="pb-4 text-2xl md:text-2xl font-bold text-gray-800 mb-3">A Mark of Global Impact</h3>
                     
-                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                    <p className="text-gray-700 text-sm text-justify leading-relaxed mb-4">
                         Awarded annually at the Global Schools Summit & Awards Gala, these prizes 
                         spotlight institutions shaping the next era of education — aligned with the UN 
                         Sustainable Development Goals, ecosystem restoration, and 21st-century leadership. 
@@ -1154,7 +1155,7 @@ export default function WhyApplyPage() {
                         networks.
                     </p>
 
-                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                    <p className="text-gray-700 text-sm text-justify leading-relaxed mb-4">
                         Winning a Global Schools Prize signifies your school's commitment to excellence, 
                         innovation, and shaping the future of education.
                     </p>
@@ -1162,10 +1163,10 @@ export default function WhyApplyPage() {
 
                 {/* Selection Process */}
                 <div>
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="text-gray-700 text-sm text-justify leading-relaxed">
                         <strong className="text-gray-800">The selection is merit-based, transparent, and globally benchmarked, overseen by a 
-                        distinguished panel of:</strong> UN representatives & dignitaries, Leading education 
-                        policymakers and Top university leaders & experts.
+                        distinguished panel of: UN representatives & dignitaries, Leading education 
+                        policymakers and Top university leaders & experts.</strong>
                     </p>
                 </div>
             </div>
@@ -1173,29 +1174,29 @@ export default function WhyApplyPage() {
     </div>
 </section>
 
-<section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-blue-900 py-16 overflow-hidden">
+<section className="relative bg-gradient-to-br from-[#000000] to-[#002e41] py-16 overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Side - Content */}
             <div className="w-full lg:w-1/2">
                 {/* Header */}
                 <div className="mb-6">
-                    <h2 className="text-2xl md:text-3xl font-bold text-blue-400 mb-4">
+                    <h2 className="py-10 text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
                         Global Schools Summit
                     </h2>
                     <h3 className="text-base md:text-lg font-bold text-white mb-4">
-                        A Conference of Changemakers Shaping the Future of Education:
+                        A Confluence of Changemakers Shaping the Future of Education:
                     </h3>
                 </div>
 
                 {/* Main Description */}
                 <div className="mb-6">
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    <p className="text-gray-300 text-sm text-justify leading-relaxed mb-4">
                         The Global Schools Summit is India MUN's annual gathering of trailblazing institutions, 
                         education leaders, Policy Influencers, UN Dignitaries, Global Leaders and Think Tanks.
                     </p>
                     
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-300 text-sm text-justify leading-relaxed">
                         This invite-only forum serves as a catalyst for collaboration, recognition, and vision-building in 
                         education aligned with SDGs and future-readiness.
                         Hosted by India MUN in collaboration with partners from the UN ecosystem and top academic 
@@ -1235,22 +1236,21 @@ export default function WhyApplyPage() {
 
                 {/* Closing Statement */}
                 <div>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                        The Summit is a celebration of bold ideas, global collaboration, and transformative education. 
-                        It's not just an event — it's a movement.
+                    <p className="text-gray-300 text-sm text-justify leading-relaxed">
+                        The Summit is a celebration of bold ideas, global collaboration, and transformative education. “It’s more than an event — it’s a heartfelt celebration of the students, educators, and institutions revolutionising the educational landscape.”
                     </p>
                 </div>
             </div>
 
             {/* Right Side - Image */}
             <div className="w-full lg:w-1/2 flex justify-center">
-                <div className="relative w-full max-w-lg">
+                <div className="relative w-full max-w-2xl">
                     <Image
                         src="/images/whyApply/w43.webp"
                         alt="Global Schools Summit"
                         width={500}
                         height={400}
-                        className="w-full h-auto object-cover rounded-lg"
+                        className="w-full h-auto object-cover"
                     />
                 </div>
             </div>
@@ -1278,16 +1278,13 @@ export default function WhyApplyPage() {
             <div className="w-full lg:w-1/2">
                 {/* Header */}
                 <div className="mb-6">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-                        GSCA & GSLI
-                    </h2>
-                    <h3 className="text-base md:text-lg font-bold text-blue-600 mb-4">
+                    <h2 className="py-8 text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
                         Path to Global Accreditation.
-                    </h3>
+                    </h2>
                 </div>
 
                 {/* Main Content */}
-                <div className="space-y-4">
+                <div className="space-y-4 text-justify">
                     <p className="text-gray-700 text-sm leading-relaxed">
                         Building upon the foundation of our affiliation process, the GSCA—GSLI Accreditation 
                         Program honors institutions that demonstrate exceptional commitment to climate 
@@ -1341,7 +1338,7 @@ export default function WhyApplyPage() {
 
     {/* Content */}
     <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center text-white max-w-4xl mx-auto bg-black/40 p-7 rounded-2xl">
+        <div className="py-10 text-center text-white max-w-4xl mx-auto">
             {/* Top Label */}
             <div className="mb-8">
             <div className="inline-block border border-white/50 px-6 py-2 text-sm font-medium">
@@ -1350,26 +1347,22 @@ export default function WhyApplyPage() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="pt-15 text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             THE FUTURE
             <br />
             OF GLOBAL LEADERSHIP
             </h1>
 
             {/* Subtitle */}
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-8">
+            <h2 className="pb-10 text-xl md:text-2xl lg:text-3xl mb-8">
             Begins in Classrooms Like Yours
             </h2>
 
             {/* Description */}
-            <div className="text-base md:text-lg leading-relaxed space-y-4 max-w-3xl mx-auto">
+            <div className="text-base md:text-sm leading-relaxed space-y-4 max-w-5xl mx-auto bg-black/40 p-7 rounded-2xl">
             <p>
                 Great leaders aren't born in boardrooms — they're nurtured in classrooms first.
-            </p>
-            <p>
                 Today's students will define tomorrow's climate solutions, global policies, and innovation breakthroughs.
-            </p>
-            <p>
                 India MUN provides the platform, network, and recognition to turn your classrooms into launchpads for global impact.
             </p>
             </div>
@@ -1379,10 +1372,10 @@ export default function WhyApplyPage() {
 
 <section className="relative bg-white py-16 overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+                <h2 className="text-2xl md:text-5xl font-bold text-[#1774d1] mb-6">
                     Who Can Apply?
                 </h2>
             </div>
@@ -1390,21 +1383,21 @@ export default function WhyApplyPage() {
             {/* Content List */}
             <div className="space-y-4">
                 <div className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">♦</span>
+                    <span className="text-blue-500 mr-3 mt-1">🔹</span>
                     <p className="text-gray-800 text-base md:text-lg">
-                        K–10/12 Schools (Private / Public / International).
+                        A recognized K–10/12 (Private / Public / International) educational institution operating under national or international curriculum frameworks.
                     </p>
                 </div>
 
                 <div className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">♦</span>
+                    <span className="text-blue-500 mr-3 mt-1">🔹</span>
                     <p className="text-gray-800 text-base md:text-lg">
                         Schools aligned with sustainability, leadership, innovation, or holistic education.
                     </p>
                 </div>
 
                 <div className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">♦</span>
+                    <span className="text-blue-500 mr-3 mt-1">🔹</span>
                     <p className="text-gray-800 text-base md:text-lg">
                         Institutions looking to enhance their global standing and student outcomes.
                     </p>
@@ -1414,7 +1407,7 @@ export default function WhyApplyPage() {
     </div>
 </section>
 
-<section className="relative py-20 overflow-hidden h-200">
+<section className="relative overflow-hidden h-200">
     {/* Background Image */}
     <div className="absolute inset-0">
         <Image
@@ -1424,12 +1417,10 @@ export default function WhyApplyPage() {
             className="object-cover"
             priority
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
     </div>
 
     {/* Content */}
-    <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-12">
         <div className="text-center text-white max-w-5xl mx-auto">
             {/* Main Heading */}
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
@@ -1437,21 +1428,21 @@ export default function WhyApplyPage() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed max-w-4xl mx-auto">
-                Apply now to take your institution beyond boundaries — where learning meets purpose, and every child becomes a leader for the future.
+            <p className="text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed max-w-7xl mx-auto">
+                Apply now to take your institution beyond boundaries — where learning meets purpose, and every child becomes a force for the future.
             </p>
 
         </div>
     </div>
 </section>
 
-<section className="relative py-4 overflow-hidden">
+<section className="relative py-10 overflow-hidden">
      {/* Call to Action */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <span className="text-lg md:text-xl font-semibold">
+                <span className="text-lg md:text-xl text-[#1774d1]">
                     Get Certified:
                 </span>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300 shadow-lg">
+                <button className="bg-[#4A90E2] hover:bg-[#357ABD] text-white px-12 py-2 text-lg font-semibold rounded-xl min-w-[200px]">
                     Affiliate Now
                 </button>
             </div>

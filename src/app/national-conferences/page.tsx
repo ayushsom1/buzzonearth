@@ -49,7 +49,7 @@ export default function NationalConferences() {
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-green-900">
           <iframe
-            src="https://www.youtube.com/embed/yzH6JjqwiHQ?autoplay=1&mute=1&start=11&loop=1&playlist=yzH6JjqwiHQ&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+            src="https://www.youtube.com/embed/yzH6JjqwiHQ?autoplay=1&mute=0&loop=1&playlist=yzH6JjqwiHQ&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
             style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -66,13 +66,13 @@ export default function NationalConferences() {
             animate="visible"
             variants={fadeInUp}
           >
-            "CLIMATE CHANGE IS REAL"
+            "CLIMATE CHANGE"
           </motion.h1>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto text-center py-15">
-        <h1 className="text-3xl md:text-4xl font-bold text-[#0066FF] mb-2">
+      <section className="max-w-7xl mx-auto text-center py-16">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#1774d1] mb-2">
           Get READY to redefine IMPACT
         </h1>
 
@@ -86,62 +86,84 @@ export default function NationalConferences() {
       </section>
 
       {/* Global Force Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image */}
-            <div className="relative">
-              <div className="relative w-full aspect-3/2  h-100 mx-auto">
-                <Image
-                  src="/images/conference25/z1.webp"
-                  alt="Global collaboration - hands protecting Earth"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            </div>
 
-            {/* Right side - Quote Content */}
-            <div className="relative">
-              {/* Large opening quote */}
-              <div className="text-8xl text-[#4686d8] absolute -top-6 -left-4 leading-none">"</div>
-
-              <div className="pl-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 leading-relaxed">
+      <section className="w-full md:mb-8 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 min-h-[430px] lg:h-96">
+                  {/* Left side - Image with overlay text */}
+                  <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-full">
+                      <div className="relative h-full rounded-lg overflow-hidden">
+                          <Image
+                              src="/images/conference25/z1.webp"
+                              alt="Global collaboration - hands protecting Earth"
+                              fill
+                              className="object-cover"
+                          />
+                          {/* Overlay text at bottom */}
+                          
+                      </div>
+                  </div>
+      
+                  {/* Right side - Quote Content */}
+                  <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-6">
+                      <div className="relative w-full max-w-2xl rounded-2xl lg:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 bg-white">
+                          {/* Logo/Image at top */}
+                          <div className="flex justify-left mb-4">
+                              <Image
+                                  src="/images/affiliation/x51.webp"
+                                  alt="Global collaboration logo"
+                                  width={60}
+                                  height={30}
+                                  className="object-contain sm:w-20 sm:h-20 lg:w-24 lg:h-18"
+                              />
+                          </div>
+                          
+                          <div className="text-center lg:text-left">
+                              <h2 className="text-3xl md:text-4xl text-gray-800 mb-8 leading-tight">
                   Behold the power
-                  of the largest youth
-                  population{" "} <br />
-                  <span className="text-[#1875d1]">in the world.</span>
+                  of <b>the largest youth
+                  population{" "} </b><br />
+                  <span className="text-[#1875d1] font-bold ">in the world.</span>
                 </h2>
 
-                {/* Keywords section */}
                 <div className="mb-8">
-                  <p className="text-lg font-semibold text-gray-700 italic">
+                  <p className="text-xl text-gray-700">
                     INDIA’S YOUTH FOR CLIMATE ACTION
                   </p>
                 </div>
 
-                {/* Bottom quote */}
-                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#4686d8]">
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    CLIMATE ACTION. LEADERSHIP. DIPLOMACY. INNOVATION.
-                    GLOBAL EXPOSURE. COMMUNITY IMPACT.
-                  </p>
-                </div>
+                              
+                              {/* Keywords section */}
+                              <div className="mb-4">
+                                  <p className="text-sm sm:text-base text-gray-700 italic">
+                                      CLIMATE ACTION. LEADERSHIP. DIPLOMACY.  INNOVATION. GLOBAL EXPOSURE. COMMUNITY IMPACT.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-
-              {/* Large closing quote */}
-              <div className="text-8xl text-[#4686d8] absolute -bottom-6 right-4 leading-none">"</div>
-            </div>
           </div>
-        </div>
       </section>
 
       <section className="bg-white py-16">
+        
+                            {/* UN Logo */}
+                            <div className="flex justify-center mb-12">
+                                <div className="relative w-50 h-24">
+                                    <Image
+                                        src="/images/logos/top1.webp"
+                                        alt="UN Logo"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-4">
+            <h2 className="text-2xl md:text-xl text-[#1774d1] mb-4">
               The only Model UN that truly represents India on a global stage                        </h2>
             <p className="text-base md:text-md text-gray-700 max-w-7xl mx-auto">
               India’s first and largest MUN conference focused entirely on Climate Action and Biodiversity as the core themes . A challenging and competitive platform for
@@ -150,13 +172,15 @@ export default function NationalConferences() {
             </p>
           </div>
 
-          <Image
+          <div className="flex justify-center mb-12">
+            <Image
             src="/images/conference25/z2.webp"
             alt="Benefits of Participation"
             width={1200}
             height={600}
             className="object-cover rounded-lg"
           />
+          </div>
 
           {/* Benefits Grid with Accordions */}
 
@@ -177,7 +201,7 @@ export default function NationalConferences() {
             "Direct linkage with UNEP and UNFCCC.",
             "Unique opportunity to represent India at UN COP Events."
           ].map((text, index) => (
-            <div key={index} className="flex items-center justify-center w-36 h-36 rounded-full bg-white border-10 border-[#E6F3FF] p-4 text-center font-medium hover:border-[#0066FF] transition-colors duration-300">
+            <div key={index} className="flex items-center justify-center w-36 h-36 rounded-full bg-white border-10 border-[#9de3e6] p-4 text-center font-medium hover:border-[#b8d638] transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
               {text}
             </div>
           ))}
@@ -186,8 +210,8 @@ export default function NationalConferences() {
       </section>
 
       {/* Key Highlights Section */}
-      <section className="max-w-7xl mx-auto mt-24 flex flex-col items-center px-4 justify-center">
-        <h2 className="text-4xl font-bold text-[#0066FF] text-center mb-16">
+      <section className="max-w-7xl mx-auto py-16 flex flex-col items-center px-4 justify-center">
+        <h2 className="text-4xl font-bold text-[#1774d1] text-center py-8">
           Key Highlights
         </h2>
 
@@ -196,7 +220,7 @@ export default function NationalConferences() {
           {/* Youth-Led Dialogues */}
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Youth-Led Dialogues</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-sm">
               Engage in thought-provoking discussions led by young leaders driving climate action globally.
             </p>
           </div>
@@ -204,7 +228,7 @@ export default function NationalConferences() {
           {/* Innovative Solutions Showcase */}
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Innovative Solutions Showcase</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-sm">
               Witness groundbreaking initiatives and solutions addressing pressing climate challenges.
             </p>
           </div>
@@ -212,7 +236,7 @@ export default function NationalConferences() {
           {/* Global Networking */}
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Global Networking</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-sm ">
               Connect with like-minded individuals, experts, and organizations committed to a sustainable future
             </p>
           </div>
@@ -220,7 +244,7 @@ export default function NationalConferences() {
           {/* Inspiring Keynotes */}
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Inspiring Keynotes</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-sm">
               Gain insights from influential speakers shaping the discourse on climate change and environmental conservation
             </p>
           </div>
@@ -228,7 +252,7 @@ export default function NationalConferences() {
           {/* Interactive Workshops */}
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Interactive Workshops</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-sm">
               Participate in hands-on sessions focused on
               regenerative solutions, systems thinking,
               and policy writing, equipping yourself with
@@ -238,7 +262,7 @@ export default function NationalConferences() {
           {/* Youth Awards Ceremony */}
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Leadership Forums & Expert Panels</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-sm">
               Explore the intersection of youth, climate,
               innovation, and leadership through
               moderated panels featuring voices from the
@@ -249,7 +273,7 @@ export default function NationalConferences() {
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Resolution Presentation to
               High-Level Jury</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-sm">
               Final resolutions — drafted through days of research,
               negotiation, and debate — are formally presented to an
               esteemed jury of international diplomats, global leaders
@@ -259,8 +283,8 @@ export default function NationalConferences() {
 
           <div className="bg-white rounded-lg p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Youth Awards Ceremony</h3>
-            <p className="text-gray-700">
-              Celebrate and recognize outstanding contributions by young individuals in the field of climate action.
+            <p className="text-gray-700 text-sm">
+              Outstanding delegates, speakers, and innovators are recognized through prestigious Youth Awards presented during the closing ceremony. These awards celebrate excellence in diplomacy, innovation, climate action, and social impact — spotlighting India’s next generation of global changemakers.
             </p>
           </div>
         </div>
@@ -332,16 +356,16 @@ export default function NationalConferences() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
-            CLIMATE ACTION<span className="text-[#0066FF]">.</span> INNOVATION<span className="text-[#0066FF]">.</span>
+          <h2 className="text-3xl md:text-4xl lg:text-7xl text-black tracking-tight leading-tight">
+            CLIMATE <b>ACTION<span className="text-[#0066FF]">.</span> INNOVATION<span className="text-[#0066FF]">.</span>
             <br />
-            LEADERSHIP DEVELOPMENT<span className="text-[#0066FF]">.</span>
+            LEADERSHIP</b> DEVELOPMENT<b><span className="text-[#0066FF]">.</span></b>
           </h2>
         </motion.div>
       </section>
 
       {/* Fourth Section - Mission */}
-      <section className="bg-gradient-to-r p-10 from-[#0a1929] to-[#112c4c]">
+      <section className="bg-gradient-to-r py-16 from-[#000000] to-[#002e41]">
         <div className="container px-2 sm:px-4 lg:px-3 mx-auto">
           <div className="flex flex-col md:flex-row-reverse items-center">
             <div className="">
@@ -358,18 +382,18 @@ export default function NationalConferences() {
                 With over <b>600 million young people</b>, India is the youngest country in the world.
                 Therefore, in the years to come, no country will produce more leaders than India. The
                 climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has
-                intensified, spread and in some cases, caused irreversible damage – will impact the
-                youth and their future generations the most — the stakes couldn’t be higher.
+                intensified, spread and in some cases, caused irreversible damage – <b>will impact the
+                youth and their future generations the most</b> — the stakes couldn’t be higher.
               </p><br />
               <p className="text-md text-white leading-relaxed">Global bodies have not been able to move the needle as yet.</p>
               <br />
-              <p className="text-md text-white leading-relaxed">Every small step taken by millions of young Indians can create a ripple effect with global
+              <p className="text-md text-white font-bold leading-relaxed">Every small step taken by millions of young Indians can create a ripple effect with global
                 impact.</p>
               <br />
-              <p className="text-md text-white leading-relaxed">You’re standing at the most powerful moment in history.</p>
+              <p className="text-md text-white font-bold leading-relaxed">You’re standing at the most powerful moment in history.</p>
 
               <br />
-              <p className="text-md text-white leading-relaxed">🌱 This is your moment. This is your movement.
+              <p className="text-md text-white leading-relaxed">🌱 This is your <b>moment</b>. This is your <b>movement</b>.
                 <br />And it begins with you.</p>
             </div>
           </div>
@@ -385,13 +409,13 @@ export default function NationalConferences() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0066FF] mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-8 text-center">
             Why Participate: Skills & Impact Beyond the Conference
           </h2>
 
           <div className="space-y-6">
             {/* Communication & Public Speaking */}
-            <div className="flex items-start space-x-4">
+            <div>
               <div className="text-[#0066FF] text-xl mt-1">◆</div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Communication & Public Speaking</h3>
@@ -492,37 +516,37 @@ export default function NationalConferences() {
           {/* First Row - 6 Speakers */}
           {[
             {
-              id: 's1',
+              id: 'G3',
               name: 'Hon\'ble Mr. Suresh Prabhu',
               designation: ['Parliamentarian, Minister and Chancellor', 'Prime Minister\'s Sherpa for G20 Summit (2014-2015)'],
               affiliation: 'Government of India'
             },
             {
-              id: 's2', 
+              id: 'G4', 
               name: 'Mr. Erik Solheim',
               designation: ['Norwegian Diplomat, Peace Negotiator', 'Former Executive Director, UNEP'],
               affiliation: 'UNEP'
             },
             {
-              id: 's3',
+              id: 'G5',
               name: 'Dr. Jagdish N. Seth',
               designation: ['Padma Bhushan Awardee 2020', 'Charles H. Kellstadt Professor'],
               affiliation: 'Emory University'
             },
             {
-              id: 's4',
+              id: 'G6',
               name: 'Dr. Shakila T. Shamsu',
               designation: ['Former OSD (New Education Policy)', 'Department of Higher Education'],
               affiliation: 'Government of India'
             },
             {
-              id: 's5',
+              id: 'M5',
               name: 'Mr. B.N Ramakrishnan',
               designation: ['Joint Director', 'ISRO'],
               affiliation: 'ISRO'
             },
             {
-              id: 's6',
+              id: 'M6',
               name: 'Mr. Rajendra Shende',
               designation: ['Former Director', 'UNEP'],
               affiliation: 'UNEP'
@@ -600,37 +624,37 @@ export default function NationalConferences() {
         >
           {[
             {
-              id: 's7',
+              id: 'M7',
               name: 'Mr. Satya S. Tripathi',
               designation: ['Secretary-General', 'GLOBAL ALLIANCE FOR A SUSTAINABLE PLANET'],
               affiliation: 'GLOBAL ALLIANCE'
             },
             {
-              id: 's8',
+              id: 'M8',
               name: 'Smt. Anita Karwal',
               designation: ['Secretary, Department of School Education', 'MHRD'],
               affiliation: 'MHRD'
             },
             {
-              id: 's9',
+              id: 'M9',
               name: 'Mr. TIM CHRISTOPHERSEN',
               designation: ['Head, Nature for Climate Branch', 'UNEP'],
               affiliation: 'UNEP'
             },
             {
-              id: 's10',
+              id: 'M10',
               name: 'Dr. Biswajit Saha',
               designation: ['Director, Central Institute of Secondary', 'Education(CISCE), Ministry of Education'],
               affiliation: 'Government of India'
             },
             {
-              id: 's11',
+              id: 'M11',
               name: 'Mr. Abhilash Misra',
               designation: ['Board of Directors, IFS Social IAS Council of India', 'Chief Executive Officer'],
               affiliation: 'IAS ACADEMY'
             },
             {
-              id: 's12',
+              id: 'M12',
               name: 'Ms. Liza Goldberg',
               designation: ['Lead - Google Cloud for Classroom', 'Research Scientist'],
               affiliation: 'Google'
@@ -691,15 +715,15 @@ export default function NationalConferences() {
       </section>
 
 
-      <section className="relative p-10 flex items-center justify-center bg-gradient-to-b from-[#001428] to-[#002952] text-white px-4 ">
+      <section className="relative p-10 flex items-center justify-center bg-gradient-to-br from-[#000000] via-[#002e41] to-black text-white px-4 ">
         <div className="container mx-auto text-center space-y-4">
-          <h2 className="text-[#3B82F6] text-2xl md:text-3xl lg:text-4xl font-bold  mx-auto leading-tight mb-10">
+          <h2 className="py-10 text-[#3B82F6] text-2xl md:text-3xl lg:text-4xl font-bold  mx-auto leading-tight mb-10">
             This is not just a conference; it's an invitation to be part of something bigger.
           </h2>
 
           <div className="space-y-4">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-              <span>India</span> Model <span>United Nations</span>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl">
+              <b><span>India</span></b> Model <b><span>United Nations</span></b>
             </h1>
             <p className="text-2xl md:text-3xl lg:text-4xl font-medium">
               A forum for future sustainability leaders
@@ -733,7 +757,7 @@ export default function NationalConferences() {
                 <div>
 
                   <Image
-                    src="/images/programs/s7.webp"
+                    src="/images/programs/S7.webp"
                     alt="Youth Leadership Program Icon"
                     width={200}
                     height={200}
@@ -759,7 +783,7 @@ export default function NationalConferences() {
               <div className="p-8 grid grid-cols-2 gap-4 items-center">
                 <div>
                   <Image
-                    src="/images/programs/s6.webp"
+                    src="/images/programs/S6.webp"
                     alt="Young Forest Ambassador Icon"
                     width={200}
                     height={200}

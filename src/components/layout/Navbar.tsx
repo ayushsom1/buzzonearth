@@ -54,7 +54,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
-    { name: "Global School Affiliations", 
+    { name: "Global Schools Affiliation", 
       href: "/affliation", 
       dropdown: true, 
       items: [
@@ -73,7 +73,8 @@ const Navbar = () => {
       dropdown: true,
       items: nationalConferencesItems,
     },
-    { name: "Global School Awards", href: "/awards" }, 
+    { name: "Global Schools Awards", href: "/awards" },
+    { name: "Global Schools Ranking", href: "/Ranking" }, 
     { name: "Governing Council", href: "/governing-council" },
   ];
 

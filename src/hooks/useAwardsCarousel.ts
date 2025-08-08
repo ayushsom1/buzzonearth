@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 interface Delegate {
   name: string;
@@ -6,63 +6,104 @@ interface Delegate {
   award: string;
 }
 
-export const useAwardsCarousel = (delegates: Delegate[], isReverse: boolean = false) => {
+export const useAwardsCarousel = (
+  delegates: Delegate[],
+  rowIndex: number,
+  scrollSpeed: number = 50 // pixels per second
+) => {
   const [position, setPosition] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const cardWidth = 300; // Width of each card
-  const gap = 24; // Gap between cards (6 * 4 = 24px)
+
+  const animationRef = useRef<number | null>(null);
+  const lastTimeRef = useRef<number>(0);
+
+  const cardWidth = 300;
+  const gap = 24;
   const itemWidth = cardWidth + gap;
   const totalWidth = delegates.length * itemWidth;
 
+  const isReverse = rowIndex % 2 === 1;
+
+  useEffect(() => {
+    if (!isAutoPlaying || delegates.length === 0) {
+      if (animationRef.current !== null) {
+        cancelAnimationFrame(animationRef.current);
+      }
+      return;
+    }
+
+    const animate = (currentTime: number) => {
+      if (lastTimeRef.current === 0) {
+        lastTimeRef.current = currentTime;
+      }
+
+      const deltaTime = currentTime - lastTimeRef.current;
+      const moveDistance = (scrollSpeed * deltaTime) / 1000;
+
+      setPosition(prev => {
+        let newPosition;
+        if (isReverse) {
+          newPosition = prev + moveDistance;
+          if (newPosition >= totalWidth) {
+            return newPosition - totalWidth;
+          }
+        } else {
+          newPosition = prev - moveDistance;
+          if (newPosition <= -totalWidth) {
+            return newPosition + totalWidth;
+          }
+        }
+        return newPosition;
+      });
+
+      lastTimeRef.current = currentTime;
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current !== null) {
+        cancelAnimationFrame(animationRef.current);
+      }
+      lastTimeRef.current = 0;
+    };
+  }, [isAutoPlaying, isReverse, scrollSpeed, delegates.length, totalWidth]);
+
+  useEffect(() => {
+    if (isReverse && position === 0 && delegates.length > 0) {
+      setPosition(-totalWidth / 3);
+    }
+  }, [isReverse, delegates.length, totalWidth, position]);
+
   const scroll = useCallback((direction: 'left' | 'right') => {
     setPosition(prev => {
-      // Adjust direction based on isReverse
-      const effectiveDirection = isReverse ? (direction === 'left' ? 'right' : 'left') : direction;
-      const newPosition = effectiveDirection === 'left' 
+      const effectiveDirection = isReverse
+        ? (direction === 'left' ? 'right' : 'left')
+        : direction;
+
+      const newPosition = effectiveDirection === 'left'
         ? prev + itemWidth
         : prev - itemWidth;
 
-      // When scrolling right and reaching the end
-      if (Math.abs(newPosition) >= totalWidth) {
-        return 0;
-      }
-
-      // When scrolling left and reaching the start
-      if (newPosition > 0) {
-        return -totalWidth + itemWidth;
-      }
+      if (Math.abs(newPosition) >= totalWidth) return 0;
+      if (newPosition > 0) return -totalWidth + itemWidth;
 
       return newPosition;
     });
   }, [totalWidth, itemWidth, isReverse]);
 
-  // Auto scroll effect
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-
-    if (isAutoPlaying) {
-      interval = setInterval(() => {
-        // Auto scroll in opposite direction if isReverse is true
-        scroll(isReverse ? 'left' : 'right');
-      }, 3000);
+  const pauseAutoPlay = () => {
+    setIsAutoPlaying(false);
+    if (animationRef.current !== null) {
+      cancelAnimationFrame(animationRef.current);
     }
+  };
 
-    return () => {
-      if (interval) {
-        clearInterval(interval);
-      }
-    };
-  }, [isAutoPlaying, scroll, isReverse]);
-
-  // Reset position when reaching the end
-  useEffect(() => {
-    if (Math.abs(position) >= totalWidth) {
-      setPosition(0);
-    }
-  }, [position, totalWidth]);
-
-  const pauseAutoPlay = () => setIsAutoPlaying(false);
-  const resumeAutoPlay = () => setIsAutoPlaying(true);
+  const resumeAutoPlay = () => {
+    setIsAutoPlaying(true);
+    lastTimeRef.current = 0;
+  };
 
   return {
     position,
@@ -72,6 +113,7 @@ export const useAwardsCarousel = (delegates: Delegate[], isReverse: boolean = fa
     cardWidth,
     gap,
     totalWidth,
-    isReverse
+    isReverse,
+    rowIndex,
   };
-}; 
+};
