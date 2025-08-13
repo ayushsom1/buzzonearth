@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion,useMotionValue, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, Award, Users, Trophy, Star, CheckCircle } from "lucide-react";
+import EvaluationMatrixSection from "@/components/EvaluationMatrixSection";
 
 // Animation variants
 const fadeInUp = {
@@ -568,6 +569,7 @@ export default function GlobalSchoolsAwards() {
   </div>
 </section>
 
+<EvaluationMatrixSection />
 
       {/* Awards Categories Section */}
       <section className="py-20 ">
