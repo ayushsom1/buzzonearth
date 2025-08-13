@@ -2,7 +2,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion,useMotionValue, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, Award, Users, Trophy, Star, CheckCircle } from "lucide-react";
 
@@ -15,6 +15,7 @@ const fadeInUp = {
     transition: { duration: 0.6, ease: "easeOut" }
   }
 };
+
 
 const fadeInLeft = {
   hidden: { opacity: 0, x: -30 },
@@ -47,107 +48,526 @@ const staggerContainer = {
 export default function GlobalSchoolsAwards() {
   return (
     <div className="flex flex-col min-h-screen">
-<motion.section
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.8 }}
-  className="relative h-[900px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700"
->
-  {/* Background Pattern - UN Globe Style */}
-  <div className="absolute inset-0 z-0">
-    {/* Background Image */}
-    <Image
-      src="/images/ranking/r2.webp"
-      alt="Conference Background"
-      fill
-      className="object-cover object-center"
-      priority
-      sizes="100vw"
-    /> 
-  </div>
-
-  {/* Content */}
-  <div className="container px-4 sm:px-6 lg:px-8 relative z-10 text-white text-center">
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={fadeInUp}
-      className="max-w-5xl mx-auto"
-    >
-      <motion.h2
-        variants={fadeInUp}
-        transition={{ delay: 0.2 }}
-        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-8 text-white"
+    
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700"
       >
-        Global Schools Ranking
-      </motion.h2>
-
-      {/* Date */}
-      <motion.div
-        variants={fadeInUp}
-        transition={{ delay: 0.4 }}
-        className="mb-12"
-      >
-        <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg px-8 py-4 border border-white/20">
-          <div className="flex items-center justify-center gap-3 text-xl md:text-2xl lg:text-3xl font-light">
-            <Calendar className="w-6 h-6 md:w-8 md:h-8" />
-            <span>2025</span>
+        {/* Background Pattern - UN Globe Style */}
+        <div className="absolute inset-0 z-0">
+          {/* Background Image */}
+          <Image
+            src="/images/ranking/r1.webp"
+            alt="Conference Background"
+            fill
+            className="object-cover"
+            priority
+          />
+      
+          {/* Black Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80"></div>
+      
+          
+          {/* UN-style laurel branches */}
+          <div className="absolute bottom-0 left-0 w-full h-32 opacity-10">
+            <div className="flex justify-center">
+              <div className="w-64 h-32 border-t-4 border-l-4 border-r-4 border-white rounded-t-full transform rotate-180" />
+            </div>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
-  </div>
-</motion.section>    
+      
+        {/* Main Grid Container */}
+        <div className="container px-4 sm:px-6 lg:px-8 relative z-10 py-4 sm:py-6 lg:py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 min-h-[calc(100vh-12rem)] sm:min-h-[calc(100vh-6rem)] md:min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-4rem) xl:min-h-screen] items-center">
+            
+            {/* Left Column - Content */}
+            <div className="text-white text-center lg:text-left">
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={fadeInUp}
+    className="max-w-2xl mx-auto lg:mx-0 flex flex-col h-full justify-between"
+  >
+    {/* Title */}
+    <motion.h2
+      variants={fadeInUp}
+      transition={{ delay: 0.2 }}
+      className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white/80"
+    >
+      GLOBAL SCHOOLS RANKING
+    </motion.h2>
 
-      <section className="max-w-7xl mx-auto py-16 px-4">
-              <motion.div
-  className="relative py-12 p-4 md:p-12 rounded-3xl overflow-hidden"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
+    {/* Big Year */}
+    <motion.h2
+      variants={fadeInUp}
+      transition={{ delay: 0.2 }}
+      className="text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[10rem] font-extrabold text-white/60 leading-none mb-12 sm:mb-16 md:mb-24 lg:mb-48"
+    >
+      2025
+    </motion.h2>
+
+    {/* Bottom Row */}
+    {/* Bottom Row */}
+<motion.div
   variants={fadeInUp}
+  transition={{ delay: 0.4 }}
+  className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
 >
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image
-      src="/images/ranking/r2.webp"
-      alt="Background"
-      fill
-      className="object-cover rounded-3xl"
-      priority
-    />
-    {/* Optional dark overlay for readability */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[#000000]/80 via-[#002e41]/80 to-black/80 rounded-3xl" />
-  </div>
-  <h2 className="text-3xl md:text-4xl font-bold text-[#1774d1] mb-8 text-center">
-    The Global Schools Awards
-  </h2>
-  <div className="space-y-6">
-    <div className="flex items-start space-x-4 text-justify">
-      <div>
-        <p className="text-[#1774d1] text-sm">
-          are awarded to <span className="text-white font-bold">making a profound and lasting impact across the key pillars of 21st-century education —</span> including Educational Leadership & Innovation, Climate Action & Sustainability, SDG Integration, Youth Empowerment, and Community Engagement.
-        </p>
-        <p className="text-white text-sm py-6">
-          We honor extraordinary institutions that are not only educating students — <b>but transforming lives, communities, and the world.</b>
-        </p>
-        <p className="text-white text-sm">
-          <span className="text-[#1774d1] font-bold">These are the schools rewriting the narrative of future education:<br/></span>
-          Where <b>climate action</b> meets <b>leadership</b> | Where <b>diplomacy</b> meets <b>innovation</b> | Where <b>students rise as global leaders, innovators and changemakers.</b>
-        </p>
-        <Image
-                src="/images/prizes/p4.webp"
-                alt="Global Schools Awards for Institutions"
-                width={100}
-                height={100}
-                className="mx-auto mt-8 rounded-xl shadow-2xl"
-        />
-      </div>
+  {/* Left Block */}
+  <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg px-4 sm:px-6 py-3 lg:py-4 border border-white/20 w-auto">
+    <div className="flex items-center justify-center gap-2 lg:gap-3 text-sm sm:text-base md:text-lg font-light">
+      <span>🏆</span>
+      <span className="text-center font-bold">Become a Global Member School</span>
     </div>
   </div>
+
+  {/* Right Button */}
+  <button className="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 text-black font-medium rounded-lg px-6 py-3 lg:py-4 text-sm sm:text-base lg:text-lg w-auto">
+    Learn More
+  </button>
 </motion.div>
 
-            </section>
+  </motion.div>
+</div>
+
+
+
+      
+            {/* Right Column - Large Image */}
+            <div className="flex justify-center lg:justify-end mt-4 sm:mt-6 lg:mt-0">
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={fadeInRight}
+                className="relative"
+              >
+                <div className="relative w-full max-w-xl sm:max-w-xl md:max-w-xl lg:max-w-xl">
+                  <div className="absolute inset-0 scale-110"></div>
+                  <Image
+                    src="/images/ranking/r3.webp"
+                    alt="Global Schools Awards Trophy"
+                    width={600}
+                    height={500}
+                    className="relative z-10 w-full h-auto"
+                    priority
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="absolute bottom-4 lg:bottom-8 left-1/2 transform -translate-x-1/2 text-white"
+        >
+          <div className="flex flex-col items-center">
+            <span className="text-xs lg:text-sm mb-2">Scroll to explore</span>
+            <div className="w-5 h-8 lg:w-6 lg:h-10 border-2 border-white rounded-full flex justify-center">
+              <div className="w-1 h-2 lg:h-3 bg-white rounded-full mt-2 animate-bounce" />
+            </div>
+          </div>
+        </motion.div>
+      </motion.section>
+
+
+      
+     <section className="max-w-7xl mx-auto py-16 px-4">
+  <motion.div
+    className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUp}
+  >
+    {/* Left Content */}
+    <div className="w-full mx-auto text-center lg:text-left lg:mx-0">
+  <h3 className="text-2xl md:text-4xl font-extrabold text-black leading-tight">
+    Celebrating Institutions
+  </h3>
+  <h2 className="text-3xl md:text-5xl font-extrabold text-black mt-2">
+    Revolutionizing<br /> Education
+  </h2>
+  <p className="text-gray-600 py-16 text-base leading-relaxed">
+    The Global Schools Ranking is an international honor that recognizes schools 
+    setting the benchmark for transformative education in Climate Action, Leadership, 
+    Innovation, Diplomacy, Entrepreneurship, Regeneration & SDGs Learning.
+  </p>
+</div>
+
+
+    {/* Right Content - Feature Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {/* Card 1 */}
+      <motion.div
+  className="bg-white rounded-2xl shadow-sm p-6 text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+  whileHover={{ scale: 1.03 }}
+>
+  <div className="flex justify-center mb-4">
+    <motion.div
+      className="w-[72px] h-[72px] rounded-full bg-black backdrop-blur-md flex items-center justify-center shadow-lg border border-yellow-300/60"
+      whileHover={{ scale: 1.1, rotate: 5 }}
+    >
+      <div className="w-[60px] h-[60px] relative">
+        <Image
+          src="/images/ranking/r4.webp" // Replace with your logo path
+          alt="Logo"
+          fill
+          className="object-contain"
+        />
+      </div>
+    </motion.div>
+  </div>
+  <h4 className="font-bold text-black">Global Recognition</h4>
+  <p className="text-gray-600 text-sm mt-2">
+    Prestigious acknowledgment from UN dignitaries, global leaders, and international organisations.
+  </p>
+</motion.div>
+
+
+      {/* Card 2 */}
+      <motion.div
+  className="bg-white rounded-2xl shadow-sm p-6 text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+  whileHover={{ scale: 1.03 }}
+>
+  <div className="flex justify-center mb-4">
+    <motion.div
+      className="w-[72px] h-[72px] rounded-full bg-black backdrop-blur-md flex items-center justify-center shadow-lg border border-yellow-300/60"
+      whileHover={{ scale: 1.1, rotate: 5 }}
+    >
+      <div className="w-[60px] h-[60px] relative">
+        <Image
+          src="/images/ranking/r5.webp" // Replace with your logo path
+          alt="Logo"
+          fill
+          className="object-contain"
+        />
+      </div>
+    </motion.div>
+  </div>
+  <h4 className="font-bold text-black">10+ Award Categories</h4>
+  <p className="text-gray-600 text-sm mt-2">
+    Celebrating excellence in sustainability, leadership, innovation, diplomacy, and more.
+  </p>
+</motion.div>
+
+
+      {/* Card 3 */}
+      <motion.div
+  className="bg-white rounded-2xl shadow-sm p-6 text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+  whileHover={{ scale: 1.03 }}
+>
+  <div className="flex justify-center mb-4">
+    <motion.div
+      className="w-[72px] h-[72px] rounded-full bg-black backdrop-blur-md flex items-center justify-center shadow-lg border border-yellow-300/60"
+      whileHover={{ scale: 1.1, rotate: 5 }}
+    >
+      <div className="w-[60px] h-[60px] relative">
+        <Image
+          src="/images/ranking/r6.webp" // Replace with your logo path
+          alt="Logo"
+          fill
+          className="object-contain"
+        />
+      </div>
+    </motion.div>
+  </div>
+  <h4 className="font-bold text-black">Access to Global Platforms</h4>
+  <p className="text-gray-600 text-sm mt-2">
+    Opportunities to participate in world-class summits, national conferences, and global programs.
+  </p>
+</motion.div>
+      
+
+      {/* Card 4 */}
+      <motion.div
+  className="bg-white rounded-2xl shadow-sm p-6 text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+  whileHover={{ scale: 1.03 }}
+>
+  <div className="flex justify-center mb-4">
+    <motion.div
+      className="w-[72px] h-[72px] rounded-full bg-black backdrop-blur-md flex items-center justify-center shadow-lg border border-yellow-300/60"
+      whileHover={{ scale: 1.1, rotate: 5 }}
+    >
+      <div className="w-[60px] h-[60px] relative">
+        <Image
+          src="/images/ranking/r7.webp" // Replace with your logo path
+          alt="Logo"
+          fill
+          className="object-contain"
+        />
+      </div>
+    </motion.div>
+  </div>
+  <h4 className="font-bold text-black">National & Global Visibility</h4>
+  <p className="text-gray-600 text-sm mt-2">
+    Featured across media, global school directory, India MUN’s high-impact network & Annual Report.
+  </p>
+</motion.div>
+      
+    </div>
+  </motion.div>
+</section>
+
+
+<section className="w-full py-16 bg-gradient-to-br from-[#000000] to-[#002e41] md:mb-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 min-h-[430px] lg:h-96">
+                  {/* Left side - Image with overlay text */}
+                  <div className="w-full lg:w-1/2">
+  <div
+    className="relative h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px]
+               rounded-lg overflow-hidden transform transition-transform duration-500 will-change-transform
+               hover:-translate-y-3 hover:scale-105 hover:shadow-2xl"
+  >
+    <Image
+      src="/images/ranking/r8.webp"
+      alt="Global collaboration - hands protecting Earth"
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
+
+      
+                  {/* Right side - Quote Content */}
+                  <div className="w-full lg:w-1/2">
+            <div className="relative w-full rounded-2xl lg:rounded-3xl  p-4 sm:p-6 h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px] flex flex-col justify-center">
+              {/* Content wrapper */}
+              <div className="text-black space-y-4">
+                          
+                            <h3 className="text-3xl text-[#ffd34f] font-bold mb-6">
+                                Putting Schools on the Global Map
+                            </h3>
+
+                            <p className="text-lg mb-6 text-white text-justify">
+                                The <b>Global Schools Ranking</b> by <b>India MUN</b> is a first-of-its-kind platform that recognizes and spotlights pioneering institutions that are not just educating— but transforming the future. 
+                            </p>
+
+                          
+
+                            
+
+                            <p className="text-lg text-white font-bold mb-6">
+                                This recognition elevates schools that <b>unite academic rigor and global vision</b>, preparing their communities for leadership in a rapidly changing world.
+                            </p>
+                        </div>            
+            </div>
+          </div>
+              </div>
+          </div>
+          
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+                    className="text-center"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                  >
+                    <h2 className="text-3xl md:text-4xl font-extrabold lg:text-5xl text-black leading-tight">
+                      Pathway to Global Visibility
+                    </h2>
+                  </motion.div>
+            {/* Header */}
+            <div className="text-center">
+                <p className="py-12 text-md text-[#b68500]">
+                                This prestigious ranking is part of the  <b>Global Schools for Climate Action, Leadership & Innovation (GSCA–GSLI) movement —</b> designed to spotlight schools that are actively aligning with the UN Sustainable Development Goals, the UN Decade on Ecosystem Restoration, and the evolving needs of a planet in transformation. Ranked schools are showcased nationally & globally through India MUN’s and BoE networks, media partnerships, and United Nations-aligned forums. 
+                            </p>
+            </div>
+
+            
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {[
+    {
+      img: "/images/ranking/r9.webp",
+      title: "Official Certificates",
+      description: "Certificates of achievement and digital badges for distinction"
+    },
+    {
+      img: "/images/ranking/r10.webp",
+      title: "Leadership Among Visionaries",
+      description: "Stand among the leading changemaker schools across the globe"
+    },
+    {
+      img: "/images/ranking/r11.webp",
+      title: "Expert Validation",
+      description: "Recgonition by UN dignitaries, global leaders, and international organisations."
+    },
+    {
+      img: "/images/ranking/r12.webp",
+      title: "Featured on National & Global Platforms",
+      description: "Showcased through exclusive media campaigns, UN-aligned summits, and India MUN’s high-impact network."
+    },
+    {
+      img: "/images/ranking/r13.webp",
+      title: "Global Schools Awards",
+      description: "Nomination access for educator, principal, and student prizes"
+    },
+    {
+      img: "/images/ranking/r14.webp",
+      title: "Global Schools Summit",
+      description: "Recognition at the Global Schools Summit & Awards Gala"
+    },
+    {
+      img: "/images/ranking/r15.webp",
+      title: "Featured in Annual Impact Report",
+      description: "Featured profiles in India MUN's National and global Impact Report"
+    },
+    {
+      img: "/images/ranking/r16.webp",
+      title: "Directory Listing",
+      description: "Showcased in the India MUN Global Schools Directory"
+    },
+    {
+      img: "/images/ranking/r17.webp",
+      title: " Networking & collaboration",
+      description: "Connect with forward-thinking educators, students, and partners worldwide."
+    }
+  ].map((benefit, index) => (
+    <motion.div
+      key={index}
+      className="bg-gradient-to-r from-gray-50 to-blue-50 p-8 rounded-2xl text-center hover:shadow-lg transition-all duration-300"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+      whileHover={{ y: -5 }}
+    >
+      <div className="flex justify-center mb-4">
+  <motion.div
+    className="w-[72px] h-[72px] rounded-full flex items-center justify-center shadow-lg border border-yellow-300/60"
+    style={{
+      background: 'radial-gradient(circle at 50% 50%, #fae57f, #bd9137)',
+    }}
+    whileHover={{ scale: 1.05 }} // hover scale only, no rotation
+  >
+    <div className="w-[60px] h-[60px] relative">
+      <Image
+        src={benefit.img}
+        alt={benefit.title}
+        fill
+        className="object-contain"
+      />
+    </div>
+  </motion.div>
+</div>
+
+      <h3 className="font-bold text-gray-900 mb-3">{benefit.title}</h3>
+      <p className="text-gray-600 text-sm">{benefit.description}</p>
+    </motion.div>
+  ))}
+</div>
+
+          
+            <div className="">
+                <p className=" py-8 text-center text-md font-bold mb-2">
+                                They're about giving schools the global visibility they deserve, and empowering them to lead the future of education.
+                            </p>
+            </div>
+        </div>
+      </section>
+
+<section className="py-24 m-20 bg-gradient-to-br from-[#000000] to-[#002e41] text-white rounded-2xl overflow-hidden">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-9xl">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      {/* Left Column: Bold Heading */}
+      <div className="space-y-4">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+          Ranking Structure:<br/><span className="text-[#5ce1e6]"> Levels of Recognition </span>
+        
+        </h2>
+        
+      </div>
+
+      {/* Right Column: Checkmarked Benefits */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+  {/* Point 1 */}
+  <div className="flex flex-col items-center">
+    <img
+      src="/images/prizes/p16.webp" // Replace with your image
+      alt="Leadership Icon"
+      className="w-12 h-12 mb-4"
+    />
+    <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
+                        City-Level Rankings
+                    </h2>
+    <p className="text-base lg:text-md">
+      Honoring excellence in metropolitan and Tier-2/3 cities.
+    </p>
+  </div>
+
+  {/* Point 2 */}
+  <div className="flex flex-col items-center">
+    <img
+      src="/images/prizes/p16.webp" // Replace with your image
+      alt="Dialogue Icon"
+      className="w-12 h-12 mb-4"
+    />
+    <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
+                        State-Level Rankings
+                    </h2>
+    <p className="text-base lg:text-md">
+      Spotlighting regional champions in education.
+    </p>
+  </div>
+
+  {/* Point 3 */}
+  <div className="flex flex-col items-center">
+    <img
+      src="/images/prizes/p16.webp" // Replace with your image
+      alt="Transformation Icon"
+      className="w-12 h-12 mb-4"
+    />
+    <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-4">
+                        National & Global Listings
+                    </h2>
+    <p className="text-base lg:text-md">
+      Distinguishing top schools across India and internationally.
+    </p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section className="max-w-xl mx-auto p-4">
+  <div className="bg-white border border-yellow-400 rounded-lg p-6">
+    <ul className="space-y-4">
+      <li className="flex items-center">
+        <Star className="w-6 h-6 text-yellow-600 flex-shrink-0 mr-3" />
+        <span className="font-semibold text-black">
+          Custom plaques and certificates
+        </span>
+      </li>
+      <li className="flex items-center">
+        <Star className="w-6 h-6 text-yellow-600 flex-shrink-0 mr-3" />
+        <span className="font-semibold text-black">
+          Digital badges for online/print use
+        </span>
+      </li>
+      <li className="flex items-center">
+        <Star className="w-6 h-6 text-yellow-600 flex-shrink-0 mr-3" />
+        <span className="font-semibold text-black">
+          Invitations to high-level forums and leadership summits
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
 
       {/* Awards Categories Section */}
       <section className="py-20 ">
@@ -384,763 +804,10 @@ export default function GlobalSchoolsAwards() {
               ))}
             </div>
           </motion.div>
-
-          {/* Principal & Leadership Awards */}
-          <motion.div 
-            className="mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div className="text-center mb-12" variants={fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#860503] mb-4">
-                Global Schools Principal & Leadership Awards
-              </h2>
-              <p className="text-lg text-gray-500">Recognizing Visionary School Leaders Building the Future of Education</p>
-            </motion.div>
-            
-            <div className="pb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 lg:gap-10 justify-items-center">
-              {[
-                {
-                  title: "BEST PRINCIPAL IN HOLISTIC STUDENT DEVELOPMENT",
-                  description: "For exemplary leadership in guiding schools toward innovation, global alignment, and student empowerment.",
-                  image: "/images/prizes/p8.webp",
-                  icon: "/images/awards/trophy-icon.webp"
-                },
-                {
-                  title: "UN SDG PIONEER IN IMPACTFUL EDUCATION AWARD",
-                  description: "Honors school leaders who are at the forefront of aligning education with the United Nations Sustainable Development Goals (SDGs).",
-                  image: "/images/prizes/p8.webp", 
-                  gradient: "linear-gradient(135deg, rgba(16, 185, 129, 0.8) 0%, rgba(101, 163, 13, 0.8) 100%)",
-                  icon: "/images/awards/innovation-icon.webp"
-                },
-                {
-                  title: "LEGACY IN EDUCATIONAL IMPACT AWARD",
-                  description: "Recognizing leadership behind programs creating measurable change in communities and the environment.",
-                  image: "/images/prizes/p8.webp",
-                  gradient: "linear-gradient(135deg, rgba(34, 197, 94, 0.8) 0%, rgba(22, 163, 74, 0.8) 100%)",
-                  icon: "/images/awards/climate-icon.webp"
-                },
-                {
-                  title: "ENTREPRENEURSHIP IN EDUCATION EXCELLENCE AWARD",
-                  description: "Awarded to school leaders championing entrepreneurial ecosystems and real-world ventures within the school community.",
-                  image: "/images/prizes/p8.webp",
-                  gradient: "linear-gradient(135deg, rgba(249, 115, 22, 0.8) 0%, rgba(234, 88, 12, 0.8) 100%)",
-                  icon: "/images/awards/global-icon.webp"
-                },
-                {
-                  title: "PIONEERING INNOVATION IN SCHOOL LEADERSHIP",
-                  description: "For embracing new learning models, technology, and student-led initiatives at a school-wide level.",
-                  image: "/images/prizes/p8.webp",
-                  gradient: "linear-gradient(135deg, rgba(168, 85, 247, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%)",
-                  icon: "/images/awards/leadership-icon.webp"
-                }
-              ].map((award, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -12, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)' }}
-                  className="rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 relative"
-                  style={{
-                    width: '250px',
-                    height: '435px',
-                  }}
-                >
-                  {/* Background image with overlay */}
-                  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-                    
-                    <Image
-                      src={award.image}
-                      alt={award.title}
-                      fill
-                      priority
-                      style={{ objectFit: 'cover', opacity: 1 }}
-                      className="transition-transform duration-700 ease-in-out hover:scale-105"
-                    />
-                    {/* Sparkle overlay effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/10 via-transparent to-amber-200/10"></div>
-                  </div>
-
-                  {/* Card content */}
-                  <div className="py-6 px-4 flex flex-col items-center h-full relative z-20">
-                    {/* Award icon */}
-                    <motion.div
-                      className="w-18 h-18 rounded-full bg-gradient-to-br from-yellow-300/30 to-black backdrop-blur-md flex items-center justify-center relative shadow-lg border border-yellow-300/60"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                    >
-                      <div className="w-15 h-15 relative">
-  <Image
-    src="/images/prizes/p5.webp" // Replace with your logo path
-    alt="Logo"
-    fill
-    className="object-contain"
-  />
-</div>
-                    </motion.div>
-
-                    {/* Award rep */}
-                    <h3 className="text-white text-xs mt-2 font-semibold tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">GLOBAL SCHOOLS</h3>
-                    <h3 className="text-white text-xs font-thin tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">PRINCIPALS</h3>
-                    <h1 className="text-[#FFD34F] text-4xl mt-[-3] font-extrabold tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">AWARD</h1>
-
-                    
-
-                    {/* Award title */}
-                    <h3 className="text-lg font-bold text-white text-center py-2 drop-shadow-md leading-tight">{award.title}</h3>
-
-                    {/* Global Schools Award Badge */}
-                    <div className="bg-gradient-to-r from-[#b68500] via-[#fde47f] to-[#b68500] backdrop-blur-sm px-2 py-1/2 rounded-full mt-2 border-[2.5px] border-[#fde47f]">
-                      <p className="text-black text-[10px] font-semibold tracking-wide">Global Schools Summit | Dec,25</p>
-                    </div>
-
-                    {/* Divider line */}
-                    <div className="w-30 h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent rounded-full m-4"></div>
-
-                    {/* Award description */}
-                    <p className="text-white/90 text-center mb-2 leading-relaxed text-xs flex-grow">{award.description}</p>
-
-                    
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Educator Awards - Similar structure */}
-          <motion.div 
-            className="mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div className="text-center mb-12" variants={fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Global Schools Educator Awards
-              </h2>
-              <p className="text-lg text-gray-500">Honoring Educators Shaping the Minds That Will Shape the World</p>
-            </motion.div>
-            
-            <div className="pb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 lg:gap-10 justify-items-center">
-              {[
-                {
-                  title: "ECO- LEADERSHIP EDUCATOR AWARD",
-                  description: "For educators championing climate consciousness, sustainability, and nature-based learning.",
-                  image: "/images/prizes/p9.webp",
-                  icon: "/images/awards/trophy-icon.webp"
-                },
-                {
-                  title: "INNOVATION IN TEACHING AWARD",
-                  description: "Awarded to teachers implementing creative, interdisciplinary, or tech-powered pedagogy.",
-                  image: "/images/prizes/p9.webp", 
-                  gradient: "linear-gradient(135deg, rgba(16, 185, 129, 0.8) 0%, rgba(101, 163, 13, 0.8) 100%)",
-                  icon: "/images/awards/innovation-icon.webp"
-                },
-                {
-                  title: "LEADERSHIP FOR IMPACT AWARD",
-                  description: "For teachers leading purpose-driven learning and fostering leadership in their classrooms.",
-                  image: "/images/prizes/p9.webp",
-                  gradient: "linear-gradient(135deg, rgba(34, 197, 94, 0.8) 0%, rgba(22, 163, 74, 0.8) 100%)",
-                  icon: "/images/awards/climate-icon.webp"
-                },
-                {
-                  title: "BEST ACADEMIC COORDINATOR IMUN",
-                  description: "Recognizing educators mentoring high-impact student clubs, projects, or changemaker campaigns.",
-                  image: "/images/prizes/p9.webp",
-                  gradient: "linear-gradient(135deg, rgba(249, 115, 22, 0.8) 0%, rgba(234, 88, 12, 0.8) 100%)",
-                  icon: "/images/awards/global-icon.webp"
-                },
-                {
-                  title: "GLOBAL CURRICULUM CHAMPION AWARD",
-                  description: "For seamlessly integrating SDGs, global issues, and intercultural understanding into the curriculum.",
-                  image: "/images/prizes/p9.webp",
-                  gradient: "linear-gradient(135deg, rgba(168, 85, 247, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%)",
-                  icon: "/images/awards/leadership-icon.webp"
-                }
-              ].map((award, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -12, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)' }}
-                  className="rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 relative"
-                  style={{
-                    width: '250px',
-                    height: '400px',
-                  }}
-                >
-                  {/* Background image with overlay */}
-                  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-                    
-                    <Image
-                      src={award.image}
-                      alt={award.title}
-                      fill
-                      priority
-                      style={{ objectFit: 'cover', opacity: 1 }}
-                      className="transition-transform duration-700 ease-in-out hover:scale-105"
-                    />
-                    {/* Sparkle overlay effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/10 via-transparent to-amber-200/10"></div>
-                  </div>
-
-                  {/* Card content */}
-                  <div className="py-6 px-4 flex flex-col items-center h-full relative z-20">
-                    {/* Award icon */}
-                    <motion.div
-                      className="w-18 h-18 rounded-full bg-gradient-to-br from-yellow-300/30 to-black backdrop-blur-md flex items-center justify-center relative shadow-lg border border-yellow-300/60"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                    >
-                      <div className="w-15 h-15 relative">
-  <Image
-    src="/images/prizes/p5.webp" // Replace with your logo path
-    alt="Logo"
-    fill
-    className="object-contain"
-  />
-</div>
-                    </motion.div>
-
-                    {/* Award rep */}
-                    <h3 className="text-white text-xs mt-2 font-semibold tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">GLOBAL SCHOOLS</h3>
-                    <h3 className="text-white text-xs font-thin tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">EDUCATORS</h3>
-                    <h1 className="text-[#FFD34F] text-4xl mt-[-3] font-extrabold tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">AWARD</h1>
-
-                    
-
-                    {/* Award title */}
-                    <h3 className="text-lg font-bold text-white text-center py-2 drop-shadow-md leading-tight">{award.title}</h3>
-
-                    {/* Global Schools Award Badge */}
-                    <div className="bg-gradient-to-r from-[#b68500] via-[#fde47f] to-[#b68500] backdrop-blur-sm px-2 py-1/2 rounded-full mt-4 border-[2.5px] border-[#fde47f]">
-                      <p className="text-black text-[10px] font-semibold tracking-wide">Global Schools Summit | Dec,25</p>
-                    </div>
-
-                    {/* Divider line */}
-                    <div className="w-30 h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent rounded-full m-4"></div>
-
-                    {/* Award description */}
-                    <p className="text-white/90 text-center mb-2 leading-relaxed text-xs flex-grow">{award.description}</p>
-
-                    
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* STUDENT Awards - Similar structure */}
-          <motion.div 
-            className="mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div className="text-center mb-12" variants={fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Global Schools Student Excellence Awards
-              </h2>
-              <p className="text-lg text-gray-500">Recognizing Young Leaders, Ambassadors Innovators & Changemakers</p>
-            </motion.div>
-            
-            <div className="pb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 lg:gap-10 justify-items-center">
-              {[
-                {
-                  title: "STUDENT OF THE YEAR 2025",
-                  description: "Awarded to a student leading bold initiatives that create real-world impact in sustainability, innovation, or social change.",
-                  image: "/images/prizes/p10.webp",
-                  icon: "/images/awards/trophy-icon.webp"
-                },
-                {
-                  title: "BEST DELEGATE INDIA MUN 2025",
-                  description: "Awarded to the best delegate of the year for excellence in MUNs, public speaking, and cross-border youth diplomacy.",
-                  image: "/images/prizes/p10.webp", 
-                  gradient: "linear-gradient(135deg, rgba(16, 185, 129, 0.8) 0%, rgba(101, 163, 13, 0.8) 100%)",
-                  icon: "/images/awards/innovation-icon.webp"
-                },
-                {
-                  title: "BEST CAMPUS AMBASSADOR AWARD",
-                  description: "Outstanding leadership in advancing Mission Prakriti through impactful environmental action, restoration drives, and student-led campaigns.",
-                  image: "/images/prizes/p10.webp",
-                  gradient: "linear-gradient(135deg, rgba(34, 197, 94, 0.8) 0%, rgba(22, 163, 74, 0.8) 100%)",
-                  icon: "/images/awards/climate-icon.webp"
-                },
-                {
-                  title: "STUDENT INNOVATOR OF THE YEAR",
-                  description: "Awarded to student for developing a tech, design, or entrepreneurial solution addressing global problems & SDG challenges.",
-                  image: "/images/prizes/p10.webp",
-                  gradient: "linear-gradient(135deg, rgba(249, 115, 22, 0.8) 0%, rgba(234, 88, 12, 0.8) 100%)",
-                  icon: "/images/awards/global-icon.webp"
-                },
-                {
-                  title: "YOUTH LEADERSHIP AWARD",
-                  description: "For outstanding participation and leadership across India MUN platforms like YLP, Hackathons, and leadership summits.",
-                  image: "/images/prizes/p10.webp",
-                  gradient: "linear-gradient(135deg, rgba(168, 85, 247, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%)",
-                  icon: "/images/awards/leadership-icon.webp"
-                }
-              ].map((award, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -12, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)' }}
-                  className="rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 relative"
-                  style={{
-                    width: '250px',
-                    height: '430px',
-                  }}
-                >
-                  {/* Background image with overlay */}
-                  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-                    
-                    <Image
-                      src={award.image}
-                      alt={award.title}
-                      fill
-                      priority
-                      style={{ objectFit: 'cover', opacity: 1 }}
-                      className="transition-transform duration-700 ease-in-out hover:scale-105"
-                    />
-                    {/* Sparkle overlay effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/10 via-transparent to-amber-200/10"></div>
-                  </div>
-
-                  {/* Card content */}
-                  <div className="py-6 px-4 flex flex-col items-center h-full relative z-20">
-                    {/* Award icon */}
-                    <motion.div
-                      className="w-18 h-18 rounded-full bg-gradient-to-br from-yellow-300/30 to-black backdrop-blur-md flex items-center justify-center relative shadow-lg border border-yellow-300/60"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                    >
-                      <div className="w-15 h-15 relative">
-  <Image
-    src="/images/prizes/p5.webp" // Replace with your logo path
-    alt="Logo"
-    fill
-    className="object-contain"
-  />
-</div>
-                    </motion.div>
-
-                    {/* Award rep */}
-                    <h3 className="text-white text-xs mt-2 font-semibold tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">GLOBAL SCHOOLS</h3>
-                    <h3 className="text-white text-xs font-thin tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">STUDENTS</h3>
-                    <h1 className="text-[#FFD34F] text-4xl mt-[-3] font-extrabold tracking-wide drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">AWARD</h1>
-
-                    
-
-                    {/* Award title */}
-                    <h3 className="text-lg font-bold text-white text-center py-4 drop-shadow-md leading-tight">{award.title}</h3>
-
-                    {/* Global Schools Award Badge */}
-                    <div className="bg-gradient-to-r from-[#b68500] via-[#fde47f] to-[#b68500] backdrop-blur-sm px-2 py-1/2 rounded-full mt-4 border-[2.5px] border-[#fde47f]">
-                      <p className="text-black text-[10px] font-semibold tracking-wide">Global Schools Summit | Dec,25</p>
-                    </div>
-
-                    {/* Divider line */}
-                    <div className="w-30 h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent rounded-full m-4"></div>
-
-                    {/* Award description */}
-                    <p className="text-black/50 text-center mb-2 leading-relaxed text-xs flex-grow">{award.description}</p>
-
-                    
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Educator Awards - Similar structure */}
-          {/* <motion.div 
-            className="mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div className="text-center mb-12" variants={fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold text-green-400 mb-4">
-                Global Schools Educator Awards
-              </h2>
-              <p className="text-lg text-gray-300">Honoring Educators Shaping the Minds That Will Shape the World</p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 lg:gap-10 justify-items-center">
-              {[
-                "Outstanding Teaching Excellence",
-                "Innovation in Pedagogy",
-                "Climate Education Champion", 
-                "Student Mentorship Excellence",
-                "Digital Learning Pioneer"
-              ].map((award, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -8, boxShadow: '0 20px 40px -12px rgba(34, 197, 94, 0.4)' }}
-                  className="rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 relative"
-                  style={{
-                    width: '280px',
-                    height: '350px',
-                    background: "linear-gradient(135deg, rgba(34, 197, 94, 0.8) 0%, rgba(22, 163, 74, 0.8) 100%)"
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-200/10 via-transparent to-emerald-200/10"></div>
-                  
-                  <div className="p-6 flex flex-col items-center h-full relative z-20 justify-center">
-                    <motion.div
-                      className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 shadow-lg"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      <Star className="w-8 h-8 text-white" />
-                    </motion.div>
-                    <h3 className="text-lg font-bold text-white text-center mb-4 drop-shadow-md">{award}</h3>
-                    <Button className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30">
-                      Apply Now
-                    </Button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div> */}
-
-          {/* Student Excellence Awards - Similar structure */}
-          {/* <motion.div 
-            className="mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div className="text-center mb-12" variants={fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold text-purple-400 mb-4">
-                Global Schools Student Excellence Awards
-              </h2>
-              <p className="text-lg text-gray-300">Recognizing Young Leaders, Ambassadors, Innovators & Changemakers</p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 lg:gap-10 justify-items-center">
-              {[
-                {
-                  title: "Student Changemaker Award",
-                  description: "For leading impactful initiatives in sustainability or social transformation"
-                },
-                {
-                  title: "Young Diplomat Award", 
-                  description: "Excellence in MUNs, public speaking, and youth diplomacy"
-                },
-                {
-                  title: "Climate Action Leader Award",
-                  description: "Leadership in environmental action and restoration projects"
-                },
-                {
-                  title: "Innovation & Entrepreneurship Award",
-                  description: "Developing solutions addressing SDG challenges"
-                },
-                {
-                  title: "Outstanding MUN Participation Award",
-                  description: "Excellence across India MUN platforms and leadership summits"
-                }
-              ].map((award, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -8, boxShadow: '0 20px 40px -12px rgba(168, 85, 247, 0.4)' }}
-                  className="rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 relative"
-                  style={{
-                    width: '280px',
-                    height: '420px',
-                    background: "linear-gradient(135deg, rgba(168, 85, 247, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%)"
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-200/10 via-transparent to-indigo-200/10"></div>
-                  
-                  <div className="p-6 flex flex-col items-center h-full relative z-20 justify-center">
-                    <motion.div
-                      className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 shadow-lg"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      <Trophy className="w-8 h-8 text-white" />
-                    </motion.div>
-                    <h3 className="text-lg font-bold text-white text-center mb-3 drop-shadow-md leading-tight">{award.title}</h3>
-                    <p className="text-white/90 text-center text-sm mb-4">{award.description}</p>
-                    <Button className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30">
-                      Apply Now
-                    </Button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div> */}
+         
         </div>
       </section>
 
-
-
-<section className="w-full py-5 md:mb-8 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Left side - Content */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative w-full rounded-2xl lg:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 bg-white h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px] flex flex-col justify-center">
-              {/* Content wrapper */}
-              <div className="mb-4 text-justify">
-                <p className="text-sm sm:text-base text-gray-700 mb-4">
-                  Awarded annually at the Global Schools Summit & Awards Gala, these prizes spotlight institutions shaping the next era of education — aligned with the UN Sustainable Development Goals, UN Decade on ecosystem restoration, and 21st-century learning.
-                </p>
-                <p className="text-sm font-bold sm:text-base text-gray-700">
-                  Winning a Global Schools Awards places your institution among India's most transformative schools and signifies your school's commitment to excellence, innovation, and shaping the future of education.
-                </p>
-              </div>
-
-              {/* Logo and Quote Section */}
-              <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4 lg:gap-6 items-center">
-                {/* Award Logo with Hover Effect */}
-                <motion.div 
-                  className="flex justify-center md:justify-start"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="w-24 h-24 sm:w-18 sm:h-18 md:w-24 sm:h-24 lg:w-24 lg:h-24 xl:w-40 xl:h-40 rounded-full bg-gradient-to-br from-black to-teal-900 flex items-center justify-center text-white font-bold text-center text-xs sm:text-sm p-3 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                    <Image
-                src="/images/prizes/p4.webp"
-                alt="Global Schools Awards for Institutions"
-                width={100}
-                height={100}
-                className="mx-auto rounded-xl shadow-2xl"
-        />
-                  </div>
-                </motion.div>
-
-                {/* Quote Section */}
-                <div className="text-center md:text-left">
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl mb-2 leading-tight">
-                    A Symbol of bold <span className="font-bold">Vision</span><span className="text-[#1b66cf] font-extrabold">.</span>
-                  </h2>
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl leading-tight">
-                    A Commitment to <span className="font-bold">Transformation</span><span className="text-[#1b66cf] font-extrabold">.</span>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right side - Background Image with Overlay */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px] rounded-lg overflow-hidden">
-              {/* Background Image */}
-              <Image
-                src="/images/prizes/p13.webp"
-                alt="Global collaboration - hands protecting Earth"
-                fill
-                className="object-cover"
-              />
-              
-              {/* Animated Elements */}
-              <div className="absolute inset-0">
-                {/* SDG Wheel - Bottom Left */}
-                <motion.div 
-                  className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 lg:bottom-8 lg:left-8 w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-60 lg:h-60"
-
-
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                >
-                  <Image
-                    src="/images/prizes/p14.webp" // Replace with your SDG logo image path
-                    alt="SDG Wheel"
-                    fill
-                    className="object-contain"
-                  />
-                </motion.div>
-              </div>
-
-              {/* Overlay Text */}
-              <div className="absolute top-8 sm:top-12 lg:top-16 left-0 right-0 flex justify-center px-4 sm:px-6 z-10">
-                <div className="text-white text-center">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                  >
-                    <span className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium mr-1">
-  A Mark of
-</span>
-<span className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
-  Global Impact
-</span>
-
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <section className="w-full py-5 md:mb-8 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 min-h-[430px] lg:h-96">
-                  {/* Left side - Image with overlay text */}
-                  <div className="w-full lg:w-1/2">
-            <div className="relative h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px] rounded-lg overflow-hidden">
-                          <Image
-                              src="/images/prizes/p12.webp"
-                              alt="Global collaboration - hands protecting Earth"
-                              fill
-                              className="object-cover"
-                          />
-                          {/* Overlay text at bottom */}
-                          <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
-  <div className="bg-black/50 text-white p-4 sm:p-6 rounded-xl shadow-lg max-w-3xl text-center">
-                                  <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-2">Global Recognition &<br/> Media Visibility</h1>
-                                  
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-      
-                  {/* Right side - Quote Content */}
-                  <div className="w-full lg:w-1/2">
-            <div className="relative w-full rounded-2xl lg:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 bg-white h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px] flex flex-col justify-center">
-              {/* Content wrapper */}
-              <div className="text-black space-y-4">
-                          
-                            <h3 className="text-xl font-bold mb-6">
-                                Be Seen, Celebrated, and Remembered on the World Stage
-                            </h3>
-
-                            <p className="text-sm mb-6 text-justify">
-                                Winners of the Global Schools Prizes are spotlighted across prestigious platforms and influential networks:
-                            </p>
-
-                            <div className="space-y-3">
-                                
-                                <div className="space-y-2">
-                                    <div className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full mt-1.5 flex-shrink-0"></div>
-                                        <p className="text-sm">Spotlight at the Global Schools Summit</p>
-                                    </div>
-
-                                    <div className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full mt-1.5 flex-shrink-0"></div>
-                                        <p className="text-sm">
-                                            Featured in India MUN’s National & Global Media Campaigns
-                                        </p>
-                                    </div>
-
-                                    <div className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full mt-1.5 flex-shrink-0"></div>
-                                        <p className="text-sm">Covered in the BoE Impact Report & UN-aligned publications</p>
-                                    </div>
-
-                                    <div className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full mt-1.5 flex-shrink-0"></div>
-                                        <p className="text-sm">
-                                            Recognized on international forums alongside education leaders
-                                        </p>
-                                    </div>
-                                    <div className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full mt-1.5 flex-shrink-0"></div>
-                                        <p className="text-sm">
-                                            Showcased in the India MUN Global Schools Directory
-                                        </p>
-                                    </div>
-                                    <div className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full mt-1.5 flex-shrink-0"></div>
-                                        <p className="text-sm">
-                                            Highlighted across our high-reach social media channels and newsletters
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-
-                            <p className="text-md font-bold mb-6">
-                                Winning a Global Schools Prize amplifies your institution’s story — showcasing your leadership to parents, partners, and policymakers.
-                            </p>
-                        </div>            
-            </div>
-          </div>
-              </div>
-          </div>
-          
-      </section>
-
-     
-
-<section className="py-24 m-20 bg-gradient-to-br from-[#000000] to-[#002e41] text-white rounded-2xl overflow-hidden">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-9xl">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-      {/* Left Column: Bold Heading */}
-      <div className="space-y-4">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-          Winning a<span className="text-[#5ce1e6]"> Global Schools Award </span>
-          positions your institution as:
-        </h2>
-        
-      </div>
-
-      {/* Right Column: Checkmarked Benefits */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-  {/* Point 1 */}
-  <div className="flex flex-col items-center">
-    <img
-      src="/images/prizes/p16.webp" // Replace with your image
-      alt="Leadership Icon"
-      className="w-12 h-12 mb-4"
-    />
-    <p className="text-base lg:text-lg">
-      A  recognized leader in education innovation, sustainability, and SDG integration.
-    </p>
-  </div>
-
-  {/* Point 2 */}
-  <div className="flex flex-col items-center">
-    <img
-      src="/images/prizes/p16.webp" // Replace with your image
-      alt="Dialogue Icon"
-      className="w-12 h-12 mb-4"
-    />
-    <p className="text-base lg:text-lg">
-      A trusted contributor to the global dialogue on youth, climate, and leadership.
-    </p>
-  </div>
-
-  {/* Point 3 */}
-  <div className="flex flex-col items-center">
-    <img
-      src="/images/prizes/p16.webp" // Replace with your image
-      alt="Transformation Icon"
-      className="w-12 h-12 mb-4"
-    />
-    <p className="text-base lg:text-lg">
-      A flagbearer for educational transformation in your city, state, and country.
-    </p>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
 
 <section className="relative py-16 overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1268,91 +935,9 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
 </section>
 
 
+
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-                    className="text-center"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeInUp}
-                  >
-                    <h2 className="text-3xl mb-12 md:text-4xl lg:text-5xl text-black leading-tight">
-                      Your <b>School</b><span className="text-[#0066FF] font-bold">.</span> Your <b>Impact</b><span className="text-[#0066FF] font-bold">.</span>On the<b>World Stage</b><span className="text-[#0066FF] font-bold">.</span>
-                    </h2>
-                  </motion.div>
-            {/* Header */}
-            <div className="text-center">
-                <p className="text-md">
-                                The Global Schools Awards aren’t just accolades — <b>they are symbols of bold vision, deep commitment, and real-world change.</b>
-                            </p>
-            </div>
-
-            <div className="text-center mb-8">
-                <p className="text-md mb-6 text-[#1774d1]">
-                                These prizes are more than recognition, they honor schools nurturing young leaders, innovators, and global citizens equipped for the challenges of tomorrow.
-                            </p>
-            </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Trophy className="w-8 h-8" />,
-                title: "Global Recognition",
-                description: "Position your institution among India's most transformative schools"
-              },
-              {
-                icon: <Users className="w-8 h-8" />,
-                title: "Expert Validation", 
-                description: "Recognition by UN-aligned experts and international dignitaries"
-              },
-              {
-                icon: <Star className="w-8 h-8" />,
-                title: "Media Spotlight",
-                description: "Featured across prestigious platforms and influential networks"
-              },
-              {
-                icon: <Award className="w-8 h-8" />,
-                title: "Summit Recognition",
-                description: "Celebrated at the Global Schools Summit & Awards Gala"
-              },
-              {
-                icon: <CheckCircle className="w-8 h-8" />,
-                title: "Directory Listing",
-                description: "Showcased in the India MUN Global Schools Directory"
-              },
-              {
-                icon: <Calendar className="w-8 h-8" />,
-                title: "Annual Impact Report",
-                description: "Featured stories in India MUN's Annual Impact Report"
-              }
-            ].map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-2xl text-center hover:shadow-lg transition-all duration-300"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-                whileHover={{ y: -5 }}
-              >
-                <div className="text-blue-600 mb-4 flex justify-center">
-                  {benefit.icon}
-                </div>
-                <h3 className="font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-          
-            <div className="">
-                <p className=" py-8 text-center text-md font-bold mb-2">
-                                They're about giving schools the global visibility they deserve, and empowering them to lead the future of education.
-                            </p>
-            </div>
-        </div>
-      </section>
+      
 {/* Awards Timeline */}
 <section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
   <div className="max-w-4xl mx-auto px-4">
