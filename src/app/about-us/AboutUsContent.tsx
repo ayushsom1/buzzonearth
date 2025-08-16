@@ -264,7 +264,7 @@ export default function AboutUsContent() {
                   className="rounded-lg"
                 />
               </div>
-              <h2 className="text-xl md:text-2xl font-semibold text-[#1775d0] mb-12">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#1775d0]">
                 CLIMATE ACTION. LEADERSHIP. INNOVATION. DIPLOMACY. ENTREPRENEURSHIP. REGENERATION. SDGs.
               </h2>
             </div>
@@ -352,61 +352,70 @@ export default function AboutUsContent() {
 
       {/* Third Section - Vision */}
       <section className="py-20 bg-gray-50">
-        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <Image
-                src="/images/about_us/A5.webp"
-                alt="Our Vision Illustration"
-                width={700}
-                height={600}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="md:w-1/2 md:pl-12">
-              <h2 className="text-5xl font-bold mb-8 text-[#1875d1]">VISION</h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                India MUN envisions a world where every student
-                becomes a powerful force for positive change.
-                Aligned with the Decade of Action - United Nations Sustainable Development Goals, we redefine education to
-                empower youth as architects of a sustainable future.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="md:w-1/2 mb-8 md:mb-0">
+        <Image
+          src="/images/about_us/A5.webp"
+          alt="Our Vision Illustration"
+          width={700}
+          height={600}
+          className="rounded-lg w-full h-auto max-h-[600px] object-contain"
+        />
+      </div>
+      <div className="md:w-1/2 md:pl-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold sm:mb-6 text-[#1875d1]">
+          VISION
+        </h2>
+        <p className="text-base sm:text-sm lg:text-lg text-black leading-relaxed">
+          India MUN envisions a world where every student becomes a powerful force for positive change.
+          Aligned with the Decade of Action – United Nations Sustainable Development Goals, we redefine
+          education to empower youth as architects of a sustainable future.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Fourth Section - Mission */}
-      <section className="py-20 bg-gradient-to-r pt-4 from-[#000000] to-[#002e41] opacity-95">
-        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-          <div className="flex flex-col md:flex-row-reverse items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <Image
-                src="/images/about_us/A6.webp"
-                alt="Our Mission Illustration"
-                width={900}
-                height={600}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="md:w-1/2 md:pr-12">
-              <h2 className="text-5xl font-bold mb-8 text-[#1875d1]">MISSION</h2>
-              <p className="text-xl text-white leading-relaxed">
-                At the core of India MUN is a mission to transform
-                young minds into dynamic sustainability leaders.
-                We go beyond activism, offering climate-positive
-                programs that empower students to be catalysts
-                for real-world change.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r pt-4 from-[#000000] to-[#002e41] opacity-95">
+  <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+    <div className="flex flex-col md:flex-row-reverse items-center">
+      
+      {/* Image */}
+      <div className="md:w-1/2 mb-8 md:mb-0">
+        <Image
+          src="/images/about_us/A6.webp"
+          alt="Our Mission Illustration"
+          width={900}
+          height={600}
+          className="rounded-lg"
+        />
+      </div>
+      
+      {/* Text Content */}
+      <div className="md:w-1/2 md:pr-12">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6 text-[#1875d1]">
+          MISSION
+        </h2>
+        <p className="text-base sm:text-sm lg:text-lg text-white leading-relaxed">
+          At the core of India MUN is a mission to transform
+          young minds into dynamic sustainability leaders.
+          We go beyond activism, offering climate-positive
+          programs that empower students to be catalysts
+          for real-world change.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Fifth Section - Values */}
       <section className="py-15 bg-gray-50">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-          <h2 className="text-5xl font-bold mb-16 text-center text-[#1875d1]">VALUES</h2>
+          <h2 className="text-5xl font-semibold mb-16 text-center text-[#1875d1]">VALUES</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -457,66 +466,70 @@ export default function AboutUsContent() {
 
       {/* Sixth Section - What Can Youth Do */}
       <section className="w-full min-h-[600px] py-16 relative flex flex-col justify-center">
-        <div className="absolute inset-0 z-0">
+  {/* Background */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/images/programs/S33.webp"
+      alt="Impact Background"
+      fill
+      className="object-cover"
+    />
+    <div className="absolute inset-0 bg-black opacity-5"></div>
+  </div>
+
+  <div className="max-w-7xl mx-auto px-4 relative z-10">
+    {/* Make it 1 column for mobile/tablet, 3 only for big screens */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+      
+      {/* Left Column with Images */}
+      <div className="flex flex-col gap-6 col-span-1 items-center lg:items-stretch">
+        <div className="relative w-full max-w-[300px] h-48 sm:h-56 lg:h-[200px] rounded-xl overflow-hidden">
           <Image
-            src="/images/programs/S33.webp"
-            alt="Impact Background"
+            src="/images/programs/S34.webp"
+            alt="Impact Image 1"
             fill
-            style={{ objectFit: 'cover' }}
+            className="object-cover hover:scale-110 transition-transform duration-300"
           />
-          <div className="absolute inset-0 bg-black opacity-5"></div>
         </div>
-
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-40 items-center">
-            {/* Left Column with Images */}
-            <div className="space-y-6 col-span-1">
-              <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
-                <Image
-                  src="/images/programs/S34.webp"
-                  alt="Impact Image 1"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
-                <Image
-                  src="/images/programs/S35.webp"
-                  alt="Impact Image 2"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            </div>
-
-            {/* Right Column with Text */}
-            <div className="text-white col-span-2">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">WHAT CAN YOU(th) DO?</h2>
-              <div className="space-y-6 text-lg">
-                <p>
-                  With over <b>600 million young people</b>, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – <b>will impact the youth and their future generations the most</b> — the stakes couldn't be higher.
-                </p>
-                <p>
-                  Global bodies have not been able to move the needle as yet.
-                </p>
-                <p>
-                  Every small step taken by millions of young Indians can create a ripple effect with global impact.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="relative w-full max-w-[300px] h-48 sm:h-56 lg:h-[200px] rounded-xl overflow-hidden">
+          <Image
+            src="/images/programs/S35.webp"
+            alt="Impact Image 2"
+            fill
+            className="object-cover hover:scale-110 transition-transform duration-300"
+          />
         </div>
-      </section>
+      </div>
+
+      {/* Right Column with Text */}
+      <div className="text-white col-span-2">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          WHAT CAN YOU(th) DO?
+        </h2>
+        <div className="space-y-6 text-base sm:text-lg text-justify">
+          <p>
+            With over <b>600 million young people</b>, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – <b>will impact the youth and their future generations the most</b> — the stakes couldn't be higher.
+          </p>
+          <p>
+            Global bodies have not been able to move the needle as yet.
+          </p>
+          <p>
+            Every small step taken by millions of young Indians can create a ripple effect with global impact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Action Framework Section */}
       <section className="relative overflow-hidden">
         {/* Gradient strip background */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-400 to-white h-48 top-1/2 z-0"></div>
           
-          <div className="container px-4 sm:px-6 lg:px-8 mx-auto py-20 relative z-10">
+          
+          <div className="container px-4 sm:px-6 lg:px-8 mx-auto py-16 mt-8 relative">
             {/* Impactful Typography */}
             <div className="flex flex-wrap justify-center items-center mb-5 text-center">
               <h2 className="text-2xl sm:text-4xl md:text-5xl  mx-3 transform transition-transform hover:scale-105">COLLABORATE.</h2>
@@ -533,15 +546,58 @@ export default function AboutUsContent() {
                 alt="Action Framework Illustration"
                 width={1000}
                 height={500}
-                className="w-full h-[500px]"
+                className="w-full"
               />
             </div>
           </div>
         </div>
       </section>
 
+      
+
+      {/* Join Us Section */}
+      <section className="py-20 bg-gradient-to-br from-[#000000] via-[#002e41] to-black text-white">
+        
+
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Join us in creating a sustainable future!</h2>
+          <p className="text-lg mb-12 max-w-5xl mx-auto leading-relaxed">
+            Be part of India’s growing movement for climate action, innovation, and leadership — shaping a nation that thrives on sustainability, equality, and prosperity, and securing a sustainable future for generations to come.
+          </p>
+          <h2 className="text-3xl font-bold mb-8">One planet. One youth. One unstoppable force for change.</h2>
+          
+          <div className="flex justify-center space-x-6">
+            <a
+              href="/get-involved"
+              className="inline-block bg-white text-[#1875d1] px-8 py-4 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors duration-300"
+            >
+              Get Involved
+            </a>
+            <a
+              href="/contact"
+              className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-white hover:text-[#1875d1] transition-colors duration-300"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Eighth Section - Founding Partners */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
+        <motion.div
+  className="relative z-10 max-w-4xl mx-auto py-12 rounded-2xl overflow-hidden"
+  whileHover={{ scale: 1.05, rotate: 0 }}
+  transition={{ type: "spring", stiffness: 300 }}
+>
+  <Image
+    src="/images/about_us/A8.webp"
+    alt="Action Framework Illustration"
+    width={400}
+    height={0} // height auto
+    className="h-auto w-auto rounded-2xl"
+  />
+</motion.div>
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center text-[#1875d1]">FOUNDING PARTNERS</h2>
           <div className="max-w-3xl mx-auto text-center">
@@ -569,30 +625,6 @@ export default function AboutUsContent() {
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Join Us Section */}
-      <section className="py-20 bg-[#1875d1] text-white">
-        <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Join us in creating a sustainable future!</h2>
-          <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-            Be part of India's growing climate action movement and help create a sustainable future for generations to come.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a
-              href="/get-involved"
-              className="inline-block bg-white text-[#1875d1] px-8 py-4 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors duration-300"
-            >
-              Get Involved
-            </a>
-            <a
-              href="/contact"
-              className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-white hover:text-[#1875d1] transition-colors duration-300"
-            >
-              Contact Us
-            </a>
           </div>
         </div>
       </section>

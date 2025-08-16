@@ -4,7 +4,7 @@
 import Image from "next/image";
 import { motion,useMotionValue, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Calendar, Award, Users, Trophy, Star, CheckCircle } from "lucide-react";
+import { Calendar, Award, Users, Trophy, Star, CheckCircle, ArrowRight, Shield, Zap, Target } from "lucide-react";
 import EvaluationMatrixSection from "@/components/EvaluationMatrixSection";
 
 // Animation variants
@@ -486,7 +486,7 @@ export default function GlobalSchoolsAwards() {
       {/* Left Column: Bold Heading */}
       <div className="space-y-4">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-          Ranking Structure:<br/><span className="text-[#5ce1e6]"> Levels of Recognition </span>
+          Ranking Structure:<br/><span className="text-[#ffd34f]"> Levels of Recognition </span>
         
         </h2>
         
@@ -571,8 +571,77 @@ export default function GlobalSchoolsAwards() {
 
 <EvaluationMatrixSection />
 
+<section className="relative mb-16 bg-gradient-to-br from-[#000000] via-[#002e41] to-teal-500 py-20 overflow-hidden">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
+            
+            {/* Left Side - Content */}
+            <div className="w-full">
+                {/* Header */}
+                <div className="py-10">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#41b8d5] mb-4">
+                        A Globally Respected Ranking Process
+                    </h2>
+                    <h3 className="md:text-lg font-bold text-white mb-12">
+                        Upholding the Highest Standards of Credibility and Impact.
+                    </h3>
+                </div>
+
+                {/* Main Description */}
+                <div className="mb-6 text-white">
+                    <p className="text-sm text-justify leading-relaxed mb-4">
+                        Every nomination for the Global Schools Ranking undergoes a rigorous, transparent, and merit-based evaluation process.
+                    </p>
+                </div>
+
+                {/* Benefits List */}
+                <div className="mb-6 text-white">
+                    <ul className="space-y-1 text-sm font-bold">
+                        <li className="flex items-start">
+                            <span className="text-[#41b8d5] text-xl mr-3 mb-1">✪</span>
+                            <span>Impact-driven criteria that assess real-world transformation</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="text-[#41b8d5] text-xl mr-3 mb-1">✪</span>
+                            <span>Emphasis on educational excellence, innovation, sustainability, leadership, and global alignment</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="text-[#41b8d5] text-xl mr-3 mb-1">✪</span>
+                            <span>Ranking is awarded solely on the basis of merit</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="text-[#41b8d5] text-xl mr-3 mb-1">✪</span>
+                            <span>Complete data confidentiality and adherence to strict ethical standards</span>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Closing Statement */}
+                <div>
+                    <p className="text-md text-justify font-bold leading-relaxed text-white">
+                        This process ensures that the Global Schools Ranking stands as one of the most respected and aspirational benchmarks for educational leadership and innovation worldwide.
+                    </p>
+                </div>
+            </div>    
+
+            {/* Right side - Image */}
+            <div className="flex justify-center items-center">
+                <div className="relative w-full max-w-xl overflow-hidden rounded-xl shadow-lg">
+                    <Image
+                        src="/images/whyApply/w41.webp"
+                        alt="Global Schools Ranking"
+                        width={600}
+                        height={400}
+                        className="w-full h-auto object-cover"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
       {/* Awards Categories Section */}
-      <section className="py-20 ">
+      <section className="mt-16 ">
         <div className="max-w-7xl mx-auto px-4 text-center">
           
           {/* Institutional Awards */}
@@ -811,125 +880,81 @@ export default function GlobalSchoolsAwards() {
       </section>
 
 
-<section className="relative py-16 overflow-hidden">
+
+
+
+<section className="relative mb-16 overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-12 lg:gap-16">
             {/* Left Side - Content */}
             <div className="w-full">
                 {/* Header */}
+                
+<motion.div 
+    className="flex justify-center mb-8"
+    initial={{ scale: 0.5, opacity: 0 }}     
+    animate={{ scale: 1, opacity: 1 }}       
+    transition={{ duration: 0.8, ease: "easeOut" }}
+>
+    <img 
+        src="/images/ranking/r18.webp" 
+        alt="Grand Jury Panel" 
+        className="w-1/2 max-w-xs rounded-lg border-none"
+    />
+</motion.div>
                 <div className="mb-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1774d1] mb-4">
-                        A Globally Respected Evaluation Process
-                    </h2>
-                    <h3 className="text-base md:text-lg font-bold  mb-12">
-                        Upholding the Highest Standards of Credibility and Impact.
-                    </h3>
-                </div>
-
-                {/* Main Description */}
-                <div className="mb-6">
-                    <p className="text-sm text-justify leading-relaxed mb-4">
-                        
-Every nomination is reviewed through a rigorous, transparent, and merit-based evaluation process.
-                    </p>
-                    
-                  
-                </div>
-
-                {/* Benefits List */}
-                <div className="mb-6">
-                    <ul className=" space-y-1 text-sm font-bold">
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Impact-driven criteria that assess real-world transformation</span>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Emphasis on educational excellence, innovation, sustainability, leadership, and global alignment</span>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Recognition is awarded solely on the basis of merit</span>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Complete data confidentiality and ethical standards assured</span>
-                        </li>
-                        
-                    </ul>
-                </div>
-
-                {/* Closing Statement */}
-                <div>
-                    <p className=" text-md text-justify font-bold leading-relaxed">
-                        This process ensures that the Global Schools Awards remain among the most respected and aspirational honors in education today.
-                    </p>
-                </div>
-            </div>
-
-            {/* Right Side - Image */}
-            
-        
-        </div>
-    </div>
-</section>
-
-<section className="relative bg-gradient-to-br from-[#000000] to-[#002e41] py-16 overflow-hidden">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-12 lg:gap-16">
-            {/* Left Side - Content */}
-            <div className="w-full">
-                {/* Header */}
-                <div className="mb-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1774d1] mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-4">
                         The Grand Jury Panel
                     </h2>
-                    <h3 className="text-base md:text-lg font-bold text-white mb-12">
+                    <h3 className="text-[#cfa958] md:text-lg font-bold text-center mb-12">
                         An Esteemed Assembly of Global Education & Sustainability Leaders.
                     </h3>
                 </div>
 
-                {/* Main Description */}
-                <div className="mb-6">
-                    <p className="text-white text-sm text-justify leading-relaxed mb-4">
-                        The <b>Global Schools Awards</b> are adjudicated by a distinguished Grand Jury comprising:
-                    </p>
-                    
-                  
-                </div>
+                {/* Main Description + Benefits List + Closing Statement */}
+<div className="bg-gradient-to-r from-[#cfa958] to-[#f9e34b] p-1 rounded-3xl mb-6">
+    <div className="bg-white rounded-3xl p-6 md:p-8">
+        {/* Main Description */}
+        <div className="mb-6">
+            <p className="text-black text-sm text-justify leading-relaxed mb-4">
+                The <b>Global Schools Ranking</b> is determined by a distinguished Grand Jury comprising:
+            </p>
+        </div>
 
-                {/* Benefits List */}
-                <div className="mb-6">
-                    <ul className="text-white space-y-1 text-md font-bold">
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Senior representatives from the United Nations and global NGOs</span>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Education policymakers and advisors to national and state governments</span>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Vice Chancellors, Directors, and senior faculty from India’s leading universities and IITs</span>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="text-blue-400 mr-3 mt-1">🔹</span>
-                            <span>Global thought leaders in climate action, sustainability, educational leadership, and innovation </span>
-                        </li>
-                        
-                    </ul>
-                </div>
+        {/* Benefits List */}
+        <div className="mb-6">
+            <ul className="text-black space-y-1 text-md font-bold">
+                <li className="flex items-start">
+                    <span className="text-blue-400 mr-3 mt-1">🔹</span>
+                    <span>Senior representatives from the United Nations and global NGOs</span>
+                </li>
+                <li className="flex items-start">
+                    <span className="text-blue-400 mr-3 mt-1">🔹</span>
+                    <span>Education policymakers and advisors to national and state governments</span>
+                </li>
+                <li className="flex items-start">
+                    <span className="text-blue-400 mr-3 mt-1">🔹</span>
+                    <span>Vice Chancellors, Directors, and senior faculty from India’s leading universities and IITs</span>
+                </li>
+                <li className="flex items-start">
+                    <span className="text-blue-400 mr-3 mt-1">🔹</span>
+                    <span>Global thought leaders in climate action, sustainability, educational leadership, and innovation</span>
+                </li>
+            </ul>
+        </div>
 
-                {/* Closing Statement */}
-                <div>
-                    <p className="text-gray-300 text-sm text-justify leading-relaxed">
-                        "This esteemed panel brings unparalleled expertise, integrity, and international perspective to the selection process — ensuring that the most impactful institutions are honored.”
-                    </p>
-                </div>
+        {/* Closing Statement */}
+        <div>
+            <p className="text-black text-sm text-justify leading-relaxed mb-0">
+                "This esteemed panel brings unparalleled expertise, integrity, and international perspective to the selection process — ensuring that the most impactful institutions are honored.”
+            </p>
+        </div>
+    </div>
+</div>
+
             </div>
 
-            {/* Right Side - Image */}
+           
             
         
         </div>
@@ -941,7 +966,7 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
       {/* Benefits Section */}
       
 {/* Awards Timeline */}
-<section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
+<section className="py-20 bg-gradient-to-br from-[#bd9137] via-[#fae57f] to-[#bd9137]">
   <div className="max-w-4xl mx-auto px-4">
     <motion.div 
       className="text-center mb-16"
@@ -950,16 +975,16 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
       viewport={{ once: true }}
       variants={fadeInUp}
     >
-      <h2 className="text-3xl md:text-4xl text-[#1b66cf] mb-4">
-        <b>Awards Timeline</b> (tentative)
+      <h2 className="text-3xl md:text-4xl text-black mb-4">
+        <b>Timeline for the 2025 Edition</b> (tentative)
       </h2>
-      <p className="text-lg text-gray-600">Key Dates to Watch</p>
+      <p className="text-lg text-black">The Global Schools Ranking 2025 – Key Dates to Watch</p>
     </motion.div>
 
     <div className="relative">
       {/* Animated Timeline line */}
       <motion.div 
-        className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-200 origin-top"
+        className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-yellow-100 origin-top"
         initial={{ height: 0, scaleY: 0 }}
         whileInView={{ height: "100%", scaleY: 1 }}
         viewport={{ once: true }}
@@ -970,19 +995,24 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
       <div className="space-y-16">
         {[
           {
-            date: "October 2025 —",
-            title: "Nominations Open",
-            description: "Application portal opens for all award categories"
+            date: "Applications Open:",
+            title: "October 24, 2025",
+            description: "Applications Close: November 12th, 2025"
           },
           {
-            date: "November 2025 —", 
-            title: "Jury Review & Finalists Announced",
+            date: "Jury Review & Finalists Announced:", 
+            title: "November, 2025",
             description: "Expert panel reviews submissions and announces finalists"
           },
           {
-            date: "December 2025 —",
-            title: "Winners Celebrated",
-            description: "Awards ceremony at the Global Schools Summit & Awards Gala"
+            date: "City & State Rankings Announced:",
+            title: "December, 2025",
+            description: "Ranked schools showcased across national & global platforms"
+          },
+          {
+            date: "National Ranking & Global Awards Ceremony:",
+            title: "December, 2025 ",
+            description: "Winners celebrated at the Global Schools Summit & Awards Gala"
           }
         ].map((item, index) => (
           <motion.div
@@ -1011,7 +1041,7 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
           >
             <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
               <motion.div 
-                className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/20 hover:bg-white/90 transition-all duration-300"
+                className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-yellow-300/60 hover:bg-white/80 transition-all duration-300"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
@@ -1019,14 +1049,14 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <h3 className="font-bold text-black text-xl mb-2">{item.date}</h3>
-                <h4 className="font-semibold text-[#1b66cf] mb-2">{item.title}</h4>
+                <h4 className="font-semibold text-[#b68500] mb-2">{item.title}</h4>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </motion.div>
             </div>
             
             <div className="w-2/12 flex justify-center">
               <motion.div 
-                className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"
+                className="w-4 h-4 bg-yellow-500 rounded-full border-4 border-white shadow-lg"
                 initial={{ scale: 0, rotate: 0 }}
                 whileInView={{ scale: 1, rotate: 360 }}
                 viewport={{ once: true }}
@@ -1052,7 +1082,7 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
                 <div className="bg-gray-30 rounded-3xl border-2 border-gray-200 p-8 md:p-12">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h2 className="text-5xl font-bold text-[#4686d8] mb-4">
+                        <h2 className="text-5xl font-bold text-black mb-4">
                             How to Apply / Nominate
                         </h2>
                         
@@ -1062,11 +1092,11 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
                     
                     <div className="space-y-6">
                         <p className="text-lg text-gray-800 font-bold">
-                            Submission Guidelines for the 2025 Global Schools Awards:
+                            Submission Guidelines for the 2025 Global Schools Ranking:
                         </p>
 <h3 className="text-base font-bold text-gray-800 mb-4"><span className="text-gray-400 mx-2 mt-1">🔹</span>October 2025 — Nominations Open </h3>
-                        <p className="text-sm text-gray-700 leading-relaxed text-justify">
-                          <b>The Global Schools Awards are exclusively open to institutions that are part of the India MUN Global Schools Affiliation Initiative — a prestigious alliance of changemaking institutions committed to transforming education through leadership, sustainability, and innovation.</b><br/>
+                        <p className="text-sm text-black leading-relaxed text-justify">
+                          
                            These awards recognize excellence across Educational Leadership & Innovation, Climate Action & Sustainability, SDG Integration, Youth Empowerment, and Community Engagement — spotlighting institutions that are not only educating, but reshaping the future of learning.
                         </p>
 
@@ -1075,26 +1105,7 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
                       
                         <div className="mt-8">
                             <h3 className="text-base font-bold text-gray-800 mb-4"><span className="text-gray-400 mx-2 mt-1">🔹</span>Who Can Apply: </h3>
-                            <ul className="space-y-1">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-black font-bold">•</span>
-                                    <span className="text-sm text-black">Affiliated <b>Global Member Schools (K-10/12)</b> are eligible to submit nominations</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-black font-bold">•</span>
-                                    <span className="text-sm text-black">Each school may nominate itself in up to two categories</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-black font-bold">•</span>
-                                    <span className="text-sm text-black"><b>Educator nominations</b> a may be submitted individually or by the school</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-black font-bold">•</span>
-                                    <span className="text-sm text-black"><b>Students nominations</b> must be submitted or endorsed by a school leader or mentor
-</span>
-                                </li>
-                                
-                            </ul>
+                            <p className="text-sm text-black leading-relaxed text-justify"><b>The Global Schools Awards are exclusively open to institutions that are part of the India MUN Global Schools Affiliation Initiative — a prestigious alliance of changemaking institutions committed to transforming education through leadership, sustainability, and innovation.</b></p>
                         </div>
 
                         {/* Through the Affiliation Section */}
@@ -1123,11 +1134,11 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
                             <ul className="space-y-1">
                                 <li className="flex items-start gap-2">
                                     
-                                    <span className="text-sm text-black"><b>All nominations will be reviewed by a distinguished Grand Jury Panel.</b></span>
+                                    <span className="text-sm text-black"><b>All nominations will be reviewed by a distinguished Grand Jury Panel</b></span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     
-                                    <span className="text-sm text-black">All entries are scored on pre-defined, impact-driven metrics. The evaluation is merit-based, transparent, and globally benchmarked.</span>
+                                    <span className="text-sm text-black">All entries are scored on pre-defined, impact-driven evaluation matrix credits. The evaluation is merit-based, transparent, and globally benchmarked</span>
                                 </li>
                                 
                                 
@@ -1139,20 +1150,20 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
                             <ul className="space-y-1">
                                 <li className="flex items-start gap-2">
                                     <span className="text-black font-bold">•</span>
-                                    <span className="text-sm font-bold text-black">Top 10 institutions in each category will be Top entries will be officially notified via email and showcased across our global platforms.</span>
+                                    <span className="text-sm font-bold text-black">City & State Rankings Announced: December 2025.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black font-bold">•</span>
-                                    <span className="text-sm text-black">Winners will receive official trophies, certificates, and digital badges. </span>
+                                    <span className="text-sm text-black">Winners will receive official trophies, certificates, and digital badges, and showcased across national and global platforms </span>
                                 </li>
                                 
                                 <li className="flex items-start gap-2">
                                     <span className="text-black font-bold">•</span>
-                                    <span className="text-sm text-black">All Winners will be felicitated at the 2025 Global Schools Summit & Awards Gala</span>
+                                    <span className="text-sm text-black"><b>National Ranking & Global Awards Ceremony: December 2025.</b> All Winners will be felicitated at the 2025 Global Schools Summit & Awards Gala</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black font-bold">•</span>
-                                    <span className="text-sm text-black">Awarded schools will be featured in the India MUN Global Schools Directory, and select stories will be included in India MUN’s Annual Impact Report</span>
+                                    <span className="text-sm text-black">Featured schools included in the India MUN Global Schools Directory, with select stories published in the Annual Impact Report</span>
                                 </li>
                                 
                             </ul>
@@ -1161,20 +1172,109 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
                         {/* Eligibility Section */}
                         <div className="bg-gray-50 p-4 rounded-lg mt-8">
                             <p className="text-sm text-gray-700">
-                                <b>Data Privacy Note:</b> All information and materials submitted will be used solely for the purpose of the Global Schools Prizes evaluation and will remain confidential in accordance with India MUN’s data protection policy.
+                                <b>Data Privacy Note:</b> All information and materials submitted will be used solely for the purpose of the Global Schools Ranking evaluation and will remain confidential in accordance with India MUN’s data protection policy.
                             </p>
                         </div>
                       
                         {/* Call to Action */}
                         <div className="">
                             <h4 className="text-lg font-bold text-gray-800">
-                                <span className="text-black font-bold">💡</span> There is no fee for nomination or evaluation. All the Global Member Schools can nominate themselves for these honors.
+                                <span className="text-black font-bold">💡</span> There is no fee for nomination or evaluation. All the Global Member Schools can nominate themselves for this recognition.
                             </h4>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section className="py-20 px-4 bg-gradient-to-br from-[#000000] to-[#002e41]">
+        <div className="max-w-5xl mx-auto text-center">
+          
+            <motion.div variants={fadeInUp}>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Education?
+              </h2>
+              <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Join an alliance committed to raising global standards for education, sustainability, innovation and student leadership.
+              </p>
+              
+              
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div
+                  variants={fadeInUp}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                >
+                  <Award className="w-10 h-10 text-white mx-auto mb-4" />
+                  <h3 className="font-bold text-white text-lg mb-2">Redefine</h3>
+                  <p className="text-blue-100 text-sm">your institution’s legacy with national and international recognition</p>
+                </motion.div>
+                <motion.div
+                  variants={fadeInUp}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                >
+                  <Target className="w-10 h-10 text-white mx-auto mb-4" />
+                  <h3 className="font-bold text-white text-lg mb-2">Attract</h3>
+                  <p className="text-blue-100 text-sm">forward-thinking educators, students, and partners.</p>
+                </motion.div>
+                <motion.div
+                  variants={fadeInUp}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                >
+                  <Zap className="w-10 h-10 text-white mx-auto mb-4" />
+                  <h3 className="font-bold text-white text-lg mb-2">Showcase</h3>
+                  <p className="text-blue-100 text-sm">your story and leadership in forums where impact is celebrated.</p>
+                </motion.div>
+              </div>
+            </motion.div>
+          
+        </div>
+      </section>
+
+<section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          
+            <motion.div variants={fadeInUp}>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get Started Today</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">How to Participate</h3>
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Schools may self-nominate or be nominated by city representatives</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Affiliated India MUN Global Members are automatically eligible</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Others may join via GSCA–GSLI affiliation</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Recognition Benefits</h3>
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-start space-x-3">
+                      <Star className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Custom plaques and certificates</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Star className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Digital badges for online/print use</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Star className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Invitations to high-level forums and leadership summits</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          
+        </div>
+      </section>
 
       <section className="relative bg-gradient-to-br from-[#000000] to-[#002e41] py-16 overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1196,7 +1296,7 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
         {/* Center - Main Award Image (bigger) */}
         <div className="flex justify-center">
             <img 
-                src="/images/prizes/p17.webp" 
+                src="/images/ranking/r3.webp" 
                 alt="Global Schools Awards" 
                 className="w-60 h-auto rounded-lg shadow-md"
             />
@@ -1214,23 +1314,22 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
 </div>
 </div>
             
-            <h2 className="text-5xl md:text-4xl sm:text-3xl font-bold text-[#4686d8] mb-4">
-                The Vision Behind the Global Schools Awards
+            <h2 className="text-5xl md:text-4xl sm:text-3xl font-bold text-[#ffd34f] mb-4">
+                The Vision Behind the Global Schools Ranking
             </h2>
         </div>
 
         {/* Main Content */}
         <div className="space-y-6 text-white">
             <p className="text-lg font-bold">
-                Celebrating Educational Institutions Bold Enough to Lead the Future.
+                Recognizing Educational Institutions Bold Enough and Compassionate Enough to Build a Better Future.
             </p>
             
             
             
             <p className="text-sm leading-relaxed text-justify">
-              The Global Schools Awards exist to honor institutions that are not only delivering quality education — but redefining it for a rapidly changing world. These awards are rooted in the belief that education is not just about preparing for exams — it's about preparing for life, leadership, and legacy.
-            </p>
-
+              “The Global Schools Ranking by India MUN exists to recognize and uplift visionary institutions that are redefining education for a rapidly changing world, fostering purposeful collaboration, and inspiring a culture where education is about life, legacy, and leadership.”
+</p>
             {/* Who Can Apply Section */}
             <div className="mt-8">
                 <h3 className="text-base font-bold mb-4">
@@ -1256,55 +1355,28 @@ Every nomination is reviewed through a rigorous, transparent, and merit-based ev
             {/* Submission Requirements Section */}
             <div className="mt-8">
                 <p className="text-sm font-bold mb-4">
-                    These prizes are exclusively open to institutions that are part of the India MUN Global Schools Affiliation Initiative — a prestigious network of changemaking schools committed to climate action, SDG integration, entrepreneurship, diplomacy, and future-ready education.
+                    
+By celebrating and showcasing transformational impact, we help schools join a movement that shapes not only outstanding students, but stronger societies and a more hopeful world.
+
                 </p>
                 <ul className="space-y-1">
                     <li className="flex items-start gap-2">
                         
-                        <span className="text-sm text-[#1b66cf]">These awards are designed not just to recognize excellence, but to elevate the standards of education by fostering healthy collaboration and aspirational competition across the educational ecosystem.</span>
+                        <span className="text-sm text-[#ffd34f]">The ranking framework is designed not just to recognize excellence, but to elevate the standards of education by fostering healthy collaboration and aspirational competition across the educational ecosystem.</span>
                     </li>
                     
                 </ul>
             </div>
 
-            {/* Jury & Evaluation Section */}
-            <div className="mt-8">
-                <h3 className="text-base font-bold mb-4">
-                    We believe that every school has the potential to lead — and that transformation happens when institutions: 
-                </h3>
-                <ul className="space-y-1">
-                    <li className="flex items-start gap-2">
-                        <span className="font-bold text-[#1b66cf]">•</span>
-                        <span className="text-sm">Adopt best practices</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                        <span className="font-bold text-[#1b66cf]">•</span>
-                        <span className="text-sm">Empower their educators</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                        <span className="font-bold text-[#1b66cf]">•</span>
-                        <span className="text-sm">Inspire & nurture their students</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                        <span className="font-bold text-[#1b66cf]">•</span>
-                        <span className="text-sm">Collaborate for collective impact</span>
-                    </li>
-                    
-                </ul>
-            </div>
+            
 
             {/* Announcement & Recognition Section */}
-            <div className="mt-8">
-                <p className="text-sm font-bold mb-4">
-                    This is not just about recognition.<br/> It’s about uplifting every institution to do better — for their students, for society, and for the planet.
-                </p>
-                
-            </div>
+            
 
             {/* Data Privacy Section */}
             <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg mt-8 border border-white/20">
                 <p className="text-xl font-bold">
-                    Because real change begins with unity, and a better future is shaped by bold leadership in education.
+                    A celebration of courage, collaboration, and innovation at the heart of education’s next era.
                 </p>
             </div>
           
