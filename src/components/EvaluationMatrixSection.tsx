@@ -215,8 +215,8 @@ const EvaluationMatrixSection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#1774d1] mb-2">
-                        🏆 India MUN – Global Schools Ranking Evaluation Matrix
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#1774d1] mb-2">
+                        Global Schools Ranking Evaluation Matrix
                     </h2>
                     <p className="text-sm text-gray-600 mb-6">
                         Holistic assessment across 500 total credits
@@ -321,7 +321,7 @@ const EvaluationMatrixSection = () => {
                     >
                         <div className="rounded-lg px-8 py-6 h-full">
                            
-                            <div className="space-y-4">
+                            <div className="space-y-2">
                                 {categories.map((category, index) => (
                                     <motion.div
                                         key={index}
@@ -397,8 +397,8 @@ const EvaluationMatrixSection = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h3 className="text-xl md:text-2xl font-bold text-center text-black mb-6 tracking-wide">
-                            CREDIT DISTRIBUTION BREAKDOWN
+                        <h3 className="text-2xl md:text-3xl font-bold text-center text-black py-16 tracking-wide">
+                            Credit Distribution Breakdown
                         </h3>
 
                         <div className="space-y-4">

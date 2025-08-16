@@ -61,6 +61,7 @@ const Navbar = () => {
       { name: "Why Apply", href: "/why-apply" },
     ]},
     { name: "Partners and Affiliates", href: "/partners-and-affiliates" },
+    { name: "Ared", href: "/accreditation" },
     {
       name: "Student Programs",
       href: "/student-programs",

@@ -176,183 +176,230 @@ export default function GlobalSchoolsPage() {
     return (
         <main>
             {/* Global Schools Section */}
-            <section className="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-[#1875d1] text-4xl md:text-5xl font-bold mb-8">
-                        Global Schools for Climate Action,<br />
-                        Leadership & Innovation
-                    </h2>
-                    <p className="text-base md:text-lg text-black max-w-5xl mx-auto">
-                        Empowering schools and transforming education for global climate action, leadership and innovation.
-                    </p>
-                </div>
+            {/* Global Schools Section */}
+     <section className="pt-15 container mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="text-center mb-16">
+    <h2 className="text-[#1775d0] text-4xl md:text-5xl font-bold mb-8">
+      Global Schools for Climate Action,<br />
+      Leadership & Innovation
+    </h2>
+    <p className="text-base md:text-lg text-black max-w-5xl mx-auto">
+      Empowering Schools. Elevating Educators. Transforming Education.
+    </p>
+  </div>
 
-                <div className="grid md:grid-cols-3 gap-6 items-start">
-                    <div className="col-span-2 space-y-8">
-                        <div>
-                            <h3 className="text-2xl md:text-3xl font-bold mb-4">"Global Recognition for Schools Driving Change."</h3>
-                            <p className="text-sm md:text-base font-bold mb-4 text-black mb-8">
-                A Prestigious Alliance of Visionary Institutions Shaping the Future of Education.
-              </p>
-              <p className="text-sm md:text-base text-black mb-8">
-                Join a global movement of pioneering schools championing climate action, leadership, innovation, entrepreneurship, diplomacy, regeneration and SDG-aligned learning.
-              </p>
-                        </div>
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+    {/* Right side - Image (mobile first order) */}
+    <div className="order-1 lg:order-2 flex justify-center">
+      <motion.div
+  className="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] lg:w-full lg:h-[500px]"
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  whileHover={{ scale: 1.05 }}
+>
+  <Image
+    src="/images/accred/l3.webp"
+    alt="GSCA Platinum Badge"
+    fill
+    className="object-contain"
+  />
+</motion.div>
+    </div>
 
-                        <div className="flex items-center gap-4">
-                            <span className="text-[#1875d1] text-lg md:text-xl">Get Certified:</span>
-                            <Link href="/affiliate">
-                                <Button className="bg-[#1875d1] hover:bg-[#1875d1]/90 text-white text-sm md:text-base px-8 py-3 rounded-xl">
-                                    Affiliate Now
-                                </Button>
-                            </Link>
-                        </div>
+    {/* Left side - Content */}
+    <div className="order-2 lg:order-1 lg:col-span-2 space-y-8">
+  <div className="text-center lg:text-left">
+    <h3 className="text-2xl md:text-3xl font-bold mb-4">
+      "Global Recognition for Schools Driving Change."
+    </h3>
+    <p className="text-sm md:text-base font-bold mb-4 text-black">
+      A Prestigious Alliance of Visionary Institutions Shaping the Future of Education.
+    </p>
+    <p className="text-sm md:text-base text-black">
+      Join a global movement of pioneering schools championing climate action, leadership, innovation, entrepreneurship, diplomacy, regeneration and SDG-aligned learning.
+    </p>
+  </div>
 
-                        <div className="max-w-2xl bg-white rounded-md shadow-sm border border-gray-100 p-1 md:p-3">
-                            <h3 className="text-lg md:text-xl font-bold mb-6">Registrations open for</h3>
+  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+    <span className="text-[#1875d1] text-lg md:text-xl">Get Certified:</span>
+    <Link href="/affiliate">
+      <Button className="bg-[#1875d1] hover:bg-[#1875d1]/90 text-white text-sm md:text-base px-8 py-3 rounded-xl">
+        Affiliate Now
+      </Button>
+    </Link>
+  </div>
 
-                            <div className="flex items-center gap-6 mb-6">
-                                <div className="h-16 w-16 md:h-20 md:w-20 relative">
-                                    <Image
-                                        src="/images/home_page/h2.webp"
-                                        alt="UN Style Logo"
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
-                                <div className="flex flex-col">
-                                    <Image
-                                        src="/images/home_page/h3.webp"
-                                        alt="UN Style Logo"
-                                        width={100}
-                                        height={100}
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
-                                <div>
-                                    <h4 className="text-base md:text-lg font-bold mb-1">Global Schools -</h4>
-                                    <h4 className="text-base md:text-lg font-bold mb-2">City Representatives</h4>
-                                    <p className="text-sm md:text-base text-[#1875d1]">Best School from every city</p>
-                                </div>
-                            </div>
+  <motion.div
+  whileHover={{ scale: 1.03, boxShadow: "0px 6px 20px rgba(0,0,0,0.1)" }}
+  transition={{ type: "spring", stiffness: 200, damping: 15 }}
+  className="max-w-2xl bg-white rounded-md shadow-sm border border-gray-100 p-5 md:p-6"
+>
+  <h3 className="text-lg md:text-xl font-bold mb-6">Registrations open for</h3>
 
-                            <p className="text-sm md:text-base font-medium">
-                                Nominate your school to represent your city on the national and global stage.
-                            </p>
-                        </div>
-                    </div>
+  <div className="flex flex-wrap items-center gap-6 mb-6">
+    <div className="h-16 w-16 md:h-20 md:w-20 relative">
+      <Image
+        src="/images/home_page/h2.webp"
+        alt="UN Style Logo"
+        fill
+        className="object-contain"
+      />
+    </div>
+    <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
+    <div className="flex flex-col">
+      <Image
+        src="/images/home_page/h3.webp"
+        alt="UN Style Logo"
+        width={100}
+        height={100}
+        className="object-contain"
+      />
+    </div>
+    <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
+    <div>
+      <h4 className="text-base md:text-lg font-bold mb-1">Global Schools -</h4>
+      <h4 className="text-base md:text-lg font-bold mb-2">
+        City Representatives
+      </h4>
+      <p className="text-sm md:text-base text-[#1875d1]">
+        Best School from every city
+      </p>
+    </div>
+  </div>
 
-                    <div className="col-span-1 flex justify-center">
-                        <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[450px]">
-                            <Image
-                                src="/images/home_page/h4.webp"
-                                alt="GSCA Platinum Badge"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <p className="text-sm md:text-base font-medium">
+    Nominate your school to represent your city on the national and global
+    stage.
+  </p>
+</motion.div>
+</div>
 
-            {/* Small Images Section */}
-            <section className=" bg-gray-5">
-                <div className="container mx-auto px-4">
-                    <div className="flex justify-center items-center gap-8">
-                        {[2, 3, 4, 5, 6].map((num) => (
-                            <div key={num} className="relative w-[250px] h-[250px]">
-                                <Image
-                                    src={`/images/affiliation/x${num}.png`}
-                                    alt={`Small Image ${num}`}
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+  </div>
+</section>
 
-            {/* Affiliated Schools Carousel Section */}
-            <section className="py-12 bg-gray-5">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Header */}
-                    <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold text-[#1875d1] mb-4">
-                            A Celebrated Network of Future-Focused Institutions Shaping Global Education
-                        </h2>
-                        <p className="text-gray-600">
-                            Our Prestigious institutions leading educational transformation
-                        </p>
-                    </div>
 
-                    {/* Carousel Container */}
-                    <div className="relative max-w-9xl mx-auto">
-                        <div className="overflow-hidden rounded-lg">
-                            <div
-                                className="flex transition-transform duration-500 ease-in-out"
-                                style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
-                            >
-                                {[7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((num) => (
-                                    <div
-                                        key={num}
-                                        className="flex-shrink-0 px-2"
-                                        style={{ width: `${100 / slidesToShow}%` }}
-                                    >
-                                        <div className="group relative w-full rounded-lg overflow-hidden shadow-md bg-white">
-                                            <div className="relative w-full aspect-[4/3]">
-                                                <Image
-                                                    src={`/images/affiliation/x${num}.webp`}
-                                                    alt={`Affiliated School ${num}`}
-                                                    fill
-                                                    sizes="(max-width: 768px) 50vw, 25vw"
-                                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                                />
-                                            </div>
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                                <p className="text-white text-sm font-medium">Global Member School</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+      {/* Small Images Section */}
+                 <section className="py-5 bg-gray-10">
+  <div className="container mx-auto px-6">
+    <div className="flex flex-wrap justify-center items-center gap-6">
+      {[2, 3, 4, 5, 6].map((num) => (
+        <motion.div
+          key={num}
+          className="relative w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px]"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <Image
+            src={`/images/affiliation/x${num}.png`}
+            alt={`Small Image ${num}`}
+            fill
+            className="object-contain"
+          />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
-                        {/* Navigation Arrows */}
-                        <button
-                            onClick={prevSlide}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
-                            disabled={currentSlide === 0}
-                        >
-                            <ChevronLeft className="w-6 h-6" />
-                        </button>
+      {/* Schools Gallery Section - Medium height */}
+       <section className="py-12 bg-gray-10">
+                      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                          {/* Header */}
+                          <div className="text-center mb-8">
+                              <h2 className="text-3xl font-bold text-[#1875d1] mb-4">
+                                  A Celebrated Network of Future-Focused Institutions Shaping Global Education
+                              </h2>
+                              <p className="text-gray-600">
+                                  Our Prestigious institutions leading educational transformation
+                              </p>
+                          </div>
+      
+                          {/* Carousel Container */}
+                          <div className="relative max-w-9xl mx-auto">
+  <div className="overflow-hidden rounded-lg">
+    <div
+      className="flex transition-transform duration-500 ease-in-out"
+      style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
+    >
+      {[
+        { num: 7, label: "Delhi Public School, Raipur, Chhattisgarh" },
+        { num: 8, label: "Presidency School, RT Nagar, Banaglore" },
+        { num: 9, label: "Birla Open Minds, Hyderabad" },
+        { num: 10, label: "Kalvi Inernational Public School, Tamil Nadu" },
+        { num: 11, label: "Hopetown Girls' School, Uttrakhand" },
+        { num: 12, label: "Dalhousie Public School, Dalhousie, Himachal Pradesh" },
+        { num: 13, label: "St. Karen's High School,Patna " },
+        { num: 14, label: "Miles Bronson Residential School, Assam" },
+        { num: 15, label: "Silver Bells Public School, Gujarat " },
+        { num: 16, label: "Shiksha Valley School, Dibrugarh" },
+        { num: 17, label: "Goldenbee Global School, Vibgyour, Bangalore South" },
+        { num: 18, label: "Nosegay Public School, Sri Ganganagar" },
+        { num: 19, label: "Future-Ready Education Leader" },
+      ].map(({ num, label }) => (
+        <div
+          key={num}
+          className="flex-shrink-0 px-2"
+          style={{ width: `${100 / slidesToShow}%` }}
+        >
+          <div className="group relative w-full rounded-lg overflow-hidden shadow-md bg-white">
+            <div className="relative w-full aspect-[4/3]">
+              <Image
+                src={`/images/affiliation/x${num}.webp`}
+                alt={label}
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <p className="text-white text-sm font-medium">{label}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
 
-                        <button
-                            onClick={nextSlide}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
-                            disabled={currentSlide >= maxSlide}
-                        >
-                            <ChevronRight className="w-6 h-6" />
-                        </button>
-                    </div>
+  {/* Navigation Arrows */}
+  <button
+    onClick={prevSlide}
+    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+    disabled={currentSlide === 0}
+  >
+    <ChevronLeft className="w-6 h-6" />
+  </button>
 
-                    {/* Dots Indicator */}
-                    <div className="flex justify-center mt-6 space-x-2">
-                        {Array.from({ length: maxSlide + 1 }).map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrentSlide(index)}
-                                className={`w-3 h-3 rounded-full transition-all duration-200 ${currentSlide === index
-                                        ? 'bg-[#1875d1] scale-110'
-                                        : 'bg-gray-300 hover:bg-gray-400'
-                                    }`}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </section>
+  <button
+    onClick={nextSlide}
+    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+    disabled={currentSlide >= maxSlide}
+  >
+    <ChevronRight className="w-6 h-6" />
+  </button>
+</div>
+
+      
+                          {/* Dots Indicator */}
+                          <div className="flex justify-center mt-6 space-x-2">
+                              {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+                                  <button
+                                      key={index}
+                                      onClick={() => setCurrentSlide(index)}
+                                      className={`w-3 h-3 rounded-full transition-all duration-200 ${currentSlide === index
+                                              ? 'bg-[#1875d1] scale-110'
+                                              : 'bg-gray-300 hover:bg-gray-400'
+                                          }`}
+                                  />
+                              ))}
+                          </div>
+                          
+                      </div>
+                  </section>
+
+          
 
 
             <section className="bg-gradient-to-r pt-4 from-[#000000] to-[#002e41] opacity-95">
@@ -364,34 +411,36 @@ export default function GlobalSchoolsPage() {
                     </div>
                 </div>
 
-                <div className="container px-2 sm:px-4 lg:px-3 mx-auto pb-16">
-                    <div className="flex flex-col md:flex-row-reverse items-right">
-                        <div className="">
-                            <Image
-                                src="/images/affiliation/x75.webp"
-                                alt="Our Mission Illustration"
-                                width={700}
-                                height={600}
-                                className="rounded-lg"
-                            />
-                        </div>
-                        <div className="md:w-1/2 md:pr-12">
-                            <p className="text-sm text-white text-justify leading-relaxed">
-                                We celebrate schools not only as centers of learning, but as <b>launchpads for leadership, innovation, and global impact.</b>
-                                 </p>
-                              <p className="py-5 text-sm text-white text-justify leading-relaxed">
-                                  We <b>
-provide schools with an unparalleled platform to showcase your school’s vision, amplify your leadership, and gain national & global recognition.</b>
-                                </p>
-                                 <p className="text-sm py-5 text-white text-justify leading-relaxed">
-                                <b>The Global Schools Affiliation</b> represents a comprehensive transformation of your school’s identity, impact, and international standing. It is a <b>prestigious recognition of your commitment to global education values</b> — from sustainability and leadership to innovation and inclusion.
-                                </p>
-                                <p className="text-sm py-5 text-white text-justify leading-relaxed">
-                                On affiliation, you become a <span className="text-[#1b66cf]">Global Member School </span>and join a <b>prestigious alliance of changemaking institutions</b> — committed to nurturing the next generation of global leaders, innovators & ambassadors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <div className="container px-4 sm:px-4 lg:px-3 mx-auto pb-16">
+    <div className="flex flex-col lg:flex-row-reverse items-right">
+        <div className="py-6">
+            <Image
+                src="/images/affiliation/x75.webp"
+                alt="Our Mission Illustration"
+                width={700}
+                height={600}
+                className="rounded-lg"
+            />
+        </div>
+        <div className="lg:w-1/2 lg:pr-12">
+            <p className="text-sm text-white text-justify leading-relaxed">
+                We celebrate schools not only as centers of learning, but as <b>launchpads for leadership, innovation, and global impact.</b>
+            </p>
+            <p className="py-5 text-sm text-white text-justify leading-relaxed">
+                We <b>
+                    provide schools with an unparalleled platform to showcase your school’s vision, amplify your leadership, and gain national & global recognition.
+                </b>
+            </p>
+            <p className="text-sm py-5 text-white text-justify leading-relaxed">
+                <b>The Global Schools Affiliation</b> represents a comprehensive transformation of your school’s identity, impact, and international standing. It is a <b>prestigious recognition of your commitment to global education values</b> — from sustainability and leadership to innovation and inclusion.
+            </p>
+            <p className="text-sm py-5 text-white text-justify leading-relaxed">
+                On affiliation, you become a <span className="text-[#1b66cf]">Global Member School </span>and join a <b>prestigious alliance of changemaking institutions</b> — committed to nurturing the next generation of global leaders, innovators & ambassadors.
+            </p>
+        </div>
+    </div>
+</div>
+
             </section>
 
             {/* Empowering Schools Section */}
@@ -418,14 +467,23 @@ provide schools with an unparalleled platform to showcase your school’s vision
                             <Accordion type="single" collapsible className="w-full">
                                 <AccordionItem value="item-1">
                                     <AccordionTrigger className="text-left text-xl font-bold">
-                                        Global Schools Ranking.
+                                        Official Certificate & Global Member Badge
+                                    </AccordionTrigger>
+                                    <AccordionContent>
+                                        A prestigious recognition and symbol of your school’s distinguished standing and commitment to global education values — sustainability, leadership, innovation, and inclusion — proudly showcased through an official certificate signed by UN dignitaries & Global leaders, and digital Global Member badge that instantly signal your affiliation with a globally respected movement shaping the future of education.
+                                    </AccordionContent>
+                                </AccordionItem>
+
+                                <AccordionItem value="item-2">
+                                    <AccordionTrigger className="text-left text-xl font-bold">
+                                        Global Schools Ranking
                                     </AccordionTrigger>
                                     <AccordionContent>
                                         Recognizing schools across India for excellence in climate action, leadership, and innovation. Be ranked among the nation's top transformative institutions.
                                     </AccordionContent>
                                 </AccordionItem>
 
-                                <AccordionItem value="item-2">
+                                <AccordionItem value="item-3">
                                     <AccordionTrigger className="text-left text-xl font-bold">
                                         Global Student Programs & Curriculum Access.
                                     </AccordionTrigger>
@@ -434,7 +492,7 @@ provide schools with an unparalleled platform to showcase your school’s vision
                                     </AccordionContent>
                                 </AccordionItem>
 
-                                <AccordionItem value="item-3">
+                                <AccordionItem value="item-4">
                                     <AccordionTrigger className="text-left text-xl font-bold">
                                         Prestigious Prizes & Global Recognition.
                                     </AccordionTrigger>
@@ -443,7 +501,7 @@ provide schools with an unparalleled platform to showcase your school’s vision
                                     </AccordionContent>
                                 </AccordionItem>
 
-                                <AccordionItem value="item-4">
+                                <AccordionItem value="item-5">
                                     <AccordionTrigger className="text-left text-xl font-bold">
                                         Global Schools Summit.
                                     </AccordionTrigger>
@@ -452,7 +510,7 @@ provide schools with an unparalleled platform to showcase your school’s vision
                                     </AccordionContent>
                                 </AccordionItem>
 
-                                <AccordionItem value="item-5">
+                                <AccordionItem value="item-6">
                                     <AccordionTrigger className="text-left text-xl font-bold">
                                         Global Representation at India's Biggest Model UN Conferences
                                     </AccordionTrigger>
@@ -461,7 +519,7 @@ provide schools with an unparalleled platform to showcase your school’s vision
                                     </AccordionContent>
                                 </AccordionItem>
 
-                                <AccordionItem value="item-6">
+                                <AccordionItem value="item-7">
                                     <AccordionTrigger className="text-left text-xl font-bold">
                                         Path to Global Accreditation.
                                     </AccordionTrigger>
@@ -470,7 +528,7 @@ provide schools with an unparalleled platform to showcase your school’s vision
                                     </AccordionContent>
                                 </AccordionItem>
 
-                                <AccordionItem value="item-7">
+                                <AccordionItem value="item-8">
                                     <AccordionTrigger className="text-left text-xl font-bold">
                                         India MUNx Events.
                                     </AccordionTrigger>
@@ -479,7 +537,7 @@ provide schools with an unparalleled platform to showcase your school’s vision
                                     </AccordionContent>
                                 </AccordionItem>
 
-                                <AccordionItem value="item-8">
+                                <AccordionItem value="item-9">
                                     <AccordionTrigger className="text-left text-xl font-bold">
                                         Exclusive Representation at UN COP and Global Events.
                                     </AccordionTrigger>
@@ -499,8 +557,8 @@ provide schools with an unparalleled platform to showcase your school’s vision
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 min-h-[430px] lg:h-96">
             {/* Left side - Image with overlay text */}
-            <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-full">
-                <div className="relative h-full rounded-lg overflow-hidden">
+            <div className="w-full lg:w-1/2">
+                <div className="relative h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px] rounded-lg overflow-hidden">
                     <Image
                         src="/images/affiliation/x25.webp"
                         alt="Global collaboration - hands protecting Earth"
@@ -520,8 +578,8 @@ provide schools with an unparalleled platform to showcase your school’s vision
             </div>
 
             {/* Right side - Quote Content */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-6">
-                <div className="relative w-full max-w-2xl rounded-2xl lg:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 bg-white">
+            <div className="w-full lg:w-1/2">
+                <div className="relative w-full rounded-2xl lg:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 bg-white h-full min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px] flex flex-col justify-center">
                     {/* Logo/Image at top */}
                     <div className="flex justify-left mb-4">
                         <Image
@@ -1466,7 +1524,7 @@ provide schools with an unparalleled platform to showcase your school’s vision
                     </div>
 
                     {/* Main Content */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 text-justify">
                         <p className="text-sm text-gray-800 font-bold">
                             The Global Schools Affiliation is built on a powerful belief — that the future of education will be led by bold, collaborative, purpose-driven institutions.
                         </p>
@@ -1484,27 +1542,27 @@ provide schools with an unparalleled platform to showcase your school’s vision
                             <h3 className="text-base font-bold text-gray-800 mb-4">Why We Exist:</h3>
                             <ul className="space-y-2">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-gray-400 mt-1">•</span>
+                                    <span className="text-black">•</span>
                                     <span className="text-sm text-gray-700">Celebrate institutions leading the transformation of education in India and beyond with purpose, courage, and global vision</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-gray-400 mt-1">•</span>
+                                    <span className="text-black">•</span>
                                     <span className="text-sm text-gray-700">Give schools the <span className="font-bold">visibility, tools, and global platforms</span> to create measurable change</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-gray-400 mt-1">•</span>
+                                    <span className="text-black">•</span>
                                     <span className="text-sm text-gray-700">Build a network where best practices, resources, and leadership flow freely</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-gray-400 mt-1">•</span>
+                                    <span className="text-black">•</span>
                                     <span className="text-sm text-gray-700">Embed sustainability, leadership, and innovation into everyday learning</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-gray-400 mt-1">•</span>
+                                    <span className="text-black">•</span>
                                     <span className="text-sm text-gray-700">Empower educators as catalysts for change</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-gray-400 mt-1">•</span>
+                                    <span className="text-black">•</span>
                                     <span className="text-sm text-gray-700">Nurture students as changemakers, innovators and future global leaders</span>
                                 </li>
                             </ul>
@@ -1515,27 +1573,27 @@ provide schools with an unparalleled platform to showcase your school’s vision
                             <h3 className="text-base font-bold text-gray-800 mb-4">Through the Global Schools Affiliation, institutions gain:</h3>
                             <ul className="space-y-2">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4686d8] mt-1">♦</span>
+                                    <span className="text-[#4686d8]">🔹</span>
                                     <span className="text-sm text-gray-700"><span className="font-bold">National & Global Visibility</span></span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4686d8] mt-1">♦</span>
+                                    <span className="text-[#4686d8]">🔹</span>
                                     <span className="text-sm text-gray-700">Recognition by <span className="font-bold">global leaders, UN-aligned experts and dignitaries</span></span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4686d8] mt-1">♦</span>
+                                    <span className="text-[#4686d8]">🔹</span>
                                     <span className="text-sm text-gray-700">Access to <span className="font-bold">Globally recognized programs and certifications</span></span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4686d8] mt-1">♦</span>
+                                    <span className="text-[#4686d8]">🔹</span>
                                     <span className="text-sm text-gray-700"><span className="font-bold">Unparalleled leadership opportunities</span> for educators and students</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4686d8] mt-1">♦</span>
+                                    <span className="text-[#4686d8]">🔹</span>
                                     <span className="text-sm text-gray-700">International recognition and branding as a changemaking institution</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4686d8] mt-1">♦</span>
+                                    <span className="text-[#4686d8]">🔹</span>
                                     <span className="text-sm text-gray-700">Access to a <span className="font-bold">powerful ecosystem</span> of like-minded schools, experts, and global partners.</span>
                                 </li>
                             </ul>
