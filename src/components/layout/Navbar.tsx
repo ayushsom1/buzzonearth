@@ -61,7 +61,7 @@ const Navbar = () => {
       { name: "Why Apply", href: "/why-apply" },
     ]},
     { name: "Partners and Affiliates", href: "/partners-and-affiliates" },
-    { name: "Ared", href: "/accreditation" },
+    { name: "GSCA-GSLI Accreditation", href: "/accreditation" },
     {
       name: "Student Programs",
       href: "/student-programs",
@@ -129,14 +129,14 @@ const Navbar = () => {
                 </div>
               </Link>
             </div>
-              <div className="hidden sm:block text-xl sm:text-2xl font-bold">
-                IndiaMUN
+              <div className="hidden sm:block text-sm">
+                INDIA’S YOUTH FOR CLIMATE ACTION & INNOVATION
               </div>
           </div>
         </div>
         
         {/* Bottom Strip - Main Navigation - Fixed */}
-        <div className={`fixed ${isMounted ? (isScrolled ? 'top-8' : 'top-[7rem]') : 'top-[7rem]'} left-0 right-0 z-40 p-3 md:p-1 px-2 sm:px-4 lg:px-6 transition-all duration-300 bg-black ${
+        <div className={`fixed ${isMounted ? (isScrolled ? 'top-8' : 'top-[7rem]') : 'top-[7rem]'} left-0 right-0 z-40 p-3 md:p-4 lg:p-1 px-2 sm:px-4 lg:px-6 transition-all duration-300 bg-black ${
           isMounted && isScrolled
             ? "backdrop-blur-md shadow-md"
             : "border-b border-gray-700"
@@ -145,7 +145,7 @@ const Navbar = () => {
             <div className="flex items-center justify-center">
 
               {/* Desktop Navigation */}
-              <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
+              <nav className="hidden lg:flex items-center justify-center flex-wrap space-x-2 xl:space-x-4 2xl:space-x-6 py-2">
                 {navItems.map((item) => 
                   item.dropdown ? (
                     <DropdownMenu key={item.name}>
@@ -153,7 +153,7 @@ const Navbar = () => {
                         <Button
                           variant="ghost"
                           className={cn(
-                            "flex items-center space-x-1 px-3 py-1 text-sm font-medium",
+                            "flex items-center space-x-1 px-2 xl:px-3 py-1 text-xs xl:text-sm font-medium whitespace-nowrap",
                             pathname.startsWith(item.href)
                               ? "text-white bg-white/20 rounded-md"
                               : "text-gray-200 hover:text-white hover:bg-white/10 rounded-md"
@@ -198,7 +198,7 @@ const Navbar = () => {
                       key={item.name}
                       href={item.href}
                       className={cn(
-                        "px-3 py-1 text-sm font-medium rounded-md",
+                        "px-2 xl:px-3 py-1 text-xs xl:text-sm font-medium rounded-md whitespace-nowrap",
                         pathname === item.href
                           ? "text-white bg-white/20"
                           : "text-gray-200 hover:text-white hover:bg-white/10"
@@ -211,7 +211,7 @@ const Navbar = () => {
               </nav>
 
               {/* Mobile Menu - Now positioned on the right */}
-              <div className="absolute right-4 md:hidden">
+              <div className="absolute right-4 lg:hidden">
                 <Sheet>
                   <SheetTrigger asChild>
                     <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
