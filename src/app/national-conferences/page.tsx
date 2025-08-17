@@ -194,7 +194,7 @@ export default function NationalConferences() {
             "Highly influential and effective Governing council",
             "Strong network of mentors and guides for students to unleash their best potential",
             "Certificates signed by UN dignitaries",
-            "Network of Global Schools for Climate Action, Leadership and Innovation",
+            "Network of Top 1% Schools",
             "Focus on inculcating spirit of innovation, entrepreneurship, leadership and regeneration",
             "Exposure to essential life skills. Experiential learning on diverse topics",
             "The only MUN focused on Climate and Biodiversity as core themes",
@@ -211,86 +211,111 @@ export default function NationalConferences() {
 
       {/* Key Highlights Section */}
       <section className="max-w-7xl mx-auto py-16 flex flex-col items-center px-4 justify-center">
-        <h2 className="text-4xl font-bold text-[#1774d1] text-center py-8">
-          Key Highlights
-        </h2>
+  <h2 className="text-4xl font-bold text-[#1774d1] text-center py-8">
+    Key Highlights
+  </h2>
 
-        {/* Highlight Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 justify-center">
-          {/* Youth-Led Dialogues */}
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Youth-Led Dialogues</h3>
-            <p className="text-gray-700 text-sm">
-              Engage in thought-provoking discussions led by young leaders driving climate action globally.
-            </p>
-          </div>
+  {/* Highlight Cards */}
+  <div className="flex flex-wrap justify-center gap-8 mb-24">
+    {/* Youth-Led Dialogues */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Youth-Led Dialogues</h3>
+      <p className="text-gray-700 text-sm">
+        Engage in thought-provoking discussions led by young leaders driving climate action globally.
+      </p>
+    </motion.div>
 
-          {/* Innovative Solutions Showcase */}
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Innovative Solutions Showcase</h3>
-            <p className="text-gray-700 text-sm">
-              Witness groundbreaking initiatives and solutions addressing pressing climate challenges.
-            </p>
-          </div>
+    {/* Innovative Solutions Showcase */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Innovative Solutions Showcase</h3>
+      <p className="text-gray-700 text-sm">
+        Witness groundbreaking initiatives and solutions addressing pressing climate challenges.
+      </p>
+    </motion.div>
 
-          {/* Global Networking */}
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Global Networking</h3>
-            <p className="text-gray-700 text-sm ">
-              Connect with like-minded individuals, experts, and organizations committed to a sustainable future
-            </p>
-          </div>
+    {/* Global Networking */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Global Networking</h3>
+      <p className="text-gray-700 text-sm">
+        Connect with like-minded individuals, experts, and organizations committed to a sustainable future.
+      </p>
+    </motion.div>
 
-          {/* Inspiring Keynotes */}
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Inspiring Keynotes</h3>
-            <p className="text-gray-700 text-sm">
-              Gain insights from influential speakers shaping the discourse on climate change and environmental conservation
-            </p>
-          </div>
+    {/* Inspiring Keynotes */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Inspiring Keynotes</h3>
+      <p className="text-gray-700 text-sm">
+        Gain insights from influential speakers shaping the discourse on climate change and environmental conservation.
+      </p>
+    </motion.div>
 
-          {/* Interactive Workshops */}
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Interactive Workshops</h3>
-            <p className="text-gray-700 text-sm">
-              Participate in hands-on sessions focused on
-              regenerative solutions, systems thinking,
-              and policy writing, equipping yourself with
-              actionable knowledge and skills.    </p>
-          </div>
+    {/* Interactive Workshops */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Interactive Workshops</h3>
+      <p className="text-gray-700 text-sm">
+        Participate in hands-on sessions focused on regenerative solutions, systems thinking, and policy writing, equipping yourself with actionable knowledge and skills.
+      </p>
+    </motion.div>
 
-          {/* Youth Awards Ceremony */}
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Leadership Forums & Expert Panels</h3>
-            <p className="text-gray-700 text-sm">
-              Explore the intersection of youth, climate,
-              innovation, and leadership through
-              moderated panels featuring voices from the
-              UN, think tanks, top universities, and startups
-              working in climate tech and biodiversity.            </p>
-          </div>
+    {/* Leadership Forums & Expert Panels */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Leadership Forums & Expert Panels</h3>
+      <p className="text-gray-700 text-sm">
+        Explore the intersection of youth, climate, innovation, and leadership through moderated panels featuring voices from the UN, think tanks, top universities, and startups working in climate tech and biodiversity.
+      </p>
+    </motion.div>
 
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Resolution Presentation to
-              High-Level Jury</h3>
-            <p className="text-gray-700 text-sm">
-              Final resolutions — drafted through days of research,
-              negotiation, and debate — are formally presented to an
-              esteemed jury of international diplomats, global leaders
-              and sustainability experts — bridging youth-driven
-              climate diplomacy and global policy leadership</p>
-          </div>
+    {/* Resolution Presentation to High-Level Jury */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Resolution Presentation to High-Level Jury</h3>
+      <p className="text-gray-700 text-sm">
+        Final resolutions — drafted through days of research, negotiation, and debate — are formally presented to an esteemed jury of international diplomats, global leaders and sustainability experts — bridging youth-driven climate diplomacy and global policy leadership.
+      </p>
+    </motion.div>
 
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">Youth Awards Ceremony</h3>
-            <p className="text-gray-700 text-sm">
-              Outstanding delegates, speakers, and innovators are recognized through prestigious Youth Awards presented during the closing ceremony. These awards celebrate excellence in diplomacy, innovation, climate action, and social impact — spotlighting India’s next generation of global changemakers.
-            </p>
-          </div>
-        </div>
+    {/* Youth Awards Ceremony */}
+    <motion.div
+      className="bg-white rounded-lg p-8 shadow-lg text-center w-full md:w-[45%] lg:w-[30%]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <h3 className="text-2xl font-bold mb-4">Youth Awards Ceremony</h3>
+      <p className="text-gray-700 text-sm">
+        Outstanding delegates, speakers, and innovators are recognized through prestigious Youth Awards presented during the closing ceremony. These awards celebrate excellence in diplomacy, innovation, climate action, and social impact — spotlighting India’s next generation of global changemakers.
+      </p>
+    </motion.div>
 
+  </div>
+</section>
 
-      </section>
 
       {/* Climate Action, Innovation, Leadership Section */}
       <section className="max-w-7xl mx-auto py-16 px-4">
@@ -415,7 +440,7 @@ export default function NationalConferences() {
 
           <div className="space-y-6">
             {/* Communication & Public Speaking */}
-            <div>
+            <div className="flex items-start space-x-4">
               <div className="text-[#0066FF] text-xl mt-1">◆</div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Communication & Public Speaking</h3>

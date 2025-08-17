@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -18,6 +19,7 @@ const fadeIn = {
     }
   })
 };
+const text = "One planet. One youth. One unstoppable force for change.";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -264,42 +266,88 @@ export default function PartnersAndAffiliates() {
               Your partnership isn't just an opportunity; it's a call to action to invest in the
               education and development of young minds committed to climate action and innovation. Together, we can make an impact that reverberates through generations.
             </motion.p>
-            <motion.p 
-              className="text-lg text-gray-700 mb-6 font-semibold"
-              variants={fadeIn}
-              custom={3}
-            >
-              Step up and lead the charge – partner with India MUN today!
-            </motion.p>
+            
           </motion.div>
         </div>
       </section>
 
-      {/* Let's Connect CTA */}
-      <section className="py-16 bg-primary text-white">
-        <motion.div 
-          className="container px-4 sm:px-6 lg:px-8 mx-auto text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
+     
+      <section className="py-20 bg-gradient-to-br from-[#000000] via-[#002e41] to-black text-white">
+  <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
+<motion.div 
+  className="text-center mb-16"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  variants={fadeIn}
+  custom={0}
+>
+  <h2 className="text-lg md:text-3xl font-bold mt-16">LET'S CONNECT</h2>
+
+  {/* Image below heading */}
+  <div className="mt-6 mx-auto w-[400px] h-[400px] relative">
+    <Image
+      src="/images/about_us/A9.webp" // replace with your image path
+      alt="Connect Illustration"
+      fill
+      className="object-contain"
+    />
+  </div>
+</motion.div>
+    {/* Fade-up Heading */}
+    <motion.h2
+      className="text-3xl font-bold mb-8"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      Join us in creating a sustainable future!
+    </motion.h2>
+
+    {/* Fade-up Paragraph */}
+    <motion.p
+      className="text-lg mb-12 max-w-5xl mx-auto text-[#1875D1] leading-relaxed"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.3 }}
+    >
+      Be part of India’s growing movement for climate action, innovation, and leadership — shaping a nation that thrives on sustainability, equality, and prosperity, and securing a sustainable future for generations to come.
+    </motion.p>
+
+    {/* Typewriter-like effect */}
+    <motion.h2
+      className="text-3xl font-bold mb-8"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.05 } }
+      }}
+    >
+      {text.split("").map((char, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.03, delay: index * 0.05 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Connect</h2>
-          <p className="text-xl max-w-3xl mx-auto mb-8">
-            Interested in supporting youth-led climate action? Join our network of partners and help create a sustainable future.
-          </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
-                Get in Touch
-              </Button>
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
+          {char}
+        </motion.span>
+      ))}
+    </motion.h2>
+
+    {/* Single Button */}
+    <div className="flex justify-center">
+      <a
+        href="/contact"
+        className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-white hover:text-[#1875d1] transition-colors duration-300"
+      >
+        Get in Touch
+      </a>
+    </div>
+
+  </div>
+</section>
     </div>
   );
 } 

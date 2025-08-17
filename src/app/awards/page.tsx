@@ -192,7 +192,7 @@ export default function GlobalSchoolsAwards() {
           <div className="space-y-6">
             <div className="flex items-start space-x-4 text-justify">
               <div>
-                <p className="text-[#1774d1] text-sm">
+                <p className="text-[#41b6c4] text-sm">
                   are awarded to <span className="text-white font-bold">making a profound and lasting impact across the key pillars of 21st-century education —</span> including Educational Leadership & Innovation, Climate Action & Sustainability, SDG Integration, Youth Empowerment, and Community Engagement.
                 </p>
                 <p className="text-white text-sm py-6">
@@ -219,7 +219,7 @@ export default function GlobalSchoolsAwards() {
       
 
       {/* Awards Categories Section */}
-      <section className="py-20 ">
+      <section className="py-16 ">
         <div className="max-w-7xl mx-auto px-4 text-center">
 
           {/* Institutional Awards */}
@@ -1155,7 +1155,7 @@ export default function GlobalSchoolsAwards() {
 
 
 
-      <section className="py-24 m-20 bg-gradient-to-br from-[#000000] to-[#002e41] text-white rounded-2xl overflow-hidden">
+      <section className="py-20 m-20 bg-gradient-to-br from-[#000000] to-[#002e41] text-white rounded-2xl overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-9xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -1261,7 +1261,7 @@ export default function GlobalSchoolsAwards() {
 
               {/* Closing Statement */}
               <div>
-                <p className=" text-md text-justify font-bold leading-relaxed">
+                <p className=" text-md text-justify font-bold leading-relaxed mb-10">
                   This process ensures that the Global Schools Awards remain among the most respected and aspirational honors in education today.
                 </p>
               </div>
@@ -1274,7 +1274,7 @@ export default function GlobalSchoolsAwards() {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-br from-[#000000] to-[#002e41] py-16 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#000000] to-[#002e41] py-20 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-12 lg:gap-16">
             {/* Left Side - Content */}

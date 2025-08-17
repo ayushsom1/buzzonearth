@@ -8,6 +8,7 @@ import { ChevronRight, ChevronLeft, ChevronDown, ChevronUp, User, School, Buildi
 import { useRef } from "react";
 import { useState, useEffect } from "react";
 
+
 // Animation variants for fade-in
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -40,6 +41,7 @@ const cardHover = {
 
 export default function Home() {
   // Create refs for sections that need scroll-based animations
+  const [isExpanded, setIsExpanded] = useState(false);
   const sectionRefs = {
     partners: useRef(null),
     about: useRef(null),
@@ -109,6 +111,23 @@ const [currentSlide, setCurrentSlide] = useState(0);
 
         return () => clearInterval(timer);
     }, [maxSlide]);
+
+    const questions = [
+  "DO YOU WONDER WHAT YOU AS AN INDIVIDUAL CAN DO?",
+  "Can your ideas spark real change in the world?",
+  "Do you want to solve the planet’s biggest challenges?",
+  "Are you ready to lead with purpose & impact?",
+];
+
+const [questionIndex, setQuestionIndex] = useState(0);
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setQuestionIndex((prev) => (prev + 1) % questions.length);
+  }, 3000); // Change every 3 seconds
+  return () => clearInterval(timer);
+}, []);
+
 
   return (
     <div className="flex flex-col">
@@ -215,7 +234,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={fadeInUp}
-        className="py-28 bg-gradient-to-b from-black to-[#002e41] text-white relative overflow-hidden"
+        className="py-20 bg-gradient-to-b from-black to-[#002e41] text-white relative overflow-hidden"
       >
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#000000] to-[#002e41] opacity-95"></div>
@@ -250,110 +269,141 @@ const [currentSlide, setCurrentSlide] = useState(0);
                   className="rounded-lg"
                 />
               </div>
+              <h2 className="text-xl md:text-2xl font-semibold text-[#1775d0]">
+                CLIMATE ACTION. LEADERSHIP. INNOVATION. DIPLOMACY. ENTREPRENEURSHIP. REGENERATION. SDGs.
+              </h2>
             </div>
           </div>
         </div>
       </motion.section>
 
       {/* Global Schools Section */}
-      <section className="pt-15 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-[#1775d0] text-4xl md:text-5xl font-bold mb-8">
-            Global Schools for Climate Action,<br />
-            Leadership & Innovation
-          </h2>
-          <p className="text-base md:text-lg text-black max-w-5xl mx-auto">
-            Empowering Schools. Elevating Educators. Transforming Education.
-          </p>
-        </div>
+     <section className="pt-15 container mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="text-center mb-16">
+    <h2 className="text-[#1775d0] text-4xl md:text-5xl font-bold mb-8">
+      Global Schools for Climate Action,<br />
+      Leadership & Innovation
+    </h2>
+    <p className="text-base md:text-lg text-black max-w-5xl mx-auto">
+      Empowering Schools. Elevating Educators. Transforming Education.
+    </p>
+  </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-start">
-          <div className="col-span-2 space-y-8">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">"Global Recognition for Schools Driving Change."</h3>
-              <p className="text-sm md:text-base font-bold mb-4 text-black mb-8">
-                A Prestigious Alliance of Visionary Institutions Shaping the Future of Education.
-              </p>
-              <p className="text-sm md:text-base text-black mb-8">
-                Join a global movement of pioneering schools championing climate action, leadership, innovation, entrepreneurship, diplomacy, regeneration and SDG-aligned learning.
-              </p>
-            </div>
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+    {/* Right side - Image (mobile first order) */}
+    <div className="order-1 lg:order-2 flex justify-center">
+      <motion.div
+  className="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] lg:w-full lg:h-[500px]"
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  whileHover={{ scale: 1.05 }}
+>
+  <Image
+    src="/images/accred/l3.webp"
+    alt="GSCA Platinum Badge"
+    fill
+    className="object-contain"
+  />
+</motion.div>
+    </div>
 
-            <div className="flex items-center gap-4">
-              <span className="text-[#1875d1] text-lg md:text-xl">Get Certified:</span>
-              <Link href="/affiliate">
-                <Button className="bg-[#1875d1] hover:bg-[#1875d1]/90 text-white text-sm md:text-base px-8 py-3 rounded-xl">
-                  Affiliate Now
-                </Button>
-              </Link>
-            </div>
+    {/* Left side - Content */}
+    <div className="order-2 lg:order-1 lg:col-span-2 space-y-8">
+  <div className="text-center lg:text-left">
+    <h3 className="text-2xl md:text-3xl font-bold mb-4">
+      "Global Recognition for Schools Driving Change."
+    </h3>
+    <p className="text-sm md:text-base font-bold mb-4 text-black">
+      A Prestigious Alliance of Visionary Institutions Shaping the Future of Education.
+    </p>
+    <p className="text-sm md:text-base text-black">
+      Join a global movement of pioneering schools championing climate action, leadership, innovation, entrepreneurship, diplomacy, regeneration and SDG-aligned learning.
+    </p>
+  </div>
 
-            <div className="max-w-2xl bg-white rounded-md shadow-sm border border-gray-100 p-1 md:p-3">
-              <h3 className="text-lg md:text-xl font-bold mb-6">Registrations open for</h3>
+  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+    <span className="text-[#1875d1] text-lg md:text-xl">Get Certified:</span>
+    <Link href="/affiliate">
+      <Button className="bg-[#1875d1] hover:bg-[#1875d1]/90 text-white text-sm md:text-base px-8 py-3 rounded-xl">
+        Affiliate Now
+      </Button>
+    </Link>
+  </div>
 
-              <div className="flex items-center gap-6 mb-6">
-                <div className="h-16 w-16 md:h-20 md:w-20 relative">
-                  <Image
-                    src="/images/home_page/h2.webp"
-                    alt="UN Style Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
-                <div className="flex flex-col">
-                  <Image
-                    src="/images/home_page/h3.webp"
-                    alt="UN Style Logo"
-                    width={100}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
-                <div>
-                  <h4 className="text-base md:text-lg font-bold mb-1">Global Schools -</h4>
-                  <h4 className="text-base md:text-lg font-bold mb-2">City Representatives</h4>
-                  <p className="text-sm md:text-base text-[#1875d1]">Best School from every city</p>
-                </div>
-              </div>
+  <motion.div
+  whileHover={{ scale: 1.03, boxShadow: "0px 6px 20px rgba(0,0,0,0.1)" }}
+  transition={{ type: "spring", stiffness: 200, damping: 15 }}
+  className="max-w-2xl bg-white rounded-md shadow-sm border border-gray-100 p-5 md:p-6"
+>
+  <h3 className="text-lg md:text-xl font-bold mb-6">Registrations open for</h3>
 
-              <p className="text-sm md:text-base font-medium">
-                Nominate your school to represent your city on the national and global stage.
-              </p>
-            </div>
-          </div>
+  <div className="flex flex-wrap items-center gap-6 mb-6">
+    <div className="h-16 w-16 md:h-20 md:w-20 relative">
+      <Image
+        src="/images/home_page/h2.webp"
+        alt="UN Style Logo"
+        fill
+        className="object-contain"
+      />
+    </div>
+    <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
+    <div className="flex flex-col">
+      <Image
+        src="/images/home_page/h3.webp"
+        alt="UN Style Logo"
+        width={100}
+        height={100}
+        className="object-contain"
+      />
+    </div>
+    <div className="h-16 md:h-20 w-0.5 bg-gray-300"></div>
+    <div>
+      <h4 className="text-base md:text-lg font-bold mb-1">Global Schools -</h4>
+      <h4 className="text-base md:text-lg font-bold mb-2">
+        City Representatives
+      </h4>
+      <p className="text-sm md:text-base text-[#1875d1]">
+        Best School from every city
+      </p>
+    </div>
+  </div>
 
-          <div className="col-span-1 flex justify-center">
-            <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
-              <Image
-                src="/images/home_page/h4.webp"
-                alt="GSCA Platinum Badge"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+  <p className="text-sm md:text-base font-medium">
+    Nominate your school to represent your city on the national and global
+    stage.
+  </p>
+</motion.div>
+</div>
+
+  </div>
+</section>
+
 
       {/* Small Images Section */}
-                  <section className="py-5 bg-gray-10">
-                      <div className="container mx-auto px-6">
-                          <div className="flex justify-center items-center gap-10">
-                              {[2, 3, 4, 5, 6].map((num) => (
-                                  <div key={num} className="relative w-[250px] h-[250px]">
-                                      <Image
-                                          src={`/images/affiliation/x${num}.png`}
-                                          alt={`Small Image ${num}`}
-                                          fill
-                                          className="object-contain"
-                                      />
-                                  </div>
-                              ))}
-                          </div>
-                      </div>
-                  </section>
+                 <section className="py-5 bg-gray-10">
+  <div className="container mx-auto px-6">
+    <div className="flex flex-wrap justify-center items-center gap-6">
+      {[2, 3, 4, 5, 6].map((num) => (
+        <motion.div
+          key={num}
+          className="relative w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px]"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <Image
+            src={`/images/affiliation/x${num}.png`}
+            alt={`Small Image ${num}`}
+            fill
+            className="object-contain"
+          />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Schools Gallery Section - Medium height */}
        <section className="py-12 bg-gray-10">
@@ -369,54 +419,69 @@ const [currentSlide, setCurrentSlide] = useState(0);
                           </div>
       
                           {/* Carousel Container */}
-                          <div className="relative max-w-7xl mx-auto">
-                              <div className="overflow-hidden rounded-lg">
-                                  <div
-                                      className="flex transition-transform duration-500 ease-in-out"
-                                      style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
-                                  >
-                                      {[7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((num) => (
-                                          <div
-                                              key={num}
-                                              className="flex-shrink-0 px-2"
-                                              style={{ width: `${100 / slidesToShow}%` }}
-                                          >
-                                              <div className="group relative w-full rounded-lg overflow-hidden shadow-md bg-white">
-                                                  <div className="relative w-full aspect-[4/3]">
-                                                      <Image
-                                                          src={`/images/affiliation/x${num}.webp`}
-                                                          alt={`Affiliated School ${num}`}
-                                                          fill
-                                                          sizes="(max-width: 768px) 50vw, 25vw"
-                                                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                                      />
-                                                  </div>
-                                                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                                      <p className="text-white text-sm font-medium">Global Member School</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      ))}
-                                  </div>
-                              </div>
-      
-                              {/* Navigation Arrows */}
-                              <button
-                                  onClick={prevSlide}
-                                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
-                                  disabled={currentSlide === 0}
-                              >
-                                  <ChevronLeft className="w-6 h-6" />
-                              </button>
-      
-                              <button
-                                  onClick={nextSlide}
-                                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
-                                  disabled={currentSlide >= maxSlide}
-                              >
-                                  <ChevronRight className="w-6 h-6" />
-                              </button>
-                          </div>
+                          <div className="relative max-w-9xl mx-auto">
+  <div className="overflow-hidden rounded-lg">
+    <div
+      className="flex transition-transform duration-500 ease-in-out"
+      style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
+    >
+      {[
+        { num: 7, label: "Delhi Public School, Raipur, Chhattisgarh" },
+        { num: 8, label: "Presidency School, RT Nagar, Banaglore" },
+        { num: 9, label: "Birla Open Minds, Hyderabad" },
+        { num: 10, label: "Kalvi Inernational Public School, Tamil Nadu" },
+        { num: 11, label: "Hopetown Girls' School, Uttrakhand" },
+        { num: 12, label: "Dalhousie Public School, Dalhousie, Himachal Pradesh" },
+        { num: 13, label: "St. Karen's High School,Patna " },
+        { num: 14, label: "Miles Bronson Residential School, Assam" },
+        { num: 15, label: "Silver Bells Public School, Gujarat " },
+        { num: 16, label: "Shiksha Valley School, Dibrugarh" },
+        { num: 17, label: "Goldenbee Global School, Vibgyour, Bangalore South" },
+        { num: 18, label: "Nosegay Public School, Sri Ganganagar" },
+        { num: 19, label: "Future-Ready Education Leader" },
+      ].map(({ num, label }) => (
+        <div
+          key={num}
+          className="flex-shrink-0 px-2"
+          style={{ width: `${100 / slidesToShow}%` }}
+        >
+          <div className="group relative w-full rounded-lg overflow-hidden shadow-md bg-white">
+            <div className="relative w-full aspect-[4/3]">
+              <Image
+                src={`/images/affiliation/x${num}.webp`}
+                alt={label}
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <p className="text-white text-sm font-medium">{label}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Navigation Arrows */}
+  <button
+    onClick={prevSlide}
+    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+    disabled={currentSlide === 0}
+  >
+    <ChevronLeft className="w-6 h-6" />
+  </button>
+
+  <button
+    onClick={nextSlide}
+    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1875d1] rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+    disabled={currentSlide >= maxSlide}
+  >
+    <ChevronRight className="w-6 h-6" />
+  </button>
+</div>
+
       
                           {/* Dots Indicator */}
                           <div className="flex justify-center mt-6 space-x-2">
@@ -470,9 +535,21 @@ const [currentSlide, setCurrentSlide] = useState(0);
 
           <div className="">
             <div className="">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                DO YOU WONDER WHAT YOU AS AN INDIVIDUAL CAN DO?
-              </h3>
+              <div className="overflow-hidden h-[50px] md:h-[60px] flex items-center">
+  <AnimatePresence mode="wait">
+    <motion.h3
+      key={questionIndex}
+      className="text-2xl md:text-3xl lg:text-4xl font-bold"
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0%", opacity: 1 }}
+      exit={{ y: "-100%", opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
+      {questions[questionIndex]}
+    </motion.h3>
+  </AnimatePresence>
+</div>
+
             
             </div>
           </div>
@@ -487,7 +564,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
                 Where young leaders, innovators and changemakers
               </p>
 
-              <div className="flex flex-wrap justify-center gap-x-6 text-[#FFD700] text-md md:text-lg font-medium">
+              <div className="flex flex-wrap justify-center gap-x-4 text-[#FFD700] text-md md:text-lg font-medium">
                 <span>MEET</span>
                 <span>|</span>
                 <span>LEARN</span>
@@ -522,52 +599,263 @@ const [currentSlide, setCurrentSlide] = useState(0);
           </div>
         </div>
 
-        {/* Welcome letter section */}
-        <div className="min-h-[620px] max-w-7xl mx-auto mt-15 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4 md:p-8 border-2 rounded-xl mb-8 md:mb-16">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl md:text-2xl font-bold mb-4">Letter by the Executive President, India MUN</h3>
-            <p className="text-gray-700 text-sm md:text-base">
+       
+        
+
+        
+      </section>
+
+<section className="pb-16 bg-white">
+  {/* Welcome letter section */}
+  <div className="min-h-[620px] max-w-7xl mx-auto border-2 rounded-xl overflow-hidden">
+    <div className="p-4 md:p-8">
+      {/* Mobile Layout */}
+      <div className="block md:hidden space-y-6">
+        <div>
+          <h3 className="text-xl font-bold mb-4">
+            Letter by the Executive President, India MUN
+          </h3>
+
+          {/* Full content always visible */}
+          <div className="text-gray-700 text-xs text-justify">
+            <p>
               <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
               <br /><br />
-              It is with immense joy and great anticipation that I welcome you to the India Model United Nations Platform. As the Founder and Executive President of India MUN, I am deeply inspired by the bright young minds gathering from all corners of our diverse nation for this annual national conference each year. These students’ enthusiasm and dedication to addressing and taking action on the critical issues surrounding climate change and sustainability fill me with hope and confidence for our future.
+              It is with immense joy and great anticipation that I welcome you
+              to the India Model United Nations Platform. As the Founder and
+              Executive President of India MUN, I am deeply inspired by the
+              bright young minds gathering from all corners of our diverse
+              nation for this annual national conference each year. These
+              students’ enthusiasm and dedication to addressing and taking
+              action on the critical issues surrounding climate change and
+              sustainability fill me with hope and confidence for our future.
               <br /><br />
-              India is a young country, with more than 50% of our population under the age of 25. This youthful demographic is our greatest asset. I firmly believe in the power of youth to drive change, innovate, and lead with passion and purpose. The energy, creativity, and resilience that you bring to the table are exactly what we need to tackle the pressing challenges of our time.
+              India is a young country, with more than 50% of our population
+              under the age of 25. This youthful demographic is our greatest
+              asset. I firmly believe in the power of youth to drive change,
+              innovate, and lead with passion and purpose. The energy,
+              creativity, and resilience that you bring to the table are exactly
+              what we need to tackle the pressing challenges of our time.
               <br /><br />
-              I envision the youth of our country as torchbearers in solving global challenges. Instead of adopting a victim mindset, I urge you to embrace an action mindset. Rise above the challenges not only for your own good but for the betterment of society, nature, and our planet at large. Your participation in this conference is a testament to your dedication to the cause and your willingness to step up as leaders of tomorrow.
+              I envision the youth of our country as torchbearers in solving
+              global challenges. Instead of adopting a victim mindset, I urge
+              you to embrace an action mindset. Rise above the challenges not
+              only for your own good but for the betterment of society,
+              nature, and our planet at large. Your participation in this
+              conference is a testament to your dedication to the cause and
+              your willingness to step up as leaders of tomorrow.
               <br /><br />
-              Let us remember that every discussion, every debate, and every decision made here has the potential to impact our planet positively. Let us be bold in our aspirations, decisive in our actions, and unwavering in our commitment to a sustainable future.
+              Let us remember that every discussion, every debate, and every
+              decision made here has the potential to impact our planet
+              positively. Let us be bold in our aspirations, decisive in our
+              actions, and unwavering in our commitment to a sustainable future.
               <br /><br />
-              Welcome to the <b>National India MUN Conference 2025.</b>
+              Welcome to the <b>National India MUN Conference 2025</b>.
               <br /><br />
               Yours sincerely,
-              <br />
-              <br />
-              <b><i>Gayatri Chauhan, Founder and Executive President, India Model United Nations</i></b>
+              <br /><br />
+              <b>
+                Gayatri Chauhan,
+                <br />
+                Founder and Executive President,
+                <br />
+                India Model United Nations
+              </b>
             </p>
           </div>
-          <div className="flex items-center justify-center col-span-1">
-            <div className="relative h-[300px] md:h-[500px] w-full">
+        </div>
+
+        {/* Image for mobile */}
+        <div className="flex justify-center">
+          <div className="rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-lg transition-all duration-300 max-w-[280px] mx-auto w-full hover:-translate-y-2">
+            <div className="relative w-full pb-[140%] hover:scale-105 transition-transform duration-300">
               <Image
                 src="/images/programs/S21.webp"
                 alt="India MUN President"
                 fill
-                style={{ objectFit: 'contain' }}
-                className="rounded-lg"
+                style={{ objectFit: "cover" }}
+                className="absolute inset-0"
               />
+            </div>
+            <div className="p-6 space-y-3">
+              <h3 className="text-lg font-bold text-gray-900">
+                Ms. Gayatri Chauhan
+              </h3>
+              <div className="space-y-1.5 mt-2">
+                <p className="text-xs text-gray-600">
+                  Founder and CEO, BuzzOnEarth
+                  <br />
+                  President, Gaia The Earth Foundation
+                </p>
+                <p className="text-md text-[#1774d1] font-bold mt-3">
+                  (Executive President, India MUN)
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-4 mb-16">
-          <Button size="lg" className="h-auto py-2 bg-[#1875d1] cursor-pointer hover:bg-blue-700 w-full md:w-auto font-bold text-lg">
-            India MUN National Climate Conference 2024
-          </Button>
-          <div className="h-16 w-0.5 bg-gray-300"></div>
-          <Button size="lg" className="h-auto py-2 bg-[#1875d1] cursor-pointer hover:bg-blue-700 w-full md:w-auto font-bold text-lg">
-            India MUN Climate Conferences 2025
-          </Button>
+      {/* Desktop Layout */}
+      <div className="hidden md:grid md:grid-cols-3 gap-8">
+        <div className="col-span-2">
+          <h3 className="py-8 text-xl md:text-2xl font-bold mb-4">
+            Letter by the Executive President, India MUN
+          </h3>
+
+          <div className="text-gray-700 text-sm text-justify">
+            <p>
+              <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
+              <br /><br />
+              It is with immense joy and great anticipation that I welcome you
+              to the India Model United Nations Platform. As the Founder and
+              Executive President of India MUN, I am deeply inspired by the
+              bright young minds gathering from all corners of our diverse
+              nation for this annual national conference each year. These
+              students’ enthusiasm and dedication to addressing and taking
+              action on the critical issues surrounding climate change and
+              sustainability fill me with hope and confidence for our future.
+              <br /><br />
+              India is a young country, with more than 50% of our population
+              under the age of 25. This youthful demographic is our greatest
+              asset. I firmly believe in the power of youth to drive change,
+              innovate, and lead with passion and purpose. The energy,
+              creativity, and resilience that you bring to the table are exactly
+              what we need to tackle the pressing challenges of our time.
+              <br /><br />
+              I envision the youth of our country as torchbearers in solving
+              global challenges. Instead of adopting a victim mindset, I urge
+              you to embrace an action mindset. Rise above the challenges not
+              only for your own good but for the betterment of society,
+              nature, and our planet at large. Your participation in this
+              conference is a testament to your dedication to the cause and
+              your willingness to step up as leaders of tomorrow.
+              <br /><br />
+              Let us remember that every discussion, every debate, and every
+              decision made here has the potential to impact our planet
+              positively. Let us be bold in our aspirations, decisive in our
+              actions, and unwavering in our commitment to a sustainable future.
+              <br /><br />
+              Welcome to the <b>National India MUN Conference 2025</b>.
+              <br /><br />
+              Yours sincerely,
+              <br /><br />
+              <b>
+                Gayatri Chauhan,
+                <br />
+                Founder and Executive President,
+                <br />
+                India Model United Nations
+              </b>
+            </p>
+          </div>
         </div>
-      </section>
+
+        {/* Desktop Image */}
+        <div className="flex items-center justify-center">
+          <div className="rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-lg transition-all duration-300 max-w-[280px] mx-auto w-full hover:-translate-y-2">
+            <div className="relative w-full pb-[140%] hover:scale-105 transition-transform duration-300">
+              <Image
+                src="/images/programs/S21.webp"
+                alt="India MUN President"
+                fill
+                style={{ objectFit: "cover" }}
+                className="absolute inset-0"
+              />
+            </div>
+            <div className="p-6 space-y-3">
+              <h3 className="text-lg font-bold text-gray-900">
+                Ms. Gayatri Chauhan
+              </h3>
+              <div className="space-y-1.5 mt-2">
+                <p className="text-xs text-gray-600">
+                  Founder and CEO, BuzzOnEarth
+                  <br />
+                  President, Gaia The Earth Foundation
+                </p>
+                <p className="text-md text-[#1774d1] font-bold mt-3">
+                  (Executive President, India MUN)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      
+      <section className="w-full md:mb-8 bg-white">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 min-h-[430px] lg:h-96">
+                        {/* Left side - Image with overlay text */}
+                        <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-full">
+                            <div className="relative h-full rounded-lg overflow-hidden">
+                                <Image
+                                    src="/images/conference25/z1.webp"
+                                    alt="Global collaboration - hands protecting Earth"
+                                    fill
+                                    className="object-cover"
+                                />
+                                {/* Overlay text at bottom */}
+                                
+                            </div>
+                        </div>
+            
+                        {/* Right side - Quote Content */}
+                        <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-6">
+                            <div className="relative w-full max-w-2xl rounded-2xl lg:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 bg-white">
+                                {/* Logo/Image at top */}
+                                <div className="flex justify-left mb-4">
+                                    <Image
+                                        src="/images/affiliation/x51.webp"
+                                        alt="Global collaboration logo"
+                                        width={60}
+                                        height={30}
+                                        className="object-contain sm:w-20 sm:h-20 lg:w-24 lg:h-18"
+                                    />
+                                </div>
+                                
+                                <div className="text-center lg:text-left">
+                                    <h2 className="text-3xl md:text-4xl text-gray-800 mb-8 leading-tight">
+                        Behold the power
+                        of <b>the largest youth
+                        population{" "} </b><br />
+                        <span className="text-[#1875d1] font-bold ">in the world.</span>
+                      </h2>
+      
+                      <div className="mb-8">
+                        <p className="text-xl text-gray-700">
+                          INDIA’S YOUTH FOR CLIMATE ACTION
+                        </p>
+                      </div>
+      
+                                    
+                                    {/* Keywords section */}
+                                    <div className="mb-4">
+                                        <p className="text-sm sm:text-base text-gray-700 italic">
+                                            CLIMATE ACTION. LEADERSHIP. DIPLOMACY.  INNOVATION. GLOBAL EXPOSURE. COMMUNITY IMPACT.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full px-4 py-8 bg-white">
+  <div className="flex flex-wrap justify-center gap-4 mb-16">
+                          <Button size="lg" className="bg-[#1875d1] hover:bg-blue-700">
+                              India MUN National Climate Conference 2024
+                          </Button>
+                          <Button size="lg" variant="outline" className="border-blue-600 text-[#1875d1] hover:bg-blue-50">
+                              India MUN National Conferences 2025
+                          </Button>
+                      </div>
+</section>
+
 
       {/* Other Student Programs Section */}
       <section className="py-16 bg-gray-50">
@@ -765,7 +1053,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
 
 
  {/* Youth Movement Section - styled like image */}
- <section className="py-15 bg-gray-900 text-white">
+ <section className="py-15 bg-gradient-to-b from-black to-[#002e41] text-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-12">
