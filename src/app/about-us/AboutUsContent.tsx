@@ -413,56 +413,63 @@ export default function AboutUsContent() {
 
 
       {/* Fifth Section - Values */}
-      <section className="py-15 bg-gray-50">
-        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-          <h2 className="text-5xl font-semibold mb-16 text-center text-[#1875d1]">VALUES</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Youth Empowerment",
-                description: "We place young people at the heart of everything we do — nurturing their voice, vision, and capacity to lead. Through real-world programs, we empower students to become innovators, changemakers, and global citizens.",
-                icon: "👥"
-              },
-              {
-                title: "Sustainability & Climate Responsibility",
-                description: "We are committed to embedding sustainability into education and action — cultivating environmentally responsible mindsets and championing the UN Sustainable Development Goals at every level.",
-                icon: "🌱"
-              },
-              {
-                title: "Leadership for the 21st Century",
-                description: "We believe education must develop courageous, ethical, and visionary leaders. Our programs are designed to foster leadership grounded in purpose, impact, and global awareness.",
-                icon: "🚀"
-              },
-              {
-                title: "Innovation & Future Readiness",
-                description: "In a rapidly changing world, we promote innovation as a mindset — encouraging creative thinking, problem-solving, and resilience building to equip learners for the challenges of tomorrow.",
-                icon: "💡"
-              },
-              {
-                title: "Global Collaboration & Inclusion",
-                description: "We value global partnerships and diverse perspectives. By building a connected, inclusive network of institutions, educators, and youth leaders, we work collectively toward a just and resilient future.",
-                icon: "🌍"
-              },
-              {
-                title: "Integrity and Transparency",
-                description: "We uphold the highest standards of integrity, ensuring openness, accountability, and trust in all our initiatives and relationships.",
-                icon: "⚖️"
-              },
-              {
-                title: "Excellence in Education",
-                description: "We are committed to delivering transformational learning experiences that combine academic rigor with real-world relevance — empowering educators and students alike to lead with insight and impact.",
-                icon: "📚"
-              }
-            ].map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl mb-6">{value.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-[#1875d1]">{value.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     <section className="py-15 bg-gray-50">
+  <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+    <h2 className="text-5xl font-semibold mb-16 text-center text-[#1875d1]">VALUES</h2>
+    
+    {/* Flex wrapper to center last row */}
+    <div className="flex flex-wrap justify-center gap-8">
+      {[
+        {
+          title: "Youth Empowerment",
+          description: "We place young people at the heart of everything we do — nurturing their voice, vision, and capacity to lead. Through real-world programs, we empower students to become innovators, changemakers, and global citizens.",
+          icon: "👥"
+        },
+        {
+          title: "Sustainability & Climate Responsibility",
+          description: "We are committed to embedding sustainability into education and action — cultivating environmentally responsible mindsets and championing the UN Sustainable Development Goals at every level.",
+          icon: "🌱"
+        },
+        {
+          title: "Leadership for the 21st Century",
+          description: "We believe education must develop courageous, ethical, and visionary leaders. Our programs are designed to foster leadership grounded in purpose, impact, and global awareness.",
+          icon: "🚀"
+        },
+        {
+          title: "Innovation & Future Readiness",
+          description: "In a rapidly changing world, we promote innovation as a mindset — encouraging creative thinking, problem-solving, and resilience building to equip learners for the challenges of tomorrow.",
+          icon: "💡"
+        },
+        {
+          title: "Global Collaboration & Inclusion",
+          description: "We value global partnerships and diverse perspectives. By building a connected, inclusive network of institutions, educators, and youth leaders, we work collectively toward a just and resilient future.",
+          icon: "🌍"
+        },
+        {
+          title: "Integrity and Transparency",
+          description: "We uphold the highest standards of integrity, ensuring openness, accountability, and trust in all our initiatives and relationships.",
+          icon: "⚖️"
+        },
+        {
+          title: "Excellence in Education",
+          description: "We are committed to delivering transformational learning experiences that combine academic rigor with real-world relevance — empowering educators and students alike to lead with insight and impact.",
+          icon: "📚"
+        }
+      ].map((value, index) => (
+        <motion.div
+          key={index}
+          className="bg-white p-6 rounded-xl shadow-lg w-full sm:w-[45%] lg:w-[30%]"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <div className="text-4xl mb-6">{value.icon}</div>
+          <h3 className="text-xl font-semibold mb-4 text-[#1875d1]">{value.title}</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Sixth Section - What Can Youth Do */}
       <section className="w-full min-h-[600px] py-16 relative flex flex-col justify-center">

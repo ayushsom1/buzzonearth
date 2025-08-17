@@ -360,51 +360,196 @@ export default function StudentPrograms() {
 
             
 
-                    {/* Welcome letter section */}
-                    <div className="min-h-[620px] max-w-7xl mx-auto mt-15 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4 md:p-8 border-2 rounded-xl mb-8 md:mb-16">
-                              <div className="col-span-1 md:col-span-2">
-                                <h3 className="text-xl md:text-2xl font-bold mb-4">Letter by the Executive President, India MUN</h3>
-                                <p className="text-gray-700 text-sm md:text-base">
-                                  <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
-                                  <br /><br />
-                                  It is with immense joy and great anticipation that I welcome you to the India Model United Nations Platform. As the Founder and Executive President of India MUN, I am deeply inspired by the bright young minds gathering from all corners of our diverse nation for this annual national conference each year. These students’ enthusiasm and dedication to addressing and taking action on the critical issues surrounding climate change and sustainability fill me with hope and confidence for our future.
-                                  <br /><br />
-                                  India is a young country, with more than 50% of our population under the age of 25. This youthful demographic is our greatest asset. I firmly believe in the power of youth to drive change, innovate, and lead with passion and purpose. The energy, creativity, and resilience that you bring to the table are exactly what we need to tackle the pressing challenges of our time.
-                                  <br /><br />
-                                  I envision the youth of our country as torchbearers in solving global challenges. Instead of adopting a victim mindset, I urge you to embrace an action mindset. Rise above the challenges not only for your own good but for the betterment of society, nature, and our planet at large. Your participation in this conference is a testament to your dedication to the cause and your willingness to step up as leaders of tomorrow.
-                                  <br /><br />
-                                  Let us remember that every discussion, every debate, and every decision made here has the potential to impact our planet positively. Let us be bold in our aspirations, decisive in our actions, and unwavering in our commitment to a sustainable future.
-                                  <br /><br />
-                                  Welcome to the <b>National India MUN Conference 2025.</b>
-                                  <br /><br />
-                                  Yours sincerely,
-                                  <br />
-                                  <br />
-                                  <b><i>Gayatri Chauhan, Founder and Executive President, India Model United Nations</i></b>
-                                </p>
-                              </div>
-                              <div className="flex items-center justify-center col-span-1">
-                                <div className="relative h-[300px] md:h-[500px] w-full">
-                                  <Image
-                                    src="/images/programs/S21.webp"
-                                    alt="India MUN President"
-                                    fill
-                                    style={{ objectFit: 'contain' }}
-                                    className="rounded-lg"
-                                  />
-                                </div>
-                              </div>
-                            </div>
+                    
 
                     <div className="flex flex-wrap justify-center gap-4 mb-16">
                         <Button size="lg" className="bg-[#1875d1] hover:bg-blue-700">
                             India MUN National Climate Conference 2024
                         </Button>
                         <Button size="lg" variant="outline" className="border-blue-600 text-[#1875d1] hover:bg-blue-50">
-                            India MUN Climate Conferences 2025
+                            India MUN National Conferences 2025
                         </Button>
                     </div>
                 </div>
+            </section>
+            <section className="pb-16 bg-white">
+              {/* Welcome letter section */}
+              <div className="min-h-[620px] max-w-7xl mx-auto border-2 rounded-xl overflow-hidden">
+                <div className="p-4 md:p-8">
+                  {/* Mobile Layout */}
+                  <div className="block md:hidden space-y-6">
+                    <div>
+                      <h3 className="text-xl font-bold mb-4">
+                        Letter by the Executive President, India MUN
+                      </h3>
+            
+                      {/* Full content always visible */}
+                      <div className="text-gray-700 text-xs text-justify">
+                        <p>
+                          <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
+                          <br /><br />
+                          It is with immense joy and great anticipation that I welcome you
+                          to the India Model United Nations Platform. As the Founder and
+                          Executive President of India MUN, I am deeply inspired by the
+                          bright young minds gathering from all corners of our diverse
+                          nation for this annual national conference each year. These
+                          students’ enthusiasm and dedication to addressing and taking
+                          action on the critical issues surrounding climate change and
+                          sustainability fill me with hope and confidence for our future.
+                          <br /><br />
+                          India is a young country, with more than 50% of our population
+                          under the age of 25. This youthful demographic is our greatest
+                          asset. I firmly believe in the power of youth to drive change,
+                          innovate, and lead with passion and purpose. The energy,
+                          creativity, and resilience that you bring to the table are exactly
+                          what we need to tackle the pressing challenges of our time.
+                          <br /><br />
+                          I envision the youth of our country as torchbearers in solving
+                          global challenges. Instead of adopting a victim mindset, I urge
+                          you to embrace an action mindset. Rise above the challenges not
+                          only for your own good but for the betterment of society,
+                          nature, and our planet at large. Your participation in this
+                          conference is a testament to your dedication to the cause and
+                          your willingness to step up as leaders of tomorrow.
+                          <br /><br />
+                          Let us remember that every discussion, every debate, and every
+                          decision made here has the potential to impact our planet
+                          positively. Let us be bold in our aspirations, decisive in our
+                          actions, and unwavering in our commitment to a sustainable future.
+                          <br /><br />
+                          Welcome to the <b>National India MUN Conference 2025</b>.
+                          <br /><br />
+                          Yours sincerely,
+                          <br /><br />
+                          <b>
+                            Gayatri Chauhan,
+                            <br />
+                            Founder and Executive President,
+                            <br />
+                            India Model United Nations
+                          </b>
+                        </p>
+                      </div>
+                    </div>
+            
+                    {/* Image for mobile */}
+                    <div className="flex justify-center">
+                      <div className="rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-lg transition-all duration-300 max-w-[280px] mx-auto w-full hover:-translate-y-2">
+                        <div className="relative w-full pb-[140%] hover:scale-105 transition-transform duration-300">
+                          <Image
+                            src="/images/programs/S21.webp"
+                            alt="India MUN President"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="absolute inset-0"
+                          />
+                        </div>
+                        <div className="p-6 space-y-3">
+                          <h3 className="text-lg font-bold text-gray-900">
+                            Ms. Gayatri Chauhan
+                          </h3>
+                          <div className="space-y-1.5 mt-2">
+                            <p className="text-xs text-gray-600">
+                              Founder and CEO, BuzzOnEarth
+                              <br />
+                              President, Gaia The Earth Foundation
+                            </p>
+                            <p className="text-md text-[#1774d1] font-bold mt-3">
+                              (Executive President, India MUN)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+                  {/* Desktop Layout */}
+                  <div className="hidden md:grid md:grid-cols-3 gap-8">
+                    <div className="col-span-2">
+                      <h3 className="py-8 text-xl md:text-2xl font-bold mb-4">
+                        Letter by the Executive President, India MUN
+                      </h3>
+            
+                      <div className="text-gray-700 text-sm text-justify">
+                        <p>
+                          <b>Dear Young Leaders, Esteemed Educators, and Honored Guests,</b>
+                          <br /><br />
+                          It is with immense joy and great anticipation that I welcome you
+                          to the India Model United Nations Platform. As the Founder and
+                          Executive President of India MUN, I am deeply inspired by the
+                          bright young minds gathering from all corners of our diverse
+                          nation for this annual national conference each year. These
+                          students’ enthusiasm and dedication to addressing and taking
+                          action on the critical issues surrounding climate change and
+                          sustainability fill me with hope and confidence for our future.
+                          <br /><br />
+                          India is a young country, with more than 50% of our population
+                          under the age of 25. This youthful demographic is our greatest
+                          asset. I firmly believe in the power of youth to drive change,
+                          innovate, and lead with passion and purpose. The energy,
+                          creativity, and resilience that you bring to the table are exactly
+                          what we need to tackle the pressing challenges of our time.
+                          <br /><br />
+                          I envision the youth of our country as torchbearers in solving
+                          global challenges. Instead of adopting a victim mindset, I urge
+                          you to embrace an action mindset. Rise above the challenges not
+                          only for your own good but for the betterment of society,
+                          nature, and our planet at large. Your participation in this
+                          conference is a testament to your dedication to the cause and
+                          your willingness to step up as leaders of tomorrow.
+                          <br /><br />
+                          Let us remember that every discussion, every debate, and every
+                          decision made here has the potential to impact our planet
+                          positively. Let us be bold in our aspirations, decisive in our
+                          actions, and unwavering in our commitment to a sustainable future.
+                          <br /><br />
+                          Welcome to the <b>National India MUN Conference 2025</b>.
+                          <br /><br />
+                          Yours sincerely,
+                          <br /><br />
+                          <b>
+                            Gayatri Chauhan,
+                            <br />
+                            Founder and Executive President,
+                            <br />
+                            India Model United Nations
+                          </b>
+                        </p>
+                      </div>
+                    </div>
+            
+                    {/* Desktop Image */}
+                    <div className="flex items-center justify-center">
+                      <div className="rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-lg transition-all duration-300 max-w-[280px] mx-auto w-full hover:-translate-y-2">
+                        <div className="relative w-full pb-[140%] hover:scale-105 transition-transform duration-300">
+                          <Image
+                            src="/images/programs/S21.webp"
+                            alt="India MUN President"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="absolute inset-0"
+                          />
+                        </div>
+                        <div className="p-6 space-y-3">
+                          <h3 className="text-lg font-bold text-gray-900">
+                            Ms. Gayatri Chauhan
+                          </h3>
+                          <div className="space-y-1.5 mt-2">
+                            <p className="text-xs text-gray-600">
+                              Founder and CEO, BuzzOnEarth
+                              <br />
+                              President, Gaia The Earth Foundation
+                            </p>
+                            <p className="text-md text-[#1774d1] font-bold mt-3">
+                              (Executive President, India MUN)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
 
             {/* Young Forest Ambassador Challenge */}
@@ -589,31 +734,48 @@ export default function StudentPrograms() {
                 </div>
             </section>
 
-<section className="w-full min-h-[400px] md:h-[700px] py-8 md:py-16 relative flex flex-col justify-center">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
-                    <div className="col-span-1 md:col-span-2 relative min-h-[300px] md:min-h-0">
-                        <Image
-                            src="/images/programs/S25.webp"
-                            alt="Leadership Background"
-                            fill
-                            style={{ objectFit: 'contain' }}
-                            className="rounded-xl md:rounded-r-3xl md:rounded-l-none"
-                        />
-                        <div className="absolute inset-0 bg-black opacity-5 rounded-xl md:rounded-r-3xl md:rounded-l-none"></div>
-                    </div>
-                    <div className="col-span-1 relative min-h-[300px] md:min-h-0">
-                        <Image
-                            src="/images/programs/S26.webp"
-                            alt="Leadership Background"
-                            fill
-                            style={{ objectFit: 'contain' }}
-                            className="rounded-xl md:rounded-l-3xl md:rounded-r-none"
-                        />
-                        <div className="absolute inset-0 bg-black opacity-5 rounded-xl md:rounded-l-3xl md:rounded-r-none"></div>
-                    </div>
-                </div>
 
-            </section>
+<section className="w-full max-w-[1440px] mx-auto py-8 md:py-16 relative flex flex-col justify-center">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto">
+
+    {/* Left Image */}
+    <motion.div
+      className="col-span-1 md:col-span-2 relative flex justify-center items-center"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <div className="w-full md:h-[500px] h-[300px] relative">
+        <Image
+          src="/images/programs/S25.webp"
+          alt="Leadership Background"
+          fill
+          style={{ objectFit: "contain" }}
+          className="rounded-xl md:rounded-r-3xl md:rounded-l-none"
+        />
+      </div>
+      <div className="absolute inset-0 bg-black opacity-5 rounded-xl md:rounded-r-3xl md:rounded-l-none"></div>
+    </motion.div>
+
+    {/* Right Image */}
+    <motion.div
+      className="col-span-1 relative flex justify-center items-center"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <div className="w-full md:h-[500px] h-[300px] relative">
+        <Image
+          src="/images/programs/S26.webp"
+          alt="Leadership Background"
+          fill
+          style={{ objectFit: "contain" }}
+          className="rounded-xl md:rounded-l-3xl md:rounded-r-none"
+        />
+      </div>
+      <div className="absolute inset-0 bg-black opacity-5 rounded-xl md:rounded-l-3xl md:rounded-r-none"></div>
+    </motion.div>
+
+  </div>
+</section>
         
             <section className="w-full py-8 md:py-12 relative">
                 <div className="grid grid-cols-1 md:grid-cols-4 mt-4 md:mt-8 max-w-7xl mx-auto p-4 border-2 border-blue-100 rounded-2xl">
@@ -876,7 +1038,7 @@ export default function StudentPrograms() {
              <section className="w-full py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#0076ba] mb-8">Our Vision & Mission</h2>
-                    <div className="space-y-6 text-lg md:text-xl">
+                    <div className="space-y-6 text-lg md:text-lg sm:text-md">
                         <p>
                             <span className="font-bold">India MUN</span> envisions a world where every student becomes a powerful force for positive change.
                         </p>
@@ -887,53 +1049,58 @@ export default function StudentPrograms() {
                 </div>
             </section>
 
-            {/* Final Impact Section */}
-            <section className="w-full min-h-[600px] py-16 relative flex flex-col justify-center">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/images/programs/S33.webp"
-                        alt="Impact Background"
+            
+
+            {/* Sixth Section - What Can Youth Do */}
+                  <section className="w-full min-h-[600px] py-16 relative flex flex-col justify-center">
+              {/* Background */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/programs/S33.webp"
+                  alt="Impact Background"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black opacity-5"></div>
+              </div>
+            
+              <div className="max-w-7xl mx-auto px-4 relative z-10">
+                {/* Make it 1 column for mobile/tablet, 3 only for big screens */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+                  
+                  {/* Left Column with Images */}
+                  <div className="flex flex-col gap-6 col-span-1 items-center lg:items-stretch">
+                    <div className="relative w-full max-w-[300px] h-48 sm:h-56 lg:h-[200px] rounded-xl overflow-hidden">
+                      <Image
+                        src="/images/programs/S34.webp"
+                        alt="Impact Image 1"
                         fill
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <div className="absolute inset-0 bg-black opacity-2"></div>
-                </div>
-
-                <div className="max-w-7xl mx-auto px-4 relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-40 items-center">
-                        {/* Left Column with Images */}
-                        <div className="space-y-6 col-span-1">
-                            <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
-                                <Image
-                                    src="/images/programs/S34.webp"
-                                    alt="Impact Image 1"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                    className="hover:scale-110 transition-transform duration-300"
-                                />
-                            </div>
-                            <div className="relative h-[200px] w-full rounded-xl overflow-hidden">
-                                <Image
-                                    src="/images/programs/S35.webp"
-                                    alt="Impact Image 2"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                    className="hover:scale-110 transition-transform duration-300"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Right Column with Text */}
-                        <div className="text-white col-span-2">
-                            <h2 className="py-12 text-4xl md:text-5xl font-bold mb-6">WHAT CAN YOU(th) DO?</h2>
-                            <div className="space-y-6 text-lg">
-                                <p>
-                                    With over 600 million young people, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – will impact the youth and their future generations the most — the stakes couldn't be higher.
-                                </p>
-                                <p>
-                                    Global bodies have not been able to move the needle as yet.
-                                </p>
-                                <p>
+                        className="object-cover hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="relative w-full max-w-[300px] h-48 sm:h-56 lg:h-[200px] rounded-xl overflow-hidden">
+                      <Image
+                        src="/images/programs/S35.webp"
+                        alt="Impact Image 2"
+                        fill
+                        className="object-cover hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+            
+                  {/* Right Column with Text */}
+                  <div className="text-white col-span-2">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                      WHAT CAN YOU(th) DO?
+                    </h2>
+                    <div className="space-y-6 text-base sm:text-lg text-justify">
+                      <p>
+                        With over <b>600 million young people</b>, India is the youngest country in the world. Therefore, in the years to come, no country will produce more leaders than India. The climate crisis, which the IPCC [Intergovernmental Panel on Climate Change] says has intensified, spread and in some cases, caused irreversible damage – <b>will impact the youth and their future generations the most</b> — the stakes couldn't be higher.
+                      </p>
+                      <p>
+                        Global bodies have not been able to move the needle as yet.
+                      </p>
+                      <p>
                                     Every small step taken by millions of young Indians can create a ripple effect with global impact.
                                 </p>
                                 <p>
@@ -943,11 +1110,12 @@ export default function StudentPrograms() {
                                     🌱 This is your moment. This is your movement.<br />
                                     And it begins with you.
                                 </p>
-                            </div>
-                        </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </section>
+
             <section className="w-full py-24 bg-gradient-to-br from-gray-50 to-blue-50">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-16">

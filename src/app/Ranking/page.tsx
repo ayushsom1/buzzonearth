@@ -544,30 +544,7 @@ export default function GlobalSchoolsAwards() {
   </div>
 </section>
 
-<section className="max-w-xl mx-auto p-4">
-  <div className="bg-white border border-yellow-400 rounded-lg p-6">
-    <ul className="space-y-4">
-      <li className="flex items-center">
-        <Star className="w-6 h-6 text-yellow-600 flex-shrink-0 mr-3" />
-        <span className="font-semibold text-black">
-          Custom plaques and certificates
-        </span>
-      </li>
-      <li className="flex items-center">
-        <Star className="w-6 h-6 text-yellow-600 flex-shrink-0 mr-3" />
-        <span className="font-semibold text-black">
-          Digital badges for online/print use
-        </span>
-      </li>
-      <li className="flex items-center">
-        <Star className="w-6 h-6 text-yellow-600 flex-shrink-0 mr-3" />
-        <span className="font-semibold text-black">
-          Invitations to high-level forums and leadership summits
-        </span>
-      </li>
-    </ul>
-  </div>
-</section>
+
 
 <EvaluationMatrixSection />
 
@@ -1249,7 +1226,7 @@ export default function GlobalSchoolsAwards() {
                     </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">Others may join via GSCA–GSLI affiliation</span>
+                      <span className="text-gray-700 text-sm">Others may join via India MUN Affiliation Program</span>
                     </div>
                   </div>
                 </div>

@@ -846,26 +846,14 @@ useEffect(() => {
                 </div>
             </section>
             <section className="w-full px-4 py-8 bg-white">
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
-    {/* Button 1 */}
-    <Button
-      size="lg"
-      className="h-auto py-3 px-6 bg-[#1875d1] cursor-pointer hover:bg-blue-700 w-full lg:w-auto font-bold text-lg text-white text-center"
-    >
-      India MUN National Climate Conference 2024
-    </Button>
-
-    {/* Divider — horizontal for stacked, vertical for large */}
-    <div className="w-full h-0.5 bg-gray-300 lg:w-0.5 lg:h-12"></div>
-
-    {/* Button 2 */}
-    <Button
-      size="lg"
-      className="h-auto py-3 px-6 bg-[#1875d1] cursor-pointer hover:bg-blue-700 w-full lg:w-auto font-bold text-lg text-white text-center"
-    >
-      India MUN Climate Conferences 2025
-    </Button>
-  </div>
+  <div className="flex flex-wrap justify-center gap-4 mb-16">
+                          <Button size="lg" className="bg-[#1875d1] hover:bg-blue-700">
+                              India MUN National Climate Conference 2024
+                          </Button>
+                          <Button size="lg" variant="outline" className="border-blue-600 text-[#1875d1] hover:bg-blue-50">
+                              India MUN National Conferences 2025
+                          </Button>
+                      </div>
 </section>
 
 

@@ -479,25 +479,25 @@ export default function GlobalSchoolsPage() {
                                         Global Schools Ranking
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Recognizing schools across India for excellence in climate action, leadership, and innovation. Be ranked among the nation's top transformative institutions.
+                                        An international honor celebrating schools that are revolutionizing education and setting new benchmarks in Climate Action, Leadership, Innovation, Diplomacy, Entrepreneurship, Regeneration, and SDG-focused learning. Be ranked among the nation's top transformative institutions  and inspire the future of education.
                                     </AccordionContent>
                                 </AccordionItem>
 
                                 <AccordionItem value="item-3">
                                     <AccordionTrigger className="text-left text-xl font-bold">
-                                        Global Student Programs & Curriculum Access.
+                                        International Student Programs & Curriculum Access
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Access to international educational programs and curriculum resources designed to foster global citizenship and environmental awareness.
+                                        Global Member Schools’ students gain access to India MUN’s most prestigious international programs and globally-aligned curriculum — designed to nurture leadership, foster global citizenship, advance climate action, drive innovation, and build future-ready competencies.
                                     </AccordionContent>
                                 </AccordionItem>
 
                                 <AccordionItem value="item-4">
                                     <AccordionTrigger className="text-left text-xl font-bold">
-                                        Prestigious Prizes & Global Recognition.
+                                        Global Schools Awards & Recognition
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Opportunities for schools and students to win awards and gain international recognition for their environmental initiatives and leadership.
+                                        The Global Schools Awards honor future-ready schools making a lasting impact across key pillars of 21st-century education — including Educational Leadership & Innovation, Climate Action & Sustainability, SDG Integration, Youth Empowerment, and Community Engagement. This prestigious recognition offers opportunities for schools, educators, and students to earn awards and gain international acclaim.
                                     </AccordionContent>
                                 </AccordionItem>
 
@@ -506,16 +506,16 @@ export default function GlobalSchoolsPage() {
                                         Global Schools Summit.
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Participate in our annual summit where schools showcase their achievements and connect with global education leaders.
+                                        An exclusive, invite-only annual gathering of future-forward institutions. This prestigious event brings together top schools, global dignitaries, and thought leaders to celebrate educational excellence, innovation, climate action, and the transformative impact of changemaking institutions. Experience award galas, the Global Schools Awards, and a platform honoring schools & educators driving meaningful change in education and society.
                                     </AccordionContent>
                                 </AccordionItem>
 
                                 <AccordionItem value="item-6">
                                     <AccordionTrigger className="text-left text-xl font-bold">
-                                        Global Representation at India's Biggest Model UN Conferences
+                                        School Representation at India's Biggest Model UN Conferences & Innovation Events
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Exclusive opportunities for students to represent their schools at prestigious Model UN conferences across India.
+                                        Exclusive opportunities for students to represent their schools at India’s biggest Model UN conferences across India, India’s Largest Innovation Hackathons- BIHs, ideathons, and collaborative global events.
                                     </AccordionContent>
                                 </AccordionItem>
 
@@ -524,7 +524,7 @@ export default function GlobalSchoolsPage() {
                                         Path to Global Accreditation.
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Support and guidance for schools seeking international accreditation and recognition.
+                                        Building upon the Global Schools Affiliation Program, the GSCA–GSLI Accreditation Framework honors institutions with Silver, Gold, or Platinum plaques for exceptional achievements and a demonstrated commitment to climate action, educational innovation, and values-driven leadership. Accreditations are awarded through a merit-based evaluation, ensuring that the most impactful schools earn this global honor.
                                     </AccordionContent>
                                 </AccordionItem>
 
@@ -533,7 +533,7 @@ export default function GlobalSchoolsPage() {
                                         India MUNx Events.
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Special access to India MUNx events, workshops, and training sessions for students and educators.
+                                        Host your own India MUNx event and immerse your students in the art of diplomacy with full guidance and support from India MUN, including Executive Board members. Licensed schools can also avail access to invite a senior executive delegation from India MUN. Licensing is provided exclusively to Global Member Schools after a complete review of the event scope.
                                     </AccordionContent>
                                 </AccordionItem>
 
@@ -542,7 +542,7 @@ export default function GlobalSchoolsPage() {
                                         Exclusive Representation at UN COP and Global Events.
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        Selected schools get the opportunity to send representatives to UN Climate Change Conferences and other global environmental events.
+                                        Selected schools get the opportunity to send student representatives to UN Climate Change Conferences and other global environmental events.
                                     </AccordionContent>
                                 </AccordionItem>
                             </Accordion>
@@ -1697,14 +1697,14 @@ export default function GlobalSchoolsPage() {
                         {/* Global Schools Summit Card */}
                         <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
-                                Global Schools Summit
+                                Global Accreditation
                             </h3>
 
                             {/* Circular Badge */}
                             <div className="flex justify-center mb-4">
                         <div className="relative w-40 h-40">
                             <Image
-                                src="/images/affiliation/x35.webp"
+                                src="/images/affiliation/x36.webp"
                                 alt="UN Logo"
                                 fill
                                 className="object-contain"

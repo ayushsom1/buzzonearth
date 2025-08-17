@@ -118,8 +118,8 @@ const EvaluationMatrixSection = () => {
 
     const rankingTiers = [
         { tier: "Platinum", range: "425+", color: "#5ce1e6", icon: "🏆" },
-        { tier: "Gold", range: "375-424", color: "#ffd34f", icon: "🥇" },
-        { tier: "Silver", range: "300-374", color: "#c0c0c0", icon: "🥈" },
+        { tier: "Gold", range: "375-424", color: "#ffd34f", icon: "🏅" },
+        { tier: "Silver", range: "300-374", color: "#c0c0c0", icon: "🏅" },
         { tier: "Merit", range: "250-299", color: "#7dd3c0", icon: "⭐" }
     ];
 
